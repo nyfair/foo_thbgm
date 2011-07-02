@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
+
+<thxml>
+	<album artist="U2">東方萃夢想〜Immaterial and Missing Power</album>
+	<albumartist>黄昏フロンティア&上海アリス幻樂団</albumartist>
+	<path>th075bgm.dat</path>
+	<bgmlist>
+		<bgm pos="286277870,1209472,15538396">萃夢想</bgm>
+		<bgm pos="3718,367816,14409140" artist="NKZ">東方妖恋談</bgm>
+		<bgm pos="14957282,1119220,11546196">少女綺想曲〜Capriccio</bgm>
+		<bgm pos="52475958,554316,10449000" artist="NKZ">恋色マジック</bgm>
+		<bgm pos="63655882,108780,11442164">魔女達の舞踏会</bgm>
+		<bgm pos="75382870,215492,17725936" artist="NKZ">メイドと血の懐中時計</bgm>
+		<bgm pos="93500906,306416,14725556">月時計〜ルナ・ダイアル</bgm>
+		<bgm pos="108751506,551136,20347588" artist="NKZ">ブクレシュティの人形師</bgm>
+		<bgm pos="129826966,428896,10834092">人形裁判</bgm>
+		<bgm pos="141273406,485500,17598012" artist="NKZ">ラクトガール〜少女密室</bgm>
+		<bgm pos="159533526,2303672,13100700">ヴワル魔法図書館</bgm>
+		<bgm pos="175119998,495428,11817248" artist="NKZ">広有射怪鳥事〜Till When？</bgm>
+		<bgm pos="187609282,2554272,12586484">東方妖々夢〜Ancient Temple</bgm>
+		<bgm pos="202937706,4145040,8466296" artist="NKZ">亡き王女の為のセプテット</bgm>
+		<bgm pos="215725654,2120284,7527804" artist="NKZ">幽雅に咲かせ、墨染の桜〜Border of Life</bgm>
+		<bgm pos="27799238,1764376,22735804" artist="ZUN">Demystify Feast</bgm>
+		<bgm pos="225550354,1058032,24855320" artist="ZUN">夜が降りてくる〜Evening Star</bgm>
+		<bgm pos="251640246,618388,33842696" artist="ZUN">御伽の国の鬼が島〜Missing Power</bgm>
+		<bgm pos="327237082,690152,9409968" artist="NKZ">夏明き</bgm>
+		<bgm pos="303202710,0,14743496">東方萃夢想</bgm>
+		<bgm pos="317946374,181504,5644720" artist="NKZ">魔所</bgm>
+		<bgm pos="323949330,1227880,1962600" artist="NKZ">月輪</bgm>
+		<bgm pos="337513934,542184,12699412" artist="NKZ">遍参</bgm>
+		<bgm pos="350932262,112904,3682896" artist="NKZ">裏心</bgm>
+		<bgm pos="354904794,605132,4709472" artist="NKZ">Intermezzo</bgm>
+		<bgm pos="360396130,277516,6599448" artist="NKZ">あゆのかぜ</bgm>
+		<bgm pos="411267602,308892,7056312">森閑</bgm>
+		<bgm pos="387810358,637320,6773940">仰空</bgm>
+		<bgm pos="367449826,187164,6163856">幽境</bgm>
+		<bgm pos="418821818,528768,8467460">珍客</bgm>
+		<bgm pos="374054630,278008,6049112">紅夜</bgm>
+		<bgm pos="380563342,628884,6431008">戦迅</bgm>
+		<bgm pos="404730218,707736,5644972">禍機</bgm>
+		<bgm pos="396101826,512840,7938380">砕月</bgm>
+	</bgmlist>
+</thxml>

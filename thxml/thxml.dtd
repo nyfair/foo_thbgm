@@ -1,0 +1,24 @@
+<!DOCTYPE thxml [
+	<!ELEMENT album (#PCDATA)>
+	<!ATTLIST album
+		artist CDATA "ZUN"
+		samplerate CDATA "44100"
+		bits CDATA "16"
+		channels CDATA "2"
+		codec CDATA "PCM"
+		encoding(lossless|lossy) "lossless"
+		pack CDATA "">
+	<!ELEMENT albumartist (#PCDATA)>
+	<!ELEMENT path (#PCDATA)>
+	<!ELEMENT bgmlist (bgm+)>
+	<!ELEMENT bgm (#PCDATA)>
+		<!ATTLIST bgm
+			pos CDATA #REQUIRED
+			file CDATA path
+			artist CDATA album.artist
+			samplerate CDATA album.samplerate
+			bits CDATA album.bits
+			channels CDATA album.channels
+			codec CDATA album.codec
+			encoding(lossless|lossy) album.encoding>
+]

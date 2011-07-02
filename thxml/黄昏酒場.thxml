@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
+
+<thxml>
+	<album>黄昏酒場～Uwabami Breakers～</album>
+	<albumartist>呑んべぇ会</albumartist>
+	<path>albgm.dat</path>
+	<bgmlist>
+		<bgm pos="86987548,389632,5099008" artist="骨折飲料">step u/b (lazy style)</bgm>
+		<bgm pos="16,489568,7262568" artist="骨折飲料">step u/b</bgm>
+		<bgm pos="37028652,883648,7922476" artist="骨折飲料">Festiv-al-coholically</bgm>
+		<bgm pos="45834776,2088948,18382736" artist="羽鳥風画">Valse Alcoholique</bgm>
+		<bgm pos="7752152,474032,8199076" artist="骨折飲料">chase the Twilight</bgm>
+		<bgm pos="16425260,1136640,19466752">呑んべぇのレムリア</bgm>
+		<bgm pos="66306460,3595520,17085568" artist="Kiyoma">絶対大丈夫だよ！！いくら飲んでも朝が来るよ！！。</bgm>
+	</bgmlist>
+</thxml>

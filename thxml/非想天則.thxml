@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
+
+<thxml>
+	<album artist="U2" codec="vorbis" encoding="lossy" pack="tasfro">東方非想天則～超弩級ギニョルの謎を追え</album>
+	<albumartist>黄昏フロンティア&上海アリス幻樂団</albumartist>
+	<path>th123b.dat|</path>
+	<bgmlist>
+		<bgm file="data/bgm/op2.ogg" pos="0,328801,3990163">君はあの影を見たか？</bgm>
+		<bgm file="data/bgm/select.ogg" pos="0,176523,3880800">萃夢想</bgm>
+		<bgm file="data/bgm/ta20.ogg" pos="0,929590,1893625">伝説の巨神</bgm>
+		<bgm file="data/bgm/st30.ogg" pos="0,748564,3528073">信仰は儚き人間の為に</bgm>
+		<bgm file="data/bgm/st31.ogg" pos="0,544291,3398042">おてんば恋娘</bgm>
+		<bgm file="data/bgm/ta22.ogg" pos="0,220354,2501669">人形のある風景</bgm>
+		<bgm file="data/bgm/st32.ogg" pos="0,397386,3810258">上海紅茶館～Chinese Tea</bgm>
+		<bgm file="data/bgm/st33.ogg" pos="0,257150,3763225">霊知の太陽信仰～Nuclear Fusion</bgm>
+		<bgm file="data/bgm/ta21.ogg" pos="0,300168,3338970">ぼくらの非想天則</bgm>
+		<bgm file="data/bgm/st35.ogg" pos="0,484278,6834241" artist="ZUN">アンノウンＸ～Unfound Adventure</bgm>
+		<bgm file="data/bgm/st36.ogg" pos="0,1617742,967663" artist="ZUN">空に浮かぶ物体Ｘ</bgm>
+		<bgm file="data/bgm/st40.ogg" pos="0,126149,4021919">二色蓮花蝶～Ancients</bgm>
+		<bgm file="data/bgm/st41.ogg" pos="0,492964,4006796">恋色マジック</bgm>
+		<bgm file="data/bgm/st42.ogg" pos="0,615411,3875828">the Grimoire of Alice</bgm>
+		<bgm file="data/bgm/st43.ogg" pos="0,765059,3276029">ヴワル魔法図書館</bgm>
+		<bgm file="data/bgm/st34.ogg" pos="0,169085,3861777">明日ハレの日、ケの昨日</bgm>
+		<bgm file="data/bgm/sr2.ogg" pos="0,0,4412892">悠久の蒸気機関</bgm>
+		<bgm file="data/bgm/ta00.ogg" pos="0,612434,2352036">日常坐臥</bgm>
+		<bgm file="data/bgm/ta01.ogg" pos="0,563848,2352003">甲論乙駁</bgm>
+		<bgm file="data/bgm/ta03.ogg" pos="0,354280,2381458">風光明媚</bgm>
+		<bgm file="data/bgm/ta05.ogg" pos="0,657158,2236032">以魚駆蠅</bgm>
+		<bgm file="data/bgm/ta04.ogg" pos="0,187631,2469605">冷吟閑酔</bgm>
+		<bgm file="data/bgm/ta06.ogg" pos="0,431244,3175199">暮色蒼然</bgm>
+		<bgm file="data/bgm/st99.ogg" pos="0,291453,1512004">東方妖恋談(世紀末バージョン)</bgm>
+	</bgmlist>
+</thxml>

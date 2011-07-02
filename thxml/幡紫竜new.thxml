@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
+
+<thxml>
+	<album artist="halt, 毒電P" codec="vorbis" samplerate="48000" encoding="lossy" pack="ac6">幡紫竜</album>
+	<albumartist>Amusement Makers&瞬殺サレ道？</albumartist>
+	<path>music.ac6|</path>
+	<bgmlist>
+		<bgm file="bsr_16.ogg" pos="0,0,1880064">はじまりの前に</bgm>
+		<bgm file="bsr_00.ogg" pos="0,589824,5758976">戦闘空域</bgm>
+		<bgm file="bsr_00r.ogg" pos="0,1188224,2580096" samplerate="44100">エーリッヒを探せ！</bgm>
+		<bgm file="bsr_01.ogg" pos="0,1826816,2902016">Shocking Assailant</bgm>
+		<bgm file="bsr_02.ogg" pos="0,2252800,3350528">Endless Night View</bgm>
+		<bgm file="bsr_03.ogg" pos="0,309248,3383296">Flamethrower</bgm>
+		<bgm file="bsr_04.ogg" pos="0,1372160,1806336">Overtake!</bgm>
+		<bgm file="bsr_04r.ogg" pos="0,106752,3421952" samplerate="44100">ワープゲートにたどりつけ</bgm>
+		<bgm file="bsr_05.ogg" pos="0,1622016,3072000">Tri-Star Attack</bgm>
+		<bgm file="bsr_05r.ogg" pos="0,9344,969024" samplerate="44100">無敵シールド！</bgm>
+		<bgm file="bsr_05r2.ogg" pos="0,8448,1128320" samplerate="44100">ika-ika geso-geso</bgm>
+		<bgm file="bsr_06.ogg" pos="0,2779136,307200">参拝者歓迎</bgm>
+		<bgm file="bsr_07.ogg" pos="0,161792,3311616">巫術乱声</bgm>
+		<bgm file="bsr_08.ogg" pos="0,2119680,960512">お出迎えさせて項きます......</bgm>
+		<bgm file="bsr_09.ogg" pos="0,358400,3454976">THE STRENGTH</bgm>
+		<bgm file="bsr_19.ogg" pos="0,703488,1867776">異空間の決闘</bgm>
+		<bgm file="bsr_10.ogg" pos="0,294912,2304000">強攻</bgm>
+		<bgm file="bsr_10r.ogg" pos="0,2014464,657408">中央突破！</bgm>
+		<bgm file="bsr_10r2.ogg" pos="0,84480,987072">不屈の闘志</bgm>
+		<bgm file="bsr_11.ogg" pos="0,3735552,2560000">give him a roasting</bgm>
+		<bgm file="bsr_12.ogg" pos="0,1126400,5378048">Don't call me.</bgm>
+		<bgm file="bsr_13.ogg" pos="0,516096,4096000">The agonies of death</bgm>
+		<bgm file="bsr_14.ogg" pos="0,307200,1429504">おしまい</bgm>
+		<bgm file="bsr_15.ogg" pos="0,774144,765952">さようなら</bgm>
+		<bgm file="bsr_17.ogg" pos="0,8728576,1532416">trans--</bgm>
+		<bgm file="bsr_18.ogg" pos="0,1875456,4033024">struggle for only existence</bgm>
+		<bgm file="ex_ssg1.ogg" pos="0,7168,2858496" samplerate="44100">Miria the Sylphid</bgm>
+		<bgm file="ex_ssg2.ogg" pos="0,4096,2891008" samplerate="44100">Death Twins</bgm>
+		<bgm file="ex_ssg3.ogg" pos="0,714560,4326080" samplerate="44100">黒いゲイツ</bgm>
+		<bgm file="ex_kogm.ogg" pos="0,606208,1815168" samplerate="44100">ほっとけーき実験室</bgm>
+		<bgm file="ex_kogl.ogg" pos="0,6096,2270208" samplerate="44100">Muse</bgm>
+		<bgm file="ex_ika.ogg" pos="0,320256,2509312" samplerate="44100">Super I.I.G.G</bgm>
+	</bgmlist>
+</thxml>

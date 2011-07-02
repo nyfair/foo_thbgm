@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
+
+<thxml>
+	<album artist="" samplerate="44100" bits="16" channels="2" codec="MP3" encoding="lossy" pack="zip">album name</album>
+	<albumartist>album artist</albumartist>
+	<path>thxmltest.zip|</path>
+	<bgmlist>
+		<bgm pos="0,123456,654321" file="1.mp3">track1</bgm>
+		<bgm pos="0,0,999999" codec="Musepack" file="2.mpc">track2</bgm>
+	</bgmlist>
+</thxml>

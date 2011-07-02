@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
+
+<thxml>
+	<album>東方文花帖～Shoot the Bullet</album>
+	<albumartist>上海アリス幻樂団</albumartist>
+	<path>thbgm.dat</path>
+	<bgmlist>
+		<bgm pos="16,1343488,15663104">天狗の手帖～Mysterious Note</bgm>
+		<bgm pos="17006608,314080,13621568">風の循環～Wind Tour</bgm>
+		<bgm pos="30942256,440832,21572096">天狗が見ている～Black Eyes</bgm>
+		<bgm pos="52955184,1048576,22288384">東の国の眠らない夜</bgm>
+		<bgm pos="76292144,1026048,16421120">レトロスペクティブ京都</bgm>
+		<bgm pos="93739312,2817280,28712192">風神少女</bgm>
+	</bgmlist>
+</thxml>

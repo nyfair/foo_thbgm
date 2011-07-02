@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
+
+<thxml>
+	<album artist="竜ライター" codec="vorbis" encoding="lossy">五月雨</album>
+	<albumartist>RebRank</albumartist>
+	<path>Bgm\</path>
+	<bgmlist>
+		<bgm file="TITLE.OGG" pos="0,0,3396360">五月雨</bgm>
+		<bgm file="SMD_1-1.OGG" pos="0,0,4536002">Leave the Nest</bgm>
+		<bgm file="SMD_1-2.OGG" pos="0,317688,1867552">Flame-Pilar</bgm>
+		<bgm file="SMD_2-1.OGG" pos="0,0,5556602">blue HELiX</bgm>
+		<bgm file="SMD_2-2.OGG" pos="0,585058,2879950">Halberd</bgm>
+		<bgm file="SMD_3-1.OGG" pos="0,0,2249102">Ordinary Morning</bgm>
+		<bgm file="SMD_3-2A.OGG" pos="0,1396096,2116808">Acid Rain</bgm>
+		<bgm file="SMD_3-2B.OGG" pos="0,1476352,4233728">Acid Rain: Rebirth</bgm>
+		<bgm file="EX_1.OGG" pos="0,0,5032953">Way to the West</bgm>
+		<bgm file="EX_2.OGG" pos="0,0,2579456">Chicane</bgm>
+		<bgm file="EX_3.OGG" pos="0,0,3987968">East of Eden</bgm>
+		<bgm file="EX_4.OGG" pos="0,3283136,1070848">r.r.R.</bgm>
+		<bgm file="EXBOSS_1.OGG" pos="0,566430,6684642">Meets The Gates</bgm>
+		<bgm file="EXBOSS_2.OGG" pos="0,5154600,3624024">Broken Strawberry Shortcake</bgm>
+		<bgm file="normalend.ogg" pos="0,0,2705664">Evaporation</bgm>
+		<bgm file="GOODEND.OGG" pos="0,0,4900864">Atomosphere 2</bgm>
+	</bgmlist>
+</thxml>

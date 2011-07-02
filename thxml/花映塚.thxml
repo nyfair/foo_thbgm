@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
+
+<thxml>
+	<album>東方花映塚～Phantasmagoria of Flower View</album>
+	<albumartist>上海アリス幻樂団</albumartist>
+	<path>thbgm.dat</path>
+	<bgmlist>
+		<bgm pos="16,873344,11669376">花映塚～Higan Retour</bgm>
+		<bgm pos="48724368,1509888,26666496">春色小径～Colorful Path</bgm>
+		<bgm pos="12542736,1924096,21839872">オリエンタルダークフライト</bgm>
+		<bgm pos="76900752,833088,22134528">フラワリングナイト</bgm>
+		<bgm pos="180316624,2689024,25371648">東方妖々夢～Ancient Temple</bgm>
+		<bgm pos="269951696,671744,20666368">狂気の瞳～Invisible Full Moon</bgm>
+		<bgm pos="99868368,1913856,24307712">おてんば恋娘の冒険</bgm>
+		<bgm pos="155417296,746240,24153088">幽霊楽団～Phantom Ensemble</bgm>
+		<bgm pos="126089936,1798144,27529216">もう歌しか聞こえない～Flower Mix</bgm>
+		<bgm pos="291289808,995328,18346528">お宇佐さまの素い幡</bgm>
+		<bgm pos="208377296,2817280,28712192">風神少女 (Short Version)</bgm>
+		<bgm pos="355528944,1090816,19666176">ポイズンボディ～Forsaken Doll</bgm>
+		<bgm pos="376285936,1898240,26325248">今昔幻想郷～Flower Land</bgm>
+		<bgm pos="239906768,2525440,27519488">彼岸帰航～Riverside View</bgm>
+		<bgm pos="310631664,1076224,43821056">六十年目の東方裁判～Fate of Sixty Years</bgm>
+		<bgm pos="36306704,751872,11665792">花の映る塚</bgm>
+		<bgm pos="413237744,3462784,3299456">此岸の塚</bgm>
+		<bgm pos="404509424,398976,8329344">花は幻想のままに</bgm>
+		<bgm pos="419999984,888320,18947456">魂の花～Another Dream</bgm>
+	</bgmlist>
+</thxml>
