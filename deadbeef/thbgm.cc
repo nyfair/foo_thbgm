@@ -11,6 +11,8 @@ using namespace std;
 #include "../thxmlparser.h"
 #include <deadbeef/deadbeef.h>
 
+#define trace(fmt,...)
+
 static DB_decoder_t plugin;
 static DB_functions_t *deadbeef;
 
@@ -27,6 +29,14 @@ typedef struct {
 
 static const char *ext[] = {"thxml", NULL};
 
+static const char settings_dlg[] =
+    "property \"thbgm loop forever\" checkbox thbgm.loop 1;"
+    "property \"read thbgm fileinfo\" checkbox thbgm.readinfo 0;"
+;
+
+bool loopforever = true;
+bool read_thbgm_info = false;
+
 const int deltaread = 1024;
 string pack;
 bool isWave;
@@ -39,41 +49,40 @@ static DB_fileinfo_t *thbgm_open(uint32_t hints) {
 }
 
 static int thbgm_init(DB_fileinfo_t *_info, DB_playItem_t *it) {
-	printf("thbgm_init");
+	trace("thbgm_init");
 	thbgm_info *info = (thbgm_info *)_info;
 	info->file = deadbeef->fopen(info->bgmpath);
 	return 0;
 }
 
 static void thbgm_free(DB_fileinfo_t *_info) {
-	printf("thbgm_free");
+	trace("thbgm_free");
 	thbgm_info *info = (thbgm_info *)_info;
 	if(info) free(info);
 }
 
 static int thbgm_read(DB_fileinfo_t *_info, char *bytes, int size) {
-	printf("thbgm_read");
+	trace("thbgm_read");
 	thbgm_info *info = (thbgm_info *)_info;
 	deadbeef->fread(bytes, 1, 1024, info->file);
 	return 1024;
 }
 
 static int thbgm_seek_sample(DB_fileinfo_t *_info, int sample) {
-	printf("thbgm_ss");
+	trace("thbgm_ss");
 	thbgm_info *info = (thbgm_info *)_info;
 	_info->readpos = (float) sample / _info->fmt.samplerate + info->m_offset;
 	return 0;
 }
 
 static int thbgm_seek(DB_fileinfo_t *_info, float time) {
-	printf("thbgm_s");
+	trace("thbgm_s");
 	return thbgm_seek_sample(_info, time * _info->fmt.samplerate);
 }
 
 static DB_playItem_t *thbgm_insert(ddb_playlist_t *plt,
 				DB_playItem_t *after, const char *fname) {
 	thxmlparser parser = thxmlparser();
-	char *xmlbuf;
 	parser.parsefile(fname);
 	vector<map<string, string> > bgmlist = parser.thbgm;
 	
@@ -94,8 +103,8 @@ static DB_playItem_t *thbgm_insert(ddb_playlist_t *plt,
 		_info.fmt.samplerate = atoi(bgmlist[i]["samplerate"].c_str());
 		_info.fmt.channels = atoi(bgmlist[i]["channels"].c_str());
 		_info.fmt.bps = atoi(bgmlist[i]["bits"].c_str());
-		for(int i=0; i<_info.fmt.channels; i++) {
-				_info.fmt.channelmask |= 1 << i;
+		for(int j=0; j<_info.fmt.channels; j++) {
+				_info.fmt.channelmask |= 1 << j;
 		}
 		
 		info.bgmpath = bgmlist[i]["bgmpath"].c_str();
@@ -116,6 +125,17 @@ static DB_playItem_t *thbgm_insert(ddb_playlist_t *plt,
 	return after;
 }
 
+static int thbgm_message(uint32_t id, uintptr_t ctx, uint32_t p1, uint32_t p2) {
+	switch(id) {
+		case DB_EV_ACTIVATED:
+		case DB_EV_CONFIGCHANGED:
+			loopforever = deadbeef->conf_get_int("thbgm.readinfo", 1);
+			read_thbgm_info = deadbeef->conf_get_int("thbgm.readinfo", 0);
+			break;
+	}
+	return 0;
+}
+
 extern "C" { 
 	DB_plugin_t *thbgm_load(DB_functions_t *api) {
 		deadbeef = api;
@@ -132,9 +152,8 @@ extern "C" {
 			If you have any feature request and bug report,\n \
 			feel free to contact me at my E-mail address below.\n\n \
 			(C) nyfair <nyfair2012@gmail.com>";
-		//plugin.plugin.configdialog = settings_dlg;
-		//plugin.plugin.get_actions = thbgm_get_actions;
-		//plugin.plugin.message = thbgm_message;
+		plugin.plugin.configdialog = settings_dlg;
+		plugin.plugin.message = thbgm_message;
 		plugin.open = thbgm_open;
 		plugin.init = thbgm_init;
 		plugin.free = thbgm_free;

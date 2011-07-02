@@ -7,15 +7,21 @@
 using namespace std;
 #include "thxmlparser.h"
 
-#define cirno 9
-
 static const GUID g_mainmenu_group_id = { 0xb95da62d, 0x74fe, 0x49b9, 
 	{ 0xba, 0x8a, 0x9d, 0xf3, 0x70, 0xa, 0xf8, 0x22 } };
+static const GUID guid_loop_forever = { 0xf69ffc15, 0x217e, 0x4927,
+	{ 0x86, 0x88, 0x58, 0xdb, 0x1c, 0x96, 0xfd, 0xfa } };
+static const GUID cfg_loop_forever = { 0x5b0d1577, 0xfce9, 0x45de,
+	{ 0x90, 0xb0, 0x4, 0xc6, 0xe4, 0x74, 0xb9, 0xd5 } };
+static const GUID guid_thbgm_readinfo ={ 0xd6e4490a, 0xd49, 0x4c22,
+	{ 0x95, 0x57, 0x8, 0xd9, 0xe6, 0x4f, 0x8d, 0x80 } };
+static const GUID cfg_thbgm_readinfo =  { 0x26439faf, 0xe1f3, 0x4bdf,
+	{ 0xb4, 0xda, 0x59, 0x7, 0x1d, 0x9d, 0x8c, 0xf5 } };
+
 static mainmenu_group_factory g_mainmenu_group(g_mainmenu_group_id, 
 	mainmenu_groups::playback, mainmenu_commands::sort_priority_dontcare);
-
-bool loopforever = true;
-bool read_thbgm_info = false;
+static cfg_bool loopforever(cfg_loop_forever, true);
+static cfg_bool read_thbgm_info(cfg_thbgm_readinfo, false);
 
 const t_uint32 deltaread = 1024;
 double seek_seconds;
@@ -30,8 +36,7 @@ t_filesize current_sample;
 class mainmenu_loopsetting : public mainmenu_commands {
 public:
 	enum {
-		loop_disable,
-		loop_enable,
+		loop_forever,
 		thbgm_readinfo,
 		count
 	};
@@ -41,32 +46,22 @@ public:
 	}
 
 	GUID get_command(t_uint32 p_index) {
-		static const GUID guid_loop_disable = { 0xf3843cf5, 0x4c41, 0x4887,
-			{ 0xb5, 0x18, 0x98, 0x97, 0x5c, 0x91, 0xac, 0xd9 } };
-		static const GUID guid_loop_enable = { 0xf69ffc15, 0x217e, 0x4927,
-			{ 0x86, 0x88, 0x58, 0xdb, 0x1c, 0x96, 0xfd, 0xfa } };
-		static const GUID guid_thbgm_readinfo ={ 0xd6e4490a, 0xd49, 0x4c22,
-			{ 0x95, 0x57, 0x8, 0xd9, 0xe6, 0x4f, 0x8d, 0x80 } };
-
 		switch(p_index) {
-			case loop_disable: return guid_loop_disable;
-			case loop_enable: return guid_loop_enable;
+			case loop_forever: return guid_loop_forever;
 			case thbgm_readinfo : return guid_thbgm_readinfo;
 		}
 	}
 
 	void get_name(t_uint32 p_index, pfc::string_base &p_out) {
 		switch(p_index) {
-			case loop_disable: p_out = "thbgm(no loop)"; break;
-			case loop_enable: p_out = "thbgm(loop forever)"; break;
+			case loop_forever: p_out = "thbgm loop forever"; break;
 			case thbgm_readinfo: p_out = "read thbgm fileinfo"; break;
 		}
 	}
 
 	bool get_description(t_uint32 p_index, pfc::string_base &p_out) {
 		switch(p_index) {
-			case loop_disable: p_out = "disable loop mode"; return true;
-			case loop_enable: p_out = "enter infinite loop mode"; return true;
+			case loop_forever: p_out = "infinity loop mode"; return true;
 			case thbgm_readinfo: p_out = "read thbgm file infomation"; return true;
 		}
 	}
@@ -79,11 +74,8 @@ public:
 									t_uint32 &p_flags) {
 		get_name(p_index, p_text);
 		switch(p_index) {
-			case loop_disable:
-				p_flags = loopforever ? 0 : mainmenu_commands::flag_radiochecked;
-				break;
-			case loop_enable:
-				p_flags = loopforever ? mainmenu_commands::flag_radiochecked : 0;
+			case loop_forever:
+				p_flags = loopforever ? mainmenu_commands::flag_checked : 0;
 				break;
 			case thbgm_readinfo:
 				p_flags = read_thbgm_info ? mainmenu_commands::flag_checked : 0;
@@ -94,11 +86,8 @@ public:
 
 	void execute(t_uint32 p_index,service_ptr_t<service_base> p_callback) {
 		switch(p_index) {
-			case loop_disable:
-				loopforever = false;
-				break;
-			case loop_enable:
-				loopforever = true;
+			case loop_forever:
+				loopforever = !loopforever;
 				break;
 			case thbgm_readinfo:
 				read_thbgm_info = !read_thbgm_info;
@@ -111,7 +100,7 @@ class input_raw {
 private:
 	file::ptr m_file;
 	input_decoder::ptr decoder;
-	t_uint32 first_packet;
+	bool first_packet;
 public:
 	void open(const char *p_path, t_input_open_reason p_reason,
 						bool isWave, abort_callback &p_abort) {
@@ -137,11 +126,11 @@ public:
 	}
 
 	bool run(audio_chunk &p_chunk, abort_callback &p_abort) {
-		if(first_packet != cirno) {
+		if(first_packet) {
 			decoder->initialize(0, 4, p_abort);
 			double time_offset = audio_math::samples_to_time(m_offset, samplerate);
 			decoder->seek(seek_seconds + time_offset, p_abort);
-			first_packet = cirno;
+			first_packet = false;
 		}
 		
 		bool result = decoder->run(p_chunk, p_abort);
@@ -162,7 +151,7 @@ public:
 	void seek(double seconds) {
 		current_sample = audio_math::time_to_samples(seconds, samplerate);
 		seek_seconds = seconds;
-		first_packet = NULL;
+		first_packet = true;
 	}
 };
 

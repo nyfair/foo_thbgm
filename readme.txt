@@ -35,7 +35,7 @@ You could add Resampler in DSP Manager or change the output to foobar2000 defaul
 In foobar2000's playback menu, you'll see three new thbgm entry.
 （<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)
     Loop forever means BGM will always loop.
-    No loop means we won't loop the BGM, if you want to convert these BGM, don't forget to disable loop mode.
+    If you want to convert these BGM, don't forget to disable loop mode.
     Read fileinfo will use foobar2000 to read real BGM file's tag instead of thxml,
     this will speed down the unpack speed, so it's not a preset option
 （<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)
