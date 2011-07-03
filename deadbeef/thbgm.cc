@@ -142,7 +142,7 @@ extern "C" {
 		plugin.plugin.api_vmajor = 1;
 		plugin.plugin.api_vminor = 0;
 		plugin.plugin.version_major = 1;
-		plugin.plugin.version_minor = 0;
+		plugin.plugin.version_minor = 1;
 		plugin.plugin.type = DB_PLUGIN_DECODER;
 		plugin.plugin.id = "ZWAV";
 		plugin.plugin.name = "ThBGM Player";

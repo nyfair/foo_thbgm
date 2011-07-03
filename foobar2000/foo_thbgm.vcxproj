@@ -118,6 +118,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\thxmlparser.cc" />
+    <ClCompile Include="config.cc" />
     <ClCompile Include="foo_thbgm.cc" />
     <ClCompile Include="unpack_ac6.cc" />
     <ClCompile Include="unpack_tasfro.cc" />
@@ -125,6 +126,7 @@
   <ItemGroup>
     <ClInclude Include="..\mt.hpp" />
     <ClInclude Include="..\thxmlparser.h" />
+    <ClInclude Include="config.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

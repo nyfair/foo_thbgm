@@ -6,21 +6,14 @@
 #include <vector>
 using namespace std;
 #include "thxmlparser.h"
+#include "config.h"
 
-static const GUID g_mainmenu_group_id = { 0xb95da62d, 0x74fe, 0x49b9, 
-	{ 0xba, 0x8a, 0x9d, 0xf3, 0x70, 0xa, 0xf8, 0x22 } };
-static const GUID guid_loop_forever = { 0xf69ffc15, 0x217e, 0x4927,
-	{ 0x86, 0x88, 0x58, 0xdb, 0x1c, 0x96, 0xfd, 0xfa } };
-static const GUID cfg_loop_forever = { 0x5b0d1577, 0xfce9, 0x45de,
-	{ 0x90, 0xb0, 0x4, 0xc6, 0xe4, 0x74, 0xb9, 0xd5 } };
-static const GUID guid_thbgm_readinfo ={ 0xd6e4490a, 0xd49, 0x4c22,
-	{ 0x95, 0x57, 0x8, 0xd9, 0xe6, 0x4f, 0x8d, 0x80 } };
-static const GUID cfg_thbgm_readinfo =  { 0x26439faf, 0xe1f3, 0x4bdf,
-	{ 0xb4, 0xda, 0x59, 0x7, 0x1d, 0x9d, 0x8c, 0xf5 } };
+#define needloop (loopforever || current_loop < loopcount)
 
 static mainmenu_group_factory g_mainmenu_group(g_mainmenu_group_id, 
 	mainmenu_groups::playback, mainmenu_commands::sort_priority_dontcare);
 static cfg_bool loopforever(cfg_loop_forever, true);
+static cfg_uint loopcount(cfg_loop_count, 1);
 static cfg_bool read_thbgm_info(cfg_thbgm_readinfo, false);
 
 const t_uint32 deltaread = 1024;
@@ -32,11 +25,13 @@ t_filesize m_headlen;
 t_filesize m_looplen;
 t_filesize m_totallen;
 t_filesize current_sample;
+t_uint32 current_loop;
 
 class mainmenu_loopsetting : public mainmenu_commands {
 public:
 	enum {
 		loop_forever,
+		loop_count,
 		thbgm_readinfo,
 		count
 	};
@@ -48,21 +43,39 @@ public:
 	GUID get_command(t_uint32 p_index) {
 		switch(p_index) {
 			case loop_forever: return guid_loop_forever;
+			case loop_count: return guid_loop_count;
 			case thbgm_readinfo : return guid_thbgm_readinfo;
 		}
 	}
 
 	void get_name(t_uint32 p_index, pfc::string_base &p_out) {
 		switch(p_index) {
-			case loop_forever: p_out = "thbgm loop forever"; break;
-			case thbgm_readinfo: p_out = "read thbgm fileinfo"; break;
+			case loop_forever:
+				p_out = "ThBGM loop forever";
+				break;
+			case loop_count: 
+				p_out = "ThBGM loop x";
+				char counts[12];
+				_itoa_s(loopcount, counts, 10);
+				p_out.add_string(counts);
+				break;
+			case thbgm_readinfo:
+				p_out = "ThBGM read raw metadata";
+				break;
 		}
 	}
 
 	bool get_description(t_uint32 p_index, pfc::string_base &p_out) {
 		switch(p_index) {
-			case loop_forever: p_out = "infinity loop mode"; return true;
-			case thbgm_readinfo: p_out = "read thbgm file infomation"; return true;
+			case loop_forever:
+				p_out = "infinity loop mode";
+				return true;
+			case loop_count:
+				p_out = "specify loop count";
+				return true;
+			case thbgm_readinfo:
+				p_out = "read thbgm file infomation";
+				return true;
 		}
 	}
 
@@ -75,7 +88,10 @@ public:
 		get_name(p_index, p_text);
 		switch(p_index) {
 			case loop_forever:
-				p_flags = loopforever ? mainmenu_commands::flag_checked : 0;
+				p_flags = loopforever ? mainmenu_commands::flag_radiochecked : 0;
+				break;
+			case loop_count:
+				p_flags = loopforever ? 0 : mainmenu_commands::flag_radiochecked;
 				break;
 			case thbgm_readinfo:
 				p_flags = read_thbgm_info ? mainmenu_commands::flag_checked : 0;
@@ -87,7 +103,12 @@ public:
 	void execute(t_uint32 p_index,service_ptr_t<service_base> p_callback) {
 		switch(p_index) {
 			case loop_forever:
-				loopforever = !loopforever;
+				loopforever = true;
+				break;
+			case loop_count:
+				loopforever = false;
+				loopcount = atoi(_InputBox("Please specify loop counts"));
+				if(!loopcount) loopcount = 1;
 				break;
 			case thbgm_readinfo:
 				read_thbgm_info = !read_thbgm_info;
@@ -134,7 +155,7 @@ public:
 		}
 		
 		bool result = decoder->run(p_chunk, p_abort);
-		if(!loopforever) {
+		if(!needloop) {
 			return result;
 		} else {
 			t_size read_count = p_chunk.get_sample_count();
@@ -142,6 +163,7 @@ public:
 			if(current_sample >= m_totallen || !result) {
 				double looptime = audio_math::samples_to_time(m_headlen, samplerate);
 				seek(looptime);
+				if(!loopforever) current_loop++;
 				return run(p_chunk, p_abort);
 			}
 			return result;
@@ -292,6 +314,7 @@ public:
 		if(isWave) {
 			m_buffer.set_size(samples_to_length(deltaread));
 		}
+		current_loop = 1;
 		decode_seek(0, p_abort);
 	}
 
@@ -304,12 +327,13 @@ public:
 				raw.read(m_buffer.get_ptr(), deltaread_size, p_abort);
 			m_filepos += deltaread_done;
 		
-			if(loopforever && m_filepos >= m_maxseeksize) {
+			if(needloop && m_filepos >= m_maxseeksize) {
 				t_filesize remain = samples_to_length(deltaread) - deltaread_done;
 				m_filepos = m_headlen + remain;
 				raw.raw_seek(m_offset + m_headlen, p_abort);
 				deltaread_done += raw.read(m_buffer.get_ptr()
 					+ deltaread_done, remain, p_abort);
+				if(!loopforever) current_loop++;
 			}
 
 			p_chunk.set_data_fixedpoint(m_buffer.get_ptr(), deltaread_done,
@@ -353,7 +377,7 @@ public:
 static mainmenu_commands_factory_t<mainmenu_loopsetting> loopsetting_factory;
 static input_factory_t<input_thxml> g_input_thbgm_factory;
 DECLARE_FILE_TYPE("Touhou-like BGM XML-Tag File", "*.thxml");
-DECLARE_COMPONENT_VERSION("ThBGM Player", "1.0", 
+DECLARE_COMPONENT_VERSION("ThBGM Player", "1.1", 
 "Play BGM files of Touhou and some related doujin games.\n\n"
 "If you have any feature request and bug report,\n"
 "feel free to contact me at my E-mail address below.\n\n"

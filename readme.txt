@@ -35,14 +35,18 @@ You could add Resampler in DSP Manager or change the output to foobar2000 defaul
 In foobar2000's playback menu, you'll see three new thbgm entry.
 （<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)
     Loop forever means BGM will always loop.
-    If you want to convert these BGM, don't forget to disable loop mode.
-    Read fileinfo will use foobar2000 to read real BGM file's tag instead of thxml,
+    If you want to convert these BGM, don't forget to disable loop forever mode and set loop count to 1.
+    Read metadata will use foobar2000 to read real BGM file's tag instead of thxml,
     this will speed down the unpack speed, so it's not a preset option
 （<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)
 
 If you have any feature request and bug report, feel free to contact me at my E-mail address below.
 
 ChangeLog:
+1.1
+add deadbeef plugin for play these BGM files in POSIX system
+add loop count setting
+fix a bug that configuration can't be saved
 1.0
 add tasfro unpacker for 緋想天&非想天則
 add 五月雨 support
@@ -65,9 +69,6 @@ fix decode error in foobar2000 1.16
 add 紅魔郷 support
 0.1
 initial release, support all touhou stg games from 妖々夢 to 神霊廟trial
-
-TODO:
-0xDEADBEEF plugin for play these BGM files in POSIX system
 
 (C) nyfair <nyfair2012@gmail.com>
 まどかの教会。The Church of Madoka.
