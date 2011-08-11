@@ -109,6 +109,7 @@ public:
 				loopforever = false;
 				loopcount = atoi(_InputBox("Please specify loop counts"));
 				if(!loopcount) loopcount = 1;
+				if(loopcount > 65535) loopcount = 65535;
 				break;
 			case thbgm_readinfo:
 				read_thbgm_info = !read_thbgm_info;

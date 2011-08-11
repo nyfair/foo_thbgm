@@ -44,7 +44,6 @@ If you have any feature request and bug report, feel free to contact me at my E-
 
 ChangeLog:
 1.1
-add deadbeef plugin for play these BGM files in POSIX system
 add loop count setting
 fix a bug that configuration can't be saved
 1.0

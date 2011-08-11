@@ -9,7 +9,7 @@ HWND _hMsgText;
 RECT _st_rcDesktop;
 HFONT _hWndFont;
 char _szBuffer[256];
-UINT _nMaxLine = 255;
+UINT _nMaxLine = 5;
 UINT _nEditStyle = WS_BORDER | WS_CHILD | WS_VISIBLE |
 									ES_AUTOHSCROLL | ES_AUTOVSCROLL | ES_NUMBER;
 
