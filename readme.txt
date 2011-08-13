@@ -44,6 +44,7 @@ If you have any feature request and bug report, feel free to contact me at my E-
 
 ChangeLog:
 1.1
+add 神霊廟 support
 add loop count setting
 fix a bug that configuration can't be saved
 1.0

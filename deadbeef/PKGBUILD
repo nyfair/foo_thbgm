@@ -5,12 +5,13 @@ pkgdesc="THBGM Player for deadbeef"
 arch=('i686' 'x86_64')
 license=('GPLv2')
 depends=('deadbeef>0.5')
+makedepends=('cmake')
 
 build() {
 	cd ${srcdir}
-  cmake .. \
- 	  -DCMAKE_INSTALL_PREFIX=/usr \
-    -DCMAKE_BUILD_TYPE=Release
-  make
+	cmake .. \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_BUILD_TYPE=Release
+	make
 	make DESTDIR=${pkgdir} install
 }
