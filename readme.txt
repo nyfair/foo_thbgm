@@ -1,6 +1,6 @@
 ﻿Feature:
 1. A-B loop for any audio format.
-2. Directyly play bgm files of touhou and some related doujin games.
+2. Directly play bgm files of touhou and some related doujin games.
 
 Supported Games
 The Embodiment of Scarlet Devil (東方紅魔郷)
@@ -8,7 +8,7 @@ Perfect Cherry Blossom (東方妖々夢)
 Imperishable Night (東方永夜抄)
 Phantasmagoria of Flower View (東方花映塚)
 Shoot the Bullet (東方文花帖)
-Mountain of Faith (東方風神録 )
+Mountain of Faith (東方風神録)
 Subterranean Animism (東方地霊殿)
 Undefined Fantastic Object (東方星蓮船)
 Double Spoiler (ダブルスポイラー～東方文花帖)
