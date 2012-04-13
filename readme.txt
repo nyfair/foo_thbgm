@@ -25,13 +25,13 @@ Samidare (五月雨)
 Usage:
 Put foo_thbgm.dll to your foobar2000's components folder.
 Put thxml file to your game install folder.
-Open foobar2000, drag thxml file to foobar2000's window, then enjoy your life!
+Open foobar2000, drag thxml file into foobar2000's window, then enjoy your life!
 
 Something you should know:
 If you want to extract ogg file's in 緋想天or非想天則or幡紫竜, just drag these bgm archive into foobar2000's window
-(e.g th123b.dat th105b.dat music.ac6)
+(e.g th123b.dat th105b.dat music.ac6), the extrated files will be created in current folder.
 Some sound card doesn't support play 神霊廟's ghost mode in Kernel Streaming or WASAPI becuase the music is 22050Hz.
-You could add Resampler in DSP Manager or change the output to default.
+You could add resampler in DSP Manager or change the output to default.
 
 In foobar2000's playback menu, you'll see three new thbgm entry.
 （<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)
@@ -41,7 +41,7 @@ In foobar2000's playback menu, you'll see three new thbgm entry.
     this will speed down the unpack speed, so it's not a preset option
 （<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)
 
-If you have any feature request and bug report, feel free to contact me at my E-mail address below.
+If you have any feature request or bug report, feel free to contact me at my E-mail address below.
 
 ChangeLog:
 1.1
