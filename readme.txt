@@ -55,7 +55,7 @@ fix 幡紫竜 thxml file
 add ac6 unpacker for 幡紫竜c74 and later version
 0.8
 add common unpacker support
-now we can play music in archive as long as foobar2000 can handle it
+now we can play music in archive if only foobar2000 can handle it
 0.5
 add 幡紫竜c67 version support
 add python3 script to convert THxxBGM files
