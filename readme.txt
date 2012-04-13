@@ -28,10 +28,11 @@ Put thxml file to your game install folder.
 Open foobar2000, drag thxml file to foobar2000's window, then enjoy your life!
 
 Something you should know:
-If you want to extract ogg file's in 緋想天or非想天則or幡紫竜, just drag these bgm archive to foobar2000's window
+If you want to extract ogg file's in 緋想天or非想天則or幡紫竜, just drag these bgm archive into foobar2000's window
 (e.g th123b.dat th105b.dat music.ac6)
-Some sound card doesn't support play 神霊廟trial ghost mode in Kernel Streaming or WASAPI becuase the music is 22050Hz.
-You could add Resampler in DSP Manager or change the output to foobar2000 default.
+Some sound card doesn't support play 神霊廟's ghost mode in Kernel Streaming or WASAPI becuase the music is 22050Hz.
+You could add Resampler in DSP Manager or change the output to default.
+
 In foobar2000's playback menu, you'll see three new thbgm entry.
 （<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)
     Loop forever means BGM will always loop.
