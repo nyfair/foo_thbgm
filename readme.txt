@@ -25,19 +25,19 @@ Samidare (五月雨)
 Usage:
 Put foo_thbgm.dll to your foobar2000's components folder.
 Put thxml file to your game install folder.
-Open foobar2000, drag thxml file into foobar2000's window, then enjoy your life!
+Open foobar2000, drag thxml file into foobar2000's main window, then enjoy your life!
 
 Something you should know:
 If you want to extract ogg file's in 緋想天or非想天則or幡紫竜, just drag these bgm archive into foobar2000's window
 (e.g th123b.dat th105b.dat music.ac6), the extrated files will be created in current folder.
-Some sound card doesn't support play 神霊廟's ghost mode in Kernel Streaming or WASAPI becuase the music is 22050Hz.
-You could add resampler in DSP Manager or change the output to default.
+Some sound card doesn't support play 神霊廟's ghost mode in Kernel Streaming or WASAPI becuase the frequency is 22050Hz.
+You could add resampler in DSP Manager or change the output setting to default.
 
 In foobar2000's playback menu, you'll see three new thbgm entry.
 （<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)
     Loop forever means BGM will always loop.
     If you want to convert these BGM, don't forget to disable loop forever mode and set loop count to 1.
-    Read metadata will use foobar2000 to read real BGM file's tag instead of thxml,
+    Read metadata will use foobar2000 built-in splitter to read real BGM file's music tag instead of thxml,
     this will speed down the unpack speed, so it's not a preset option
 （<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)
 
@@ -65,7 +65,7 @@ add 萃夢想&黄昏酒場&稀翁玉 support
 add 神霊廟trial ghost mode support
 change tag file from cue to thxml
 0.3
-fix decode error in foobar2000 1.16
+fix decode error in foobar2000 1.1.6
 0.2
 add 紅魔郷 support
 0.1
