@@ -156,19 +156,20 @@ public:
 		}
 		
 		bool result = decoder->run(p_chunk, p_abort);
-		if(!needloop) {
-			return result;
-		} else {
+		if(needloop) {
 			t_size read_count = p_chunk.get_sample_count();
 			current_sample += read_count;
 			if(current_sample >= m_totallen || !result) {
 				double looptime = audio_math::samples_to_time(m_headlen, samplerate);
-				seek(looptime);
+				t_size redundant_sample = current_sample - m_totallen;
+				p_chunk.set_sample_count(read_count - redundant_sample);
+				p_chunk.set_data_size(read_count - redundant_sample * p_chunk.get_channel_count());
+				current_sample = m_headlen;
+				decoder->seek(audio_math::samples_to_time(m_offset + m_headlen, samplerate), p_abort);
 				if(!loopforever) current_loop++;
-				return run(p_chunk, p_abort);
 			}
-			return result;
 		}
+		return result;
 	}
 
 	void seek(double seconds) {
@@ -299,8 +300,8 @@ public:
 
 		p_info.meta_set("album", bgmlist[0]["album"].c_str());
 		p_info.meta_set("album artist", bgmlist[0]["albumartist"].c_str());
-		p_info.meta_set("title", title);
-		p_info.meta_set("artist", artist);
+		p_info.meta_set("title", bgmlist[p_subsong]["title"].c_str());
+		p_info.meta_set("artist", bgmlist[p_subsong]["artist"].c_str());
 		p_info.meta_set("tracknumber", pfc::format_int(p_subsong));
 		p_info.meta_set("totaltracks", totaltracks);
 	}
