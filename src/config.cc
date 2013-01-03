@@ -11,7 +11,7 @@ HFONT _hWndFont;
 char _szBuffer[256];
 UINT _nMaxLine = 5;
 UINT _nEditStyle = WS_BORDER | WS_CHILD | WS_VISIBLE |
-									ES_AUTOHSCROLL | ES_AUTOVSCROLL | ES_NUMBER;
+				ES_AUTOHSCROLL | ES_AUTOVSCROLL | ES_NUMBER;
 
 int WINAPI WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam) {
 	HDC hWndDc;
@@ -47,44 +47,44 @@ int WINAPI WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam) {
 										_hInstance,
 										0);
 			_hBtnCancel = ::CreateWindowExA(0,
-											"Button",
-											"Cancel(&C)",
-											WS_CHILD | WS_VISIBLE,
-											285,
-											30,
-											65,
-											20,
-											hWnd,
-											(HMENU)IDCANCEL,
-											_hInstance,
-											0);
+										"Button",
+										"Cancel(&C)",
+										WS_CHILD | WS_VISIBLE,
+										285,
+										30,
+										65,
+										20,
+										hWnd,
+										(HMENU)IDCANCEL,
+										_hInstance,
+										0);
 			_hEdit = ::CreateWindowExA(WS_EX_CLIENTEDGE,
-											"Edit",
-											"",
-											_nEditStyle,
-											5,
-											80,
-											350,
-											20,
-											hWnd,
-											(HMENU)2000,
-											_hInstance,
-											0);
+										"Edit",
+										"",
+										_nEditStyle,
+										5,
+										80,
+										350,
+										20,
+										hWnd,
+										(HMENU)2000,
+										_hInstance,
+										0);
 			::SendMessage(_hEdit, EM_SETLIMITTEXT, _nMaxLine, 0);
-			_hWndFont = ::CreateFont(12,
-									 6,
-									 0,
-									 0,
-									 12,
-									 0,
-									 0,
-									 0,
-									 DEFAULT_CHARSET,
-									 OUT_DEFAULT_PRECIS,
-									 CLIP_DEFAULT_PRECIS,
-									 DEFAULT_QUALITY,
-									 DEFAULT_PITCH,
-									 NULL);
+			_hWndFont =		::CreateFont(12,
+										 6,
+										 0,
+										 0,
+										 12,
+										 0,
+										 0,
+										 0,
+										 DEFAULT_CHARSET,
+										 OUT_DEFAULT_PRECIS,
+										 CLIP_DEFAULT_PRECIS,
+										 DEFAULT_QUALITY,
+										 DEFAULT_PITCH,
+										 NULL);
 			hWndDc = ::GetDC(hWnd);
 			::SelectObject(hWndDc, _hWndFont);
 			::ReleaseDC(hWnd,hWndDc);
@@ -121,28 +121,28 @@ HWND _CreateWindow(HINSTANCE hInst) {
 	WNDCLASSEXA st_WndClass;
 	HWND hWnd;
 	::RtlZeroMemory(&st_WndClass, sizeof(st_WndClass));
-	st_WndClass.cbSize				= sizeof(st_WndClass);
-	st_WndClass.hInstance			= hInst;
+	st_WndClass.cbSize			= sizeof(st_WndClass);
+	st_WndClass.hInstance		= hInst;
 	st_WndClass.hbrBackground	= (HBRUSH)COLOR_BTNSHADOW;
-	st_WndClass.hCursor				= LoadCursor(0, IDC_ARROW);
-	st_WndClass.hIcon					= LoadIcon(0, IDI_APPLICATION);
-	st_WndClass.hIconSm				= st_WndClass.hIcon;
+	st_WndClass.hCursor			= LoadCursor(0, IDC_ARROW);
+	st_WndClass.hIcon			= LoadIcon(0, IDI_APPLICATION);
+	st_WndClass.hIconSm			= st_WndClass.hIcon;
 	st_WndClass.lpfnWndProc		= (WNDPROC)&WndProc;
 	st_WndClass.lpszClassName	= "InputBox_Class";
-	st_WndClass.style					= CS_HREDRAW | CS_VREDRAW;
+	st_WndClass.style			= CS_HREDRAW | CS_VREDRAW;
 	::RegisterClassExA(&st_WndClass);
 	hWnd = ::CreateWindowExA(0,
-								"InputBox_Class",
-								" ",
-								WS_DLGFRAME | WS_SYSMENU | WS_VISIBLE,
-								CW_USEDEFAULT,
-								CW_USEDEFAULT,
-								365,
-								130,
-								_hParent,
-								0,
-								hInst,
-								0);
+							"InputBox_Class",
+							" ",
+							WS_DLGFRAME | WS_SYSMENU | WS_VISIBLE,
+							CW_USEDEFAULT,
+							CW_USEDEFAULT,
+							365,
+							130,
+							_hParent,
+							0,
+							hInst,
+							0);
 	return hWnd;
 }
 

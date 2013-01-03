@@ -4,7 +4,7 @@
 
 namespace unpack_ac6 {
 	struct AC6File {
-		t_uint32 pos;			// Position inside the archive
+		t_uint32 pos;		// Position inside the archive
 		t_uint32 insize;	// Encrypted file size
 		t_uint32 outsize;	// Decrypted file size
 	};
@@ -123,7 +123,7 @@ private:
 	}
 
 	void parse_archive(service_ptr_t<file> &m_file,
-										const char *p_archive, abort_callback &p_abort) {
+						const char *p_archive, abort_callback &p_abort) {
 		filesystem::g_open(m_file, p_archive, filesystem::open_mode_read, p_abort);
 		if(stricmp_utf8(current_archive, p_archive)) {
 			files.clear();
@@ -164,7 +164,7 @@ public:
 	}
 
 	virtual t_filestats get_stats_in_archive(const char *p_archive,
-											const char *p_file, abort_callback &p_abort) {
+							const char *p_file, abort_callback &p_abort) {
 		service_ptr_t<file> m_file;
 		filesystem::g_open(m_file, p_archive, filesystem::open_mode_read, p_abort);
 		t_filestats status(m_file->get_stats(p_abort));
@@ -174,7 +174,7 @@ public:
 	}
 
 	virtual void open_archive(service_ptr_t<file> &p_out,const char *p_archive,
-														const char *p_file, abort_callback &p_abort) {
+								const char *p_file, abort_callback &p_abort) {
 		if(stricmp_utf8(pfc::string_extension(p_archive), "ac6")) {
 			throw exception_io_data();
 		}

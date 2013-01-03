@@ -20,21 +20,18 @@
     <ClCompile Include="unpack_tasfro.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\thxmlparser.cc">
+    <ClCompile Include="config.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="config.cc">
+    <ClCompile Include="thxmlparser.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\mt.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\thxmlparser.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="thxmlparser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

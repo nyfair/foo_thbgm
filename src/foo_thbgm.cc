@@ -83,8 +83,7 @@ public:
 		return g_mainmenu_group_id;
 	}
 
-	bool get_display(t_uint32 p_index, pfc::string_base &p_text,
-									t_uint32 &p_flags) {
+	bool get_display(t_uint32 p_index, pfc::string_base &p_text, t_uint32 &p_flags) {
 		get_name(p_index, p_text);
 		switch(p_index) {
 			case loop_forever:
@@ -125,7 +124,7 @@ private:
 	bool first_packet;
 public:
 	void open(const char *p_path, t_input_open_reason p_reason,
-						bool isWave, abort_callback &p_abort) {
+				bool isWave, abort_callback &p_abort) {
 		m_file.release();
 		if(isWave) {
 			input_open_file_helper(m_file, p_path, p_reason, p_abort);
@@ -231,7 +230,7 @@ protected:
 
 public:
 	void open(file::ptr p_filehint, const char *p_path,
-						t_input_open_reason p_reason, abort_callback &p_abort) {
+				t_input_open_reason p_reason, abort_callback &p_abort) {
 		if(p_reason == input_open_info_write) {
 			throw exception_io_unsupported_format();
 		}
@@ -278,8 +277,7 @@ public:
 		return p_subsong;
 	}
 
-	void get_info(t_uint32 p_subsong, file_info &p_info,
-								abort_callback &p_abort) {
+	void get_info(t_uint32 p_subsong, file_info &p_info, abort_callback &p_abort) {
 		p_info.info_set_int("samplerate", samplerate);
 		p_info.info_set_int("channels", channels);
 		p_info.info_set_int("bitspersample", bits);
@@ -379,8 +377,9 @@ public:
 static mainmenu_commands_factory_t<mainmenu_loopsetting> loopsetting_factory;
 static input_factory_t<input_thxml> g_input_thbgm_factory;
 DECLARE_FILE_TYPE("Touhou-like BGM XML-Tag File", "*.thxml");
-DECLARE_COMPONENT_VERSION("ThBGM Player", "1.1", 
+DECLARE_COMPONENT_VERSION("ThBGM Player", "1.2", 
 "Play BGM files of Touhou and some related doujin games.\n\n"
 "If you have any feature request and bug report,\n"
 "feel free to contact me at my E-mail address below.\n\n"
+"http://code.google.com/p/foo-thbgm/issues/list\n"
 "(C) nyfair <nyfair2012@gmail.com>");

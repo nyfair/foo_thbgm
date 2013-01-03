@@ -1,1 +1,9 @@
-SDK/* 
+SDK/
+Release/
+Debug/
+src/Release/
+src/Debug/
+ipch/
+*.opensdf
+*.suo
+*.sdf
