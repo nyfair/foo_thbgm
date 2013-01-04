@@ -1,12 +1,18 @@
 ﻿Usage:
-Move foo_thbgm.dll to your foobar2000's components folder.
-Move thxml file to your game install folder.
-Open foobar2000, drag thxml file into foobar2000's main window, then enjoy your life!
+Move foo_thbgm.dll to your foobar2000's components directory.
+Move thxml file to your game's installation directory.
+Simply open thxml files by foobar2000, then enjoy your life!
 
 Something you should know:
-If you want to extract ogg file's in 緋想天or非想天則or幡紫竜, just drag these bgm archive into foobar2000's window
-(e.g th123b.dat th105b.dat music.ac6), the extrated files will be created in current folder.
-Some sound card doesn't support play 神霊廟's ghost mode in Kernel Streaming or WASAPI becuase the frequency is 22050Hz.
+Three new thbgm entries are added into foobar2000's playback menu.
+
+Loop forever means BGM will always loop. Don't forget to disable loop forever mode when converting these BGMs.
+Read metadata will use foobar2000 built-in splitter to read real BGM file's music tag instead of thxml. It's not a preset option since it will speed down unpack efficiency a lot.
+
+The plugin can also extract files from 緋想天or非想天則or幡紫竜's file archives, just drag these packages files into foobar2000's main window
+(e.g th123b.dat th105b.dat music.ac6), the extrated files will be created in a new folder under current path.
+
+Some sound cards don't support play 神霊廟's ghost mode in Kernel Streaming or WASAPI becuase the frequency is 22050Hz.
 You could add resampler in DSP Manager or change the output setting to default.
 
 Feature:
@@ -32,16 +38,6 @@ Uwabami Breakers (黄昏酒場)
 Kioh Gyoku (稀翁玉)
 Banshiryuu (幡紫竜) both c67 and later version
 Samidare (五月雨)
-
-In foobar2000's playback menu, you'll see three new thbgm entry.
-（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)
-    Loop forever means BGM will always loop.
-    If you want to convert these BGM, don't forget to disable loop forever mode and set loop count to 1.
-    Read metadata will use foobar2000 built-in splitter to read real BGM file's music tag instead of thxml,
-    this will speed down the unpack speed, so it's not a preset option
-（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)
-
-If you have any feature request or bug report, feel free to contact me at my E-mail address below.
 
 ChangeLog:
 1.1
@@ -71,6 +67,6 @@ add 紅魔郷 support
 0.1
 initial release, support all touhou stg games from 妖々夢 to 神霊廟trial
 
+For any feature request or bug report, feel free to contact me at my E-mail address below.
+
 (C) nyfair <nyfair2012@gmail.com>
-まどかの教会。The Church of Madoka.
-"Don't forget. Always, somewhere, someone is fighting for you. As long as you remember her, you are not alone." - Puella Magi Madoka Magica
