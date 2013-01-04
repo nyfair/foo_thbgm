@@ -179,16 +179,25 @@ public:
 		parse_archive(m_file, p_archive, p_abort);
 
 		pfc::string8 unpackdir = p_archive;
-		unpackdir.add_string("_unpack\\");
-		if(!filesystem::g_exists(unpackdir, p_abort))
-			filesystem::g_create_directory(unpackdir, p_abort);
+		unpackdir.add_string("_unpack");
 		std::map<pfc::string8, TASFROFile>::iterator it;
 		for(it = files.begin(); it != files.end(); it++) {
 			service_ptr_t<file> out;
 			pfc::string8 outfile = unpackdir;
 			pfc::string8 archive_path = it->first;
-			archive_path.replace_char('/', '_');
-			outfile.add_string(archive_path);
+			char directory[200];
+			strncpy(directory, archive_path.toString(), archive_path.length());
+
+			char *parts;
+			parts = strtok(directory, "/");
+			while(parts != NULL) {
+				outfile.add_string("\\");
+				if(!filesystem::g_exists(outfile, p_abort))
+					filesystem::g_create_directory(outfile, p_abort);
+				outfile.add_string(parts);
+				parts = strtok(NULL, "/");
+			} 
+
 			filesystem::g_open_write_new(out, outfile, p_abort);
 			pfc::array_t<char> buffer;
 			buffer.set_size(it->second.size);

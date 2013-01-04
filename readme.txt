@@ -1,4 +1,15 @@
-﻿Feature:
+﻿Usage:
+Move foo_thbgm.dll to your foobar2000's components folder.
+Move thxml file to your game install folder.
+Open foobar2000, drag thxml file into foobar2000's main window, then enjoy your life!
+
+Something you should know:
+If you want to extract ogg file's in 緋想天or非想天則or幡紫竜, just drag these bgm archive into foobar2000's window
+(e.g th123b.dat th105b.dat music.ac6), the extrated files will be created in current folder.
+Some sound card doesn't support play 神霊廟's ghost mode in Kernel Streaming or WASAPI becuase the frequency is 22050Hz.
+You could add resampler in DSP Manager or change the output setting to default.
+
+Feature:
 1. A-B loop for any audio format.
 2. Directly play bgm files of touhou and some related doujin games.
 
@@ -21,17 +32,6 @@ Uwabami Breakers (黄昏酒場)
 Kioh Gyoku (稀翁玉)
 Banshiryuu (幡紫竜) both c67 and later version
 Samidare (五月雨)
-
-Usage:
-Put foo_thbgm.dll to your foobar2000's components folder.
-Put thxml file to your game install folder.
-Open foobar2000, drag thxml file into foobar2000's main window, then enjoy your life!
-
-Something you should know:
-If you want to extract ogg file's in 緋想天or非想天則or幡紫竜, just drag these bgm archive into foobar2000's window
-(e.g th123b.dat th105b.dat music.ac6), the extrated files will be created in current folder.
-Some sound card doesn't support play 神霊廟's ghost mode in Kernel Streaming or WASAPI becuase the frequency is 22050Hz.
-You could add resampler in DSP Manager or change the output setting to default.
 
 In foobar2000's playback menu, you'll see three new thbgm entry.
 （<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)（<ゝω·）~☆Kira)
