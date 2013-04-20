@@ -116,8 +116,6 @@
     <ClCompile Include="thxmlparser.cc" />
     <ClCompile Include="config.cc" />
     <ClCompile Include="foo_thbgm.cc" />
-    <ClCompile Include="unpack_ac6.cc" />
-    <ClCompile Include="unpack_tasfro.cc" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="thxmlparser.h" />

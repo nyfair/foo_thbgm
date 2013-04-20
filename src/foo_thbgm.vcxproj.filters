@@ -14,12 +14,6 @@
     <ClCompile Include="foo_thbgm.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="unpack_ac6.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="unpack_tasfro.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="config.cc">
       <Filter>Source Files</Filter>
     </ClCompile>

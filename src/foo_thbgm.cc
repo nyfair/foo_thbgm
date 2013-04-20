@@ -1,3 +1,6 @@
+#include "SDK/foobar2000.h"
+#include "helpers/helpers.h"
+
 #include <map>
 #include <string>
 #include <vector>
@@ -6,6 +9,12 @@ using namespace std;
 #include "config.h"
 
 #define needloop (loopforever || current_loop < loopcount)
+static mainmenu_group_factory g_mainmenu_group(g_mainmenu_group_id, 
+	mainmenu_groups::playback, mainmenu_commands::sort_priority_dontcare);
+static cfg_bool loopforever(cfg_loop_forever, true);
+static cfg_uint loopcount(cfg_loop_count, 1);
+static cfg_bool read_thbgm_info(cfg_thbgm_readinfo, false);
+static cfg_bool dump_thbgm(cfg_thbgm_dump, false);
 
 const t_uint32 deltaread = 1024;
 double seek_seconds;
@@ -182,6 +191,434 @@ public:
 		current_sample = audio_math::time_to_samples(seconds, samplerate);
 		seek_seconds = seconds;
 		first_packet = true;
+	}
+};
+
+namespace unpack_ac6 {
+	struct AC6File {
+		t_uint32 pos;		// Position inside the archive
+		t_uint32 insize;	// Encrypted file size
+		t_uint32 outsize;	// Decrypted file size
+	};
+	const t_uint32 CP1_SIZE = 0x102;
+	const t_uint32 CP2_SIZE = 0x400;
+	std::map<pfc::string8, AC6File> ac6files;
+	pfc::string8 ac6archive;
+}
+using namespace unpack_ac6;
+
+class archive_ac6 : public archive_impl {
+private:
+	t_uint32 filecount;
+	t_uint32 pool1[CP1_SIZE];
+	t_uint32 pool2[CP2_SIZE];
+
+	inline t_uint32 swap_endian(const t_uint32 &x) {
+		return ((x & 0x000000ff) << 24) |
+				((x & 0x0000ff00) << 8) |
+				((x & 0x00ff0000) >> 8) |
+				((x & 0xff000000) >> 24);
+	}
+
+	void cryptstep(t_uint32 &ecx) {
+		static const t_uint32 cmp = (CP1_SIZE - 1);
+
+		pool2[ecx]++;
+		ecx++;
+		while(ecx <= cmp) {
+			pool1[ecx]++;
+			ecx++;
+		}
+		if(pool1[cmp] < 0x10000) return;
+
+		pool1[0] = 0;
+		for(int i = 0; i < cmp; i++) {
+			pool2[i] = (pool2[i] | 2) >> 1;
+			pool1[i + 1] = pool1[i] + pool2[i];
+		}
+		return;
+	}
+
+	bool decrypt(char *dest, const t_uint32 &destsize,
+				const char *source, const t_uint32 &sourcesize) {
+		t_uint32 ebx = 0, ecx, edi, esi, edx;
+		t_uint32 cryptval[2];
+		t_uint32 s = 4, d = 0;	// source and destination bytes
+
+		for(int i = 0; i < CP1_SIZE; i++) pool1[i] = i;
+		for(int i = 0; i < CP2_SIZE; i++) pool2[i] = 1;
+	
+		edi = swap_endian(*(t_uint32*)source);
+		esi = 0xFFFFFFFF;
+	
+		while(1) {
+			edx = 0x100;
+			cryptval[0] = esi / pool1[0x101];
+			cryptval[1] = (edi - ebx) / cryptval[0];
+			ecx = 0x80;
+			esi = 0;
+
+			while(1) {
+				while((ecx != 0x100) && (pool1[ecx] > cryptval[1])) {
+					ecx--;
+					edx = ecx;
+					ecx = (esi+ecx) >> 1;
+				}
+				if(cryptval[1] < pool1[ecx+1]) break;
+				esi = ecx+1;
+				ecx = (esi+edx) >> 1;
+			}
+
+			*(dest + d) = (char)ecx;
+			if(++d >= destsize) return true;
+			esi = (long)pool2[ecx] * (long)cryptval[0];
+			ebx += pool1[ecx] * cryptval[0];
+			cryptstep(ecx);
+			ecx = (ebx + esi) ^ ebx;
+
+			while(!(ecx & 0xFF000000)) {
+				ebx = ebx << 8;
+				esi = esi << 8;
+				edi = edi << 8;
+				ecx = (ebx+esi) ^ ebx;
+				edi += *(source + s) & 0x000000FF;
+				if(++s >= sourcesize) return true;
+			}
+		
+			while(esi < 0x10000) {
+				esi = 0x10000 - (ebx & 0x0000FFFF);
+				ebx = ebx << 8;
+				esi = esi << 8;
+				edi = edi << 8;
+				edi += *(source + s) & 0x000000FF;
+				if(++s >= sourcesize) return true;
+			}
+		}
+	}
+
+	char* getfileinfo(char *source) {
+		AC6File dest;
+		pfc::string8 name;
+		char *t = source;
+		if(*t = '/') t++;	// Jump over directory slash
+		t_uint32 fnlen = strlen(t) + 1;
+		name.add_string(t, fnlen);
+		t += fnlen;
+		memcpy(&dest.insize, t, 4);
+		t += 4;
+		memcpy(&dest.outsize, t, 4);
+		t += 4;
+		memcpy(&dest.pos, t, 4);
+		t += 8;
+		ac6files[name] = dest;
+		return t;
+	}
+
+	void parse_archive(service_ptr_t<file> &m_file,
+			const char *p_archive, abort_callback &p_abort) {
+		filesystem::g_open(m_file, p_archive, filesystem::open_mode_read, p_abort);
+		if(stricmp_utf8(ac6archive, p_archive)) {
+			ac6files.clear();
+			ac6archive = p_archive;
+			char sig[4];
+			m_file->read_object_t(sig, p_abort);
+			if(memcmp(sig, "PBG6", 4)) throw exception_io_data();
+
+			t_uint32 toc_start, toc_size;
+			char *t;
+			t_uint32 toc_insize = m_file->get_size(p_abort);
+			m_file->read(&toc_start, 4, p_abort);
+			m_file->read(&toc_size, 4, p_abort);
+			m_file->seek(toc_start, p_abort);
+			toc_insize -= toc_start;
+
+			pfc::array_t<char> toc, toc_crypt;
+			toc_crypt.set_size(toc_insize);
+			toc.set_size(toc_size);
+			m_file->read(toc_crypt.get_ptr(), toc_insize, p_abort);
+			decrypt(toc.get_ptr(), toc_size, toc_crypt.get_ptr(), toc_insize);
+			memcpy(&filecount, toc.get_ptr(), 4);
+			t = toc.get_ptr() + 4;
+
+			for(t_uint32 i = 0; i < filecount; i++) {
+				t = getfileinfo(t);
+			}
+		}
+
+		if(dump_thbgm) {
+			pfc::string8 unpackdir = p_archive;
+			unpackdir.add_string("_unpack\\");
+			if(!filesystem::g_exists(unpackdir, p_abort))
+				filesystem::g_create_directory(unpackdir, p_abort);
+			std::map<pfc::string8, AC6File>::iterator it;
+			for(it = ac6files.begin(); it != ac6files.end(); it++) {
+				service_ptr_t<file> out;
+				pfc::string8 outfile = unpackdir;
+				outfile.add_string(it->first);
+				filesystem::g_open_write_new(out, outfile, p_abort);
+				pfc::array_t<char> enc, dec;
+				enc.set_size(it->second.insize);
+				dec.set_size(it->second.outsize);
+				m_file->seek(it->second.pos, p_abort);
+				m_file->read(enc.get_ptr(), it->second.insize, p_abort);
+				decrypt(dec.get_ptr(), it->second.outsize,
+					enc.get_ptr(), it->second.insize);
+				out->write(dec.get_ptr(), it->second.outsize, p_abort);
+			}
+			dump_thbgm = false;
+		}
+	}
+
+public:
+	virtual bool supports_content_types() {
+		return false;
+	}
+
+	virtual const char* get_archive_type() {
+		return "ac6";
+	}
+
+	virtual t_filestats get_stats_in_archive(const char *p_archive,
+				const char *p_file, abort_callback &p_abort) {
+		service_ptr_t<file> m_file;
+		filesystem::g_open(m_file, p_archive, filesystem::open_mode_read, p_abort);
+		t_filestats status(m_file->get_stats(p_abort));
+		std::map<pfc::string8, AC6File>::iterator it = ac6files.find(p_file);
+		status.m_size = (it == ac6files.end()) ? 0 : it->second.outsize;
+		return status;
+	}
+
+	virtual void open_archive(service_ptr_t<file> &p_out, const char *p_archive,
+				const char *p_file, abort_callback &p_abort) {
+		if(stricmp_utf8(pfc::string_extension(p_archive), "ac6")) {
+			throw exception_io_data();
+		}
+		service_ptr_t<file> m_file;
+		parse_archive(m_file, p_archive, p_abort);
+
+		filesystem::g_open_tempmem(p_out, p_abort);
+		pfc::array_t<char> enc, dec;
+		enc.set_size(ac6files[p_file].insize);
+		dec.set_size(ac6files[p_file].outsize);
+		m_file->seek(ac6files[p_file].pos, p_abort);
+		m_file->read(enc.get_ptr(), ac6files[p_file].insize, p_abort);
+		decrypt(dec.get_ptr(), ac6files[p_file].outsize,
+			enc.get_ptr(), ac6files[p_file].insize);
+		p_out->write(dec.get_ptr(), ac6files[p_file].outsize, p_abort);
+	}
+
+	virtual void archive_list(const char *p_archive,
+				const service_ptr_t<file> &p_out,
+				archive_callback &p_abort, bool p_want_readers) {
+		throw exception_io_data();
+	}
+};
+
+// Mersenne Twister
+class RNG_MT {
+private:
+  enum {
+    N = 624,
+    M = 397,
+    MATRIX_A = 0x9908b0dfUL,
+    UPPER_MASK = 0x80000000UL,
+    LOWER_MASK = 0x7FFFFFFFUL
+  };
+
+private:
+  unsigned int mt[N];
+  int mti;
+
+public:
+  explicit RNG_MT(unsigned int s) {
+    init(s);
+  }
+
+  void init(unsigned int s) {
+    mt[0] = s;
+    for(mti = 1; mti < N; ++mti) {
+      mt[mti] =
+        (1812433253UL * (mt[mti-1] ^ (mt[mti-1] >> 30)) + mti);
+    }
+  }
+
+  unsigned int next_int32() {
+    unsigned int y;
+    static const unsigned int mag01[2]={0x0UL, MATRIX_A};
+    if (mti >= N) {
+      int kk;
+      if (mti == N+1)
+          init(5489UL);
+
+      for (kk=0;kk<N-M;kk++) {
+        y = (mt[kk]&UPPER_MASK)|(mt[kk+1]&LOWER_MASK);
+        mt[kk] = mt[kk+M] ^ (y >> 1) ^ mag01[y & 0x1UL];
+      }
+      for (;kk<N-1;kk++) {
+        y = (mt[kk]&UPPER_MASK)|(mt[kk+1]&LOWER_MASK);
+        mt[kk] = mt[kk+(M-N)] ^ (y >> 1) ^ mag01[y & 0x1UL];
+      }
+      y = (mt[N-1]&UPPER_MASK)|(mt[0]&LOWER_MASK);
+      mt[N-1] = mt[M-1] ^ (y >> 1) ^ mag01[y & 0x1UL];
+
+      mti = 0;
+    }
+  
+    y = mt[mti++];
+
+    /* Tempering */
+    y ^= (y >> 11);
+    y ^= (y << 7) & 0x9d2c5680UL;
+    y ^= (y << 15) & 0xefc60000UL;
+    y ^= (y >> 18);
+
+    return y;
+  }
+};
+
+namespace unpack_tasfro {
+	struct TASFROFile {
+		t_uint32 pos;		// Position inside the archive
+		t_uint32 size;		// File size
+	};
+	std::map<pfc::string8, TASFROFile> tasfrofiles;
+	pfc::string8 tasfroarchive;
+	t_uint16 filecount;
+}
+using namespace unpack_tasfro;
+
+class archive_tasfro : public archive_impl {
+private:
+	bool decrypt(char *head, t_uint32 headsize, t_uint32 archivesize) {
+		char *t = head;
+		t_uint32 offset = 0;
+		for(t_uint16 i = 0; i < filecount; ++i) {
+			TASFROFile dest;
+			memcpy(&dest.pos, t, 4);
+			t += 4;
+			memcpy(&dest.size, t, 4);
+			t += 4;
+			t_uint8 name_len = *t;
+			t++;
+			if(offset + 9 + name_len > archivesize) return false;
+			pfc::string8 name(t, name_len);
+			tasfrofiles[name] = dest;
+			t += name_len;
+			offset += 9 + name_len;
+			if(dest.pos < headsize + 6 || dest.pos > archivesize) return false;
+			if(dest.size > archivesize - dest.pos) return false;
+		}
+		return true;
+	}
+
+	void parse_archive(service_ptr_t<file> &m_file, const char *p_archive,
+				abort_callback &p_abort) {
+		filesystem::g_open(m_file, p_archive, filesystem::open_mode_read, p_abort);
+		if(stricmp_utf8(tasfroarchive, p_archive)) {
+			tasfrofiles.clear();
+			tasfroarchive = p_archive;
+			t_filesize archivesize = m_file->get_size(p_abort);
+			if(archivesize < 6) throw exception_io_data();
+			t_uint32 headsize;
+			m_file->read_object_t(filecount, p_abort);
+			m_file->read_object_t(headsize, p_abort);
+			if(filecount == 0 || headsize == 0 || archivesize < 6 + headsize) 
+				throw exception_io_data();
+
+			pfc::array_t<char> head;
+			head.set_size(headsize);
+			m_file->read(head.get_ptr(), headsize, p_abort);
+			RNG_MT mt(headsize + 6);
+			for(t_uint32 i = 0; i < headsize; ++i)
+				head[i] ^= mt.next_int32() & 0xFF;
+
+			if(!decrypt(head.get_ptr(), headsize, archivesize)) {
+				tasfrofiles.clear();
+				t_uint8 k = 0xC5, t = 0x83;
+				for(t_uint32 i = 0; i < headsize; ++i) {
+					head[i] ^= k; k += t; t += 0x53;
+				}
+				if(!decrypt(head.get_ptr(), headsize, archivesize))
+					throw exception_io_data();
+			}
+		}
+
+		if(dump_thbgm) {
+			pfc::string8 unpackdir = p_archive;
+			unpackdir.add_string("_unpack");
+			std::map<pfc::string8, TASFROFile>::iterator it;
+			for(it = tasfrofiles.begin(); it != tasfrofiles.end(); it++) {
+				service_ptr_t<file> out;
+				pfc::string8 outfile = unpackdir;
+				pfc::string8 archive_path = it->first;
+				char directory[255];
+				strncpy(directory, archive_path.toString(), archive_path.length());
+
+				char *parts;
+				directory[archive_path.length()] = 0;
+				parts = strtok(directory, "/");
+				while(parts != NULL) {
+					outfile.add_string("\\");
+					if(!filesystem::g_exists(outfile, p_abort))
+						filesystem::g_create_directory(outfile, p_abort);
+					outfile.add_string(parts);
+					parts = strtok(NULL, "/");
+				} 
+
+				filesystem::g_open_write_new(out, outfile, p_abort);
+				pfc::array_t<char> buffer;
+				buffer.set_size(it->second.size);
+				m_file->seek(it->second.pos, p_abort);
+				m_file->read(buffer.get_ptr(), it->second.size, p_abort);
+				t_uint8 k = (it->second.pos >> 1) | 0x23;
+				for(t_uint32 i = 0; i < it->second.size; ++i) buffer[i] ^= k;
+				out->write(buffer.get_ptr(), it->second.size, p_abort);
+			}
+			dump_thbgm = false;
+		}
+	}
+
+public:
+	virtual bool supports_content_types() {
+		return false;
+	}
+
+	virtual const char* get_archive_type() {
+		return "tasfro";
+	}
+
+	virtual t_filestats get_stats_in_archive(const char *p_archive,
+				const char *p_file, abort_callback &p_abort) {
+		service_ptr_t<file> m_file;
+		filesystem::g_open(m_file, p_archive, filesystem::open_mode_read, p_abort);
+		t_filestats status(m_file->get_stats(p_abort));
+		std::map<pfc::string8, TASFROFile>::iterator it = tasfrofiles.find(p_file);
+		status.m_size = (it == tasfrofiles.end()) ? 0 : it->second.size;
+		return status;
+	}
+
+	virtual void open_archive(service_ptr_t<file> &p_out, const char *p_archive,
+				const char *p_file, abort_callback &p_abort) {
+		if(stricmp_utf8(pfc::string_extension(p_archive), "dat")) {
+			throw exception_io_data();
+		}
+		service_ptr_t<file> m_file;
+		parse_archive(m_file, p_archive, p_abort);
+
+		filesystem::g_open_tempmem(p_out, p_abort);
+		pfc::array_t<char> buffer;
+		buffer.set_size(tasfrofiles[p_file].size);
+		m_file->seek(tasfrofiles[p_file].pos, p_abort);
+		m_file->read(buffer.get_ptr(), tasfrofiles[p_file].size, p_abort);
+		t_uint8 k = (tasfrofiles[p_file].pos >> 1) | 0x23;
+		for(t_uint32 i = 0; i < tasfrofiles[p_file].size; ++i) buffer[i] ^= k;
+		p_out->write(buffer.get_ptr(), tasfrofiles[p_file].size, p_abort);
+	}
+
+	virtual void archive_list(const char *p_archive,
+				const service_ptr_t<file> &p_out,
+				archive_callback &p_abort, bool p_want_readers) {
+		throw exception_io_data();
 	}
 };
 
@@ -465,6 +902,8 @@ public:
 
 static mainmenu_commands_factory_t<mainmenu_loopsetting> loopsetting_factory;
 static input_factory_t<input_thxml> g_input_thbgm_factory;
+static archive_factory_t<archive_ac6> g_archive_ac6_factory;
+static archive_factory_t<archive_tasfro> g_archive_tasfro_factory;
 static archive_factory_t<raw_binary> g_raw_binary_factory;
 
 DECLARE_FILE_TYPE("Touhou-like BGM XML-Tag File", "*.thxml");

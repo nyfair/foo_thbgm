@@ -1,6 +1,3 @@
-#include "SDK/foobar2000.h"
-#include "helpers/helpers.h"
-
 static const GUID g_mainmenu_group_id = { 0xb95da62d, 0x74fe, 0x49b9, 
 	{ 0xba, 0x8a, 0x9d, 0xf3, 0x70, 0xa, 0xf8, 0x22 } };
 static const GUID guid_loop_forever = { 0xf69ffc15, 0x217e, 0x4927,
@@ -21,10 +18,3 @@ static const GUID guid_thbgm_dump = { 0x1a908410, 0xa5d2, 0x11e2,
 	{ 0x9e, 0x96, 0x8, 0x0, 0x20, 0x0c, 0x9a, 0x66 } };
 
 char *_InputBox(char *lpWndMsg);
-
-static mainmenu_group_factory g_mainmenu_group(g_mainmenu_group_id, 
-	mainmenu_groups::playback, mainmenu_commands::sort_priority_dontcare);
-static cfg_bool loopforever(cfg_loop_forever, true);
-static cfg_uint loopcount(cfg_loop_count, 1);
-static cfg_bool read_thbgm_info(cfg_thbgm_readinfo, false);
-static cfg_bool dump_thbgm(cfg_thbgm_dump, false);
