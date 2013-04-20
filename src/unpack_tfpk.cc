@@ -1,6 +1,5 @@
-#include "SDK/foobar2000.h"
-
 #include <map>
+#include "config.h"
 
 namespace unpack_tfpk {
 	struct TFPKFile {
@@ -45,8 +44,6 @@ public:
 		service_ptr_t<file> m_file;
 		filesystem::g_open(m_file, p_archive, filesystem::open_mode_read, p_abort);
 		t_filestats status(m_file->get_stats(p_abort));
-		std::map<pfc::string8, tfpkFile>::iterator it = files.find(p_file);
-		status.m_size = (it == files.end()) ? 0 : it->second.size;
 		return status;
 	}
 

@@ -1,6 +1,5 @@
-#include "SDK/foobar2000.h"
-
 #include <map>
+#include "config.h"
 
 namespace unpack_ac6 {
 	struct AC6File {
@@ -11,7 +10,7 @@ namespace unpack_ac6 {
 	const t_uint32 CP1_SIZE = 0x102;
 	const t_uint32 CP2_SIZE = 0x400;
 	std::map<pfc::string8, AC6File> files;
-	pfc::string8 current_archive;
+	pfc::string8 ac6archive;
 }
 using namespace unpack_ac6;
 
@@ -48,7 +47,7 @@ private:
 	}
 
 	bool decrypt(char *dest, const t_uint32 &destsize,
-								const char *source, const t_uint32 &sourcesize) {
+				const char *source, const t_uint32 &sourcesize) {
 		t_uint32 ebx = 0, ecx, edi, esi, edx;
 		t_uint32 cryptval[2];
 		t_uint32 s = 4, d = 0;	// source and destination bytes
@@ -123,11 +122,11 @@ private:
 	}
 
 	void parse_archive(service_ptr_t<file> &m_file,
-						const char *p_archive, abort_callback &p_abort) {
+			const char *p_archive, abort_callback &p_abort) {
 		filesystem::g_open(m_file, p_archive, filesystem::open_mode_read, p_abort);
-		if(stricmp_utf8(current_archive, p_archive)) {
+		if(stricmp_utf8(ac6archive, p_archive)) {
 			files.clear();
-			current_archive = p_archive;
+			ac6archive = p_archive;
 			char sig[4];
 			m_file->read_object_t(sig, p_abort);
 			if(memcmp(sig, "PBG6", 4)) throw exception_io_data();
@@ -152,6 +151,29 @@ private:
 				t = getfileinfo(t);
 			}
 		}
+
+		if(dump_thbgm) {
+			pfc::string8 unpackdir = p_archive;
+			unpackdir.add_string("_unpack\\");
+			if(!filesystem::g_exists(unpackdir, p_abort))
+				filesystem::g_create_directory(unpackdir, p_abort);
+			std::map<pfc::string8, AC6File>::iterator it;
+			for(it = files.begin(); it != files.end(); it++) {
+				service_ptr_t<file> out;
+				pfc::string8 outfile = unpackdir;
+				outfile.add_string(it->first);
+				filesystem::g_open_write_new(out, outfile, p_abort);
+				pfc::array_t<char> enc, dec;
+				enc.set_size(it->second.insize);
+				dec.set_size(it->second.outsize);
+				m_file->seek(it->second.pos, p_abort);
+				m_file->read(enc.get_ptr(), it->second.insize, p_abort);
+				decrypt(dec.get_ptr(), it->second.outsize,
+					enc.get_ptr(), it->second.insize);
+				out->write(dec.get_ptr(), it->second.outsize, p_abort);
+			}
+			dump_thbgm = false;
+		}
 	}
 
 public:
@@ -164,7 +186,7 @@ public:
 	}
 
 	virtual t_filestats get_stats_in_archive(const char *p_archive,
-							const char *p_file, abort_callback &p_abort) {
+				const char *p_file, abort_callback &p_abort) {
 		service_ptr_t<file> m_file;
 		filesystem::g_open(m_file, p_archive, filesystem::open_mode_read, p_abort);
 		t_filestats status(m_file->get_stats(p_abort));
@@ -173,8 +195,8 @@ public:
 		return status;
 	}
 
-	virtual void open_archive(service_ptr_t<file> &p_out,const char *p_archive,
-								const char *p_file, abort_callback &p_abort) {
+	virtual void open_archive(service_ptr_t<file> &p_out, const char *p_archive,
+				const char *p_file, abort_callback &p_abort) {
 		if(stricmp_utf8(pfc::string_extension(p_archive), "ac6")) {
 			throw exception_io_data();
 		}
@@ -193,33 +215,9 @@ public:
 	}
 
 	virtual void archive_list(const char *p_archive,
-							const service_ptr_t<file> &p_out,
-							archive_callback &p_abort, bool p_want_readers) {
-		if(stricmp_utf8(pfc::string_extension(p_archive), "ac6")) {
-			throw exception_io_data();
-		}
-		service_ptr_t<file> m_file;
-		parse_archive(m_file, p_archive, p_abort);
-
-		pfc::string8 unpackdir = p_archive;
-		unpackdir.add_string("_unpack\\");
-		if(!filesystem::g_exists(unpackdir, p_abort))
-			filesystem::g_create_directory(unpackdir, p_abort);
-		std::map<pfc::string8, AC6File>::iterator it;
-		for(it = files.begin(); it != files.end(); it++) {
-			service_ptr_t<file> out;
-			pfc::string8 outfile = unpackdir;
-			outfile.add_string(it->first);
-			filesystem::g_open_write_new(out, outfile, p_abort);
-			pfc::array_t<char> enc, dec;
-			enc.set_size(it->second.insize);
-			dec.set_size(it->second.outsize);
-			m_file->seek(it->second.pos, p_abort);
-			m_file->read(enc.get_ptr(), it->second.insize, p_abort);
-			decrypt(dec.get_ptr(), it->second.outsize,
-				enc.get_ptr(), it->second.insize);
-			out->write(dec.get_ptr(), it->second.outsize, p_abort);
-		}
+				const service_ptr_t<file> &p_out,
+				archive_callback &p_abort, bool p_want_readers) {
+		throw exception_io_data();
 	}
 };
 

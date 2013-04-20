@@ -1,3 +1,6 @@
+#include "SDK/foobar2000.h"
+#include "helpers/helpers.h"
+
 static const GUID g_mainmenu_group_id = { 0xb95da62d, 0x74fe, 0x49b9, 
 	{ 0xba, 0x8a, 0x9d, 0xf3, 0x70, 0xa, 0xf8, 0x22 } };
 static const GUID guid_loop_forever = { 0xf69ffc15, 0x217e, 0x4927,
@@ -12,5 +15,16 @@ static const GUID guid_thbgm_readinfo ={ 0xd6e4490a, 0xd49, 0x4c22,
 	{ 0x95, 0x57, 0x8, 0xd9, 0xe6, 0x4f, 0x8d, 0x80 } };
 static const GUID cfg_thbgm_readinfo =  { 0x26439faf, 0xe1f3, 0x4bdf,
 	{ 0xb4, 0xda, 0x59, 0x7, 0x1d, 0x9d, 0x8c, 0xf5 } };
+static const GUID cfg_thbgm_dump = { 0xbb8dda80, 0xa5d1, 0x11e2,
+	{ 0x9e, 0x96, 0x8, 0x0, 0x20, 0x0c, 0x9a, 0x66 } };
+static const GUID guid_thbgm_dump = { 0x1a908410, 0xa5d2, 0x11e2,
+	{ 0x9e, 0x96, 0x8, 0x0, 0x20, 0x0c, 0x9a, 0x66 } };
 
 char *_InputBox(char *lpWndMsg);
+
+static mainmenu_group_factory g_mainmenu_group(g_mainmenu_group_id, 
+	mainmenu_groups::playback, mainmenu_commands::sort_priority_dontcare);
+static cfg_bool loopforever(cfg_loop_forever, true);
+static cfg_uint loopcount(cfg_loop_count, 1);
+static cfg_bool read_thbgm_info(cfg_thbgm_readinfo, false);
+static cfg_bool dump_thbgm(cfg_thbgm_dump, false);

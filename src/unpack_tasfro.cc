@@ -1,6 +1,5 @@
-#include "SDK/foobar2000.h"
-
 #include <map>
+#include "config.h"
 
 // Mersenne Twister
 class RNG_MT {
@@ -70,7 +69,7 @@ namespace unpack_tasfro {
 		t_uint32 size;		// File size
 	};
 	std::map<pfc::string8, TASFROFile> files;
-	pfc::string8 current_archive;
+	pfc::string8 tasfroarchive;
 	t_uint16 filecount;
 }
 using namespace unpack_tasfro;
@@ -100,11 +99,11 @@ private:
 	}
 
 	void parse_archive(service_ptr_t<file> &m_file, const char *p_archive,
-						abort_callback &p_abort) {
+				abort_callback &p_abort) {
 		filesystem::g_open(m_file, p_archive, filesystem::open_mode_read, p_abort);
-		if(stricmp_utf8(current_archive, p_archive)) {
+		if(stricmp_utf8(tasfroarchive, p_archive)) {
 			files.clear();
-			current_archive = p_archive;
+			tasfroarchive = p_archive;
 			t_filesize archivesize = m_file->get_size(p_abort);
 			if(archivesize < 6) throw exception_io_data();
 			t_uint32 headsize;
@@ -130,6 +129,40 @@ private:
 					throw exception_io_data();
 			}
 		}
+
+		if(dump_thbgm) {
+			pfc::string8 unpackdir = p_archive;
+			unpackdir.add_string("_unpack");
+			std::map<pfc::string8, TASFROFile>::iterator it;
+			for(it = files.begin(); it != files.end(); it++) {
+				service_ptr_t<file> out;
+				pfc::string8 outfile = unpackdir;
+				pfc::string8 archive_path = it->first;
+				char directory[255];
+				strncpy(directory, archive_path.toString(), archive_path.length());
+
+				char *parts;
+				directory[archive_path.length()] = 0;
+				parts = strtok(directory, "/");
+				while(parts != NULL) {
+					outfile.add_string("\\");
+					if(!filesystem::g_exists(outfile, p_abort))
+						filesystem::g_create_directory(outfile, p_abort);
+					outfile.add_string(parts);
+					parts = strtok(NULL, "/");
+				} 
+
+				filesystem::g_open_write_new(out, outfile, p_abort);
+				pfc::array_t<char> buffer;
+				buffer.set_size(it->second.size);
+				m_file->seek(it->second.pos, p_abort);
+				m_file->read(buffer.get_ptr(), it->second.size, p_abort);
+				t_uint8 k = (it->second.pos >> 1) | 0x23;
+				for(t_uint32 i = 0; i < it->second.size; ++i) buffer[i] ^= k;
+				out->write(buffer.get_ptr(), it->second.size, p_abort);
+			}
+			dump_thbgm = false;
+		}
 	}
 
 public:
@@ -151,8 +184,8 @@ public:
 		return status;
 	}
 
-	virtual void open_archive(service_ptr_t<file> &p_out,const char *p_archive,
-						const char *p_file, abort_callback &p_abort) {
+	virtual void open_archive(service_ptr_t<file> &p_out, const char *p_archive,
+				const char *p_file, abort_callback &p_abort) {
 		if(stricmp_utf8(pfc::string_extension(p_archive), "dat")) {
 			throw exception_io_data();
 		}
@@ -170,43 +203,9 @@ public:
 	}
 
 	virtual void archive_list(const char *p_archive,
-							const service_ptr_t<file> &p_out,
-							archive_callback &p_abort, bool p_want_readers) {
-		if(stricmp_utf8(pfc::string_extension(p_archive), "dat")) {
-			throw exception_io_data();
-		}
-		service_ptr_t<file> m_file;
-		parse_archive(m_file, p_archive, p_abort);
-
-		pfc::string8 unpackdir = p_archive;
-		unpackdir.add_string("_unpack");
-		std::map<pfc::string8, TASFROFile>::iterator it;
-		for(it = files.begin(); it != files.end(); it++) {
-			service_ptr_t<file> out;
-			pfc::string8 outfile = unpackdir;
-			pfc::string8 archive_path = it->first;
-			char directory[200];
-			strncpy(directory, archive_path.toString(), archive_path.length());
-
-			char *parts;
-			parts = strtok(directory, "/");
-			while(parts != NULL) {
-				outfile.add_string("\\");
-				if(!filesystem::g_exists(outfile, p_abort))
-					filesystem::g_create_directory(outfile, p_abort);
-				outfile.add_string(parts);
-				parts = strtok(NULL, "/");
-			} 
-
-			filesystem::g_open_write_new(out, outfile, p_abort);
-			pfc::array_t<char> buffer;
-			buffer.set_size(it->second.size);
-			m_file->seek(it->second.pos, p_abort);
-			m_file->read(buffer.get_ptr(), it->second.size, p_abort);
-			t_uint8 k = (it->second.pos >> 1) | 0x23;
-			for(t_uint32 i = 0; i < it->second.size; ++i) buffer[i] ^= k;
-			out->write(buffer.get_ptr(), it->second.size, p_abort);
-		}
+				const service_ptr_t<file> &p_out,
+				archive_callback &p_abort, bool p_want_readers) {
+		throw exception_io_data();
 	}
 };
 

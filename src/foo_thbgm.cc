@@ -1,6 +1,3 @@
-#include "SDK/foobar2000.h"
-#include "helpers/helpers.h"
-
 #include <map>
 #include <string>
 #include <vector>
@@ -9,12 +6,6 @@ using namespace std;
 #include "config.h"
 
 #define needloop (loopforever || current_loop < loopcount)
-
-static mainmenu_group_factory g_mainmenu_group(g_mainmenu_group_id, 
-	mainmenu_groups::playback, mainmenu_commands::sort_priority_dontcare);
-static cfg_bool loopforever(cfg_loop_forever, true);
-static cfg_uint loopcount(cfg_loop_count, 1);
-static cfg_bool read_thbgm_info(cfg_thbgm_readinfo, false);
 
 const t_uint32 deltaread = 1024;
 double seek_seconds;
@@ -26,6 +17,8 @@ t_filesize m_looplen;
 t_filesize m_totallen;
 t_filesize current_sample;
 t_uint32 current_loop;
+t_filesize internaloffset;
+t_filesize internalsize;
 
 class mainmenu_loopsetting : public mainmenu_commands {
 public:
@@ -33,6 +26,7 @@ public:
 		loop_forever,
 		loop_count,
 		thbgm_readinfo,
+		thbgm_dump,
 		count
 	};
 
@@ -45,22 +39,26 @@ public:
 			case loop_forever: return guid_loop_forever;
 			case loop_count: return guid_loop_count;
 			case thbgm_readinfo : return guid_thbgm_readinfo;
+			case thbgm_dump : return guid_thbgm_dump;
 		}
 	}
 
 	void get_name(t_uint32 p_index, pfc::string_base &p_out) {
 		switch(p_index) {
 			case loop_forever:
-				p_out = "ThBGM loop forever";
+				p_out = "ThBGM Loop Forever";
 				break;
 			case loop_count: 
-				p_out = "ThBGM loop x";
+				p_out = "ThBGM LoopX";
 				char counts[12];
 				_itoa_s(loopcount, counts, 10);
 				p_out.add_string(counts);
 				break;
 			case thbgm_readinfo:
-				p_out = "ThBGM read raw metadata";
+				p_out = "ThBGM Read Raw Metadata";
+				break;
+			case thbgm_dump:
+				p_out = "Extract ThBGM Files";
 				break;
 		}
 	}
@@ -74,7 +72,10 @@ public:
 				p_out = "specify loop count";
 				return true;
 			case thbgm_readinfo:
-				p_out = "read thbgm file infomation";
+				p_out = "read bgm's metadata from original file";
+				return true;
+			case thbgm_dump:
+				p_out = "extract bgm files under current directory";
 				return true;
 		}
 	}
@@ -95,6 +96,9 @@ public:
 			case thbgm_readinfo:
 				p_flags = read_thbgm_info ? mainmenu_commands::flag_checked : 0;
 				break;
+			case thbgm_dump:
+				p_flags = dump_thbgm ? mainmenu_commands::flag_checked : 0;
+				break;
 		}
 		return true;
 	}
@@ -107,11 +111,14 @@ public:
 			case loop_count:
 				loopforever = false;
 				loopcount = atoi(_InputBox("Please specify loop counts"));
-				if(!loopcount) loopcount = 1;
-				if(loopcount > 65535) loopcount = 65535;
+				if(!loopcount || loopcount == 0) loopcount = 1;
+				if(loopcount > 65535 || loopcount < 0) loopcount = 65535;
 				break;
 			case thbgm_readinfo:
 				read_thbgm_info = !read_thbgm_info;
+				break;
+			case thbgm_dump:
+				dump_thbgm = !dump_thbgm;
 				break;
 		}
 	}
@@ -178,6 +185,43 @@ public:
 	}
 };
 
+class raw_binary : public archive_impl {
+public:
+	virtual bool supports_content_types() {
+		return false;
+	}
+
+	virtual const char* get_archive_type() {
+		return "raw";
+	}
+
+	virtual t_filestats get_stats_in_archive(const char *p_archive,
+				const char *p_file, abort_callback &p_abort) {
+		service_ptr_t<file> m_file;
+		filesystem::g_open(m_file, p_archive, filesystem::open_mode_read, p_abort);
+		t_filestats status(m_file->get_stats(p_abort));
+		return status;
+	}
+
+	virtual void open_archive(service_ptr_t<file> &p_out, const char *p_archive,
+				const char *p_file, abort_callback &p_abort) {
+		service_ptr_t<file> m_file;
+		filesystem::g_open(m_file, p_archive, filesystem::open_mode_read, p_abort);
+		filesystem::g_open_tempmem(p_out, p_abort);
+		pfc::array_t<char> buffer;
+		buffer.set_size(internalsize);
+		m_file->seek(internaloffset, p_abort);
+		m_file->read(buffer.get_ptr(), internalsize, p_abort);
+		p_out->write(buffer.get_ptr(), internalsize, p_abort);
+	}
+
+	virtual void archive_list(const char *p_archive,
+				const service_ptr_t<file> &p_out,
+				archive_callback &p_abort, bool p_want_readers) {
+		throw exception_io_data();
+	}
+};
+
 class input_thxml {
 protected:
 	file::ptr m_file;
@@ -196,6 +240,7 @@ protected:
 	
 	bool isWave;
 	bool isArchive;
+	bool isStream;
 	input_raw raw;
 	pfc::array_t<t_uint8> m_buffer;
 
@@ -209,23 +254,61 @@ protected:
 
 	void open_raw(t_uint32 p_subsong, abort_callback &p_abort) {
 		string bgm_path = bgmlist[p_subsong]["file"];
-		string real_path;
+		string path;
+		if(isStream) {
+			string filepos;
+			size_t name_pos, pos_size;
+			if(dump_thbgm) {
+				pfc::string8 filepath = basepath;
+				filepath.add_string(bgm_path.c_str());
+				pfc::string8 unpackdir = filepath;
+				unpackdir.add_string("_unpack\\");
+				if(!filesystem::g_exists(unpackdir, p_abort))
+					filesystem::g_create_directory(unpackdir, p_abort);
+				for(int i=1; i<bgmlist.size(); i++) {
+					filepos = bgmlist[i]["filepos"];
+					name_pos = filepos.find(',');
+					pos_size = filepos.rfind(',');
+					pfc::string8 outfile = unpackdir;
+					outfile.add_string(filepos.substr(0, name_pos).c_str());
+					internaloffset = _atoi64(filepos.substr(++name_pos, pos_size).c_str());
+					internalsize = _atoi64(filepos.substr(++pos_size).c_str());
+
+					service_ptr_t<file> m_file, p_out;
+					filesystem::g_open(m_file, filepath, filesystem::open_mode_read, p_abort);
+					filesystem::g_open_write_new(p_out, outfile, p_abort);
+					pfc::array_t<char> buffer;
+					buffer.set_size(internalsize);
+					m_file->seek(internaloffset, p_abort);
+					m_file->read(buffer.get_ptr(), internalsize, p_abort);
+					p_out->write(buffer.get_ptr(), internalsize, p_abort);
+				}
+				dump_thbgm = false;
+			}
+			filepos = bgmlist[p_subsong]["filepos"];
+			name_pos = filepos.find(',');
+			pos_size = filepos.rfind(',');
+			bgm_path.append("|");
+			bgm_path.append(filepos.substr(0, name_pos));
+			internaloffset = _atoi64(filepos.substr(++name_pos, pos_size).c_str());
+			internalsize = _atoi64(filepos.substr(++pos_size).c_str());
+		}
 		if(isArchive) {
 			t_uint32 fl = basepath.length() + bgm_path.find_first_of('|');
 			char flstr[4];
 			_itoa_s(fl, flstr, 10);
-			real_path = "unpack://";
-			real_path.append(pack);
-			real_path.append("|");
-			real_path.append(flstr);
-			real_path.append("|");
-			real_path.append(basepath);
+			path = "unpack://";
+			path.append(pack);
+			path.append("|");
+			path.append(flstr);
+			path.append("|");
+			path.append(basepath);
 		} else {
-			real_path = basepath;
+			path = basepath;
 		}
-		real_path.append(bgm_path);
+		path.append(bgm_path);
 		raw = service_impl_t<input_raw>();
-		raw.open(real_path.c_str(), input_open_decode, isWave, p_abort);
+		raw.open(path.c_str(), input_open_decode, isWave, p_abort);
 	}
 
 public:
@@ -243,10 +326,17 @@ public:
 		t_filesize length = m_file->get_size(p_abort);
 		thxmlparser parser = thxmlparser();
 		parser.parsestream(
-					(char*) (m_file->read_string_ex(length, p_abort).get_ptr()));
+			(char*) (m_file->read_string_ex(length, p_abort).get_ptr()));
 		bgmlist = parser.thbgm;
 		pack = bgmlist[0]["pack"];
+		if(bgmlist[1]["filepos"] != "") {
+			pack = "raw";
+			isStream = true;
+		} else {
+			isStream = false;
+		}
 		isArchive = pack != "";
+		isWave = bgmlist[1]["codec"] == "PCM" && !isArchive;
 	}
 
 	t_uint32 get_subsong_count() {
@@ -256,8 +346,7 @@ public:
 	}
 
 	t_uint32 get_subsong(t_uint32 p_subsong) {
-		isWave = bgmlist[++p_subsong]["codec"] == "PCM" && !isArchive;
-		codec = bgmlist[p_subsong]["codec"].c_str();
+		codec = bgmlist[++p_subsong]["codec"].c_str();
 		encoding = bgmlist[p_subsong]["encoding"].c_str();
 		title = bgmlist[p_subsong]["title"].c_str();
 		artist = bgmlist[p_subsong]["artist"].c_str();
@@ -309,7 +398,7 @@ public:
 	}
 
 	void decode_initialize(t_uint32 p_subsong, unsigned p_flags,
-												abort_callback &p_abort) {
+				abort_callback &p_abort) {
 		open_raw(get_subsong(--p_subsong), p_abort);
 		if(isWave) {
 			m_buffer.set_size(samples_to_length(deltaread));
@@ -376,6 +465,8 @@ public:
 
 static mainmenu_commands_factory_t<mainmenu_loopsetting> loopsetting_factory;
 static input_factory_t<input_thxml> g_input_thbgm_factory;
+static archive_factory_t<raw_binary> g_raw_binary_factory;
+
 DECLARE_FILE_TYPE("Touhou-like BGM XML-Tag File", "*.thxml");
 DECLARE_COMPONENT_VERSION("ThBGM Player", "1.2", 
 "Play BGM files of Touhou and some related doujin games.\n\n"
