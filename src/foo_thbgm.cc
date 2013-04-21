@@ -64,10 +64,10 @@ public:
 				p_out.add_string(counts);
 				break;
 			case thbgm_readinfo:
-				p_out = "ThBGM Read Raw Metadata";
+				p_out = "ThBGM Read Metadata";
 				break;
 			case thbgm_dump:
-				p_out = "Extract ThBGM Files";
+				p_out = "ThBGM Extract Files";
 				break;
 		}
 	}

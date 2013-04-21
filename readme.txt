@@ -1,19 +1,17 @@
 ﻿Usage:
-Move foo_thbgm.dll to your foobar2000's components directory.
+Install foo_thbgm.fb2k-component or move foo_thbgm.dll to your foobar2000's components directory.
 Move thxml file to your game's installation directory.
-Simply open thxml files by foobar2000, then enjoy your life!
+Open thxml files by foobar2000, then enjoy your life!
 
 Something you should know:
-Three new thbgm entries are added into foobar2000's playback menu.
+Four new thbgm entries are added into foobar2000's playback menu.
 
 Loop forever means BGM will always loop. Don't forget to disable loop forever mode when converting these BGMs.
-Read metadata will use foobar2000 built-in splitter to read real BGM file's music tag instead of thxml. It's not a preset option since it will speed down unpack efficiency a lot.
-
-The plugin can also extract files from 緋想天or非想天則or幡紫竜's file archives, just drag these packages files into foobar2000's main window
-(e.g th123b.dat th105b.dat music.ac6), the extrated files will be created in a new folder under current path.
+Read metadata will use foobar2000's built-in splitter and decoder to read real BGM file's music tag instead of thxml. It's not a preset option since it will speed down unpack efficiency a lot.
+The plugin can also extract files from raw binary stream or several type of file archives(緋想天or非想天則or幡紫竜), just check Extract Files option, the extrated files will be created in a new folder under current path.
 
 Some sound cards don't support play 神霊廟's ghost mode in Kernel Streaming or WASAPI becuase the frequency is 22050Hz.
-You could add resampler in DSP Manager or change the output setting to default.
+You could add resampler in DSP Manager or change the output setting to others.
 
 Feature:
 1. A-B loop for any audio format.
@@ -40,6 +38,8 @@ Banshiryuu (幡紫竜) both c67 and later version
 Samidare (五月雨)
 
 ChangeLog:
+1.2
+raw stream dump support
 1.1
 add 神霊廟 support
 add loop count setting
@@ -55,7 +55,7 @@ add common unpacker support
 now we can play music in archive if only foobar2000 can handle it
 0.5
 add 幡紫竜c67 version support
-add python3 script to convert THxxBGM files
+add python3 script for converting THxxBGM files
 0.4
 add 萃夢想&黄昏酒場&稀翁玉 support
 add 神霊廟trial ghost mode support
