@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
+
+<thxml>
+	<album artist="U2" codec="vorbis" encoding="lossy" pack="tfpk">東方心綺楼～Hopeless Masquerade</album>
+	<albumartist>黄昏フロンティア&上海アリス幻樂団</albumartist>
+	<path>th135.pak|</path>
+	<bgmlist>
+		<bgm file="data/bgm/title.ogg" pos="0,0,4669248">title</bgm>
+		<bgm file="data/bgm/op.ogg" pos="0,0,2056959">op</bgm>
+		<bgm file="data/bgm/reimu1.ogg" pos="0,0,5340036">reimu</bgm>
+		<bgm file="data/bgm/ichirin1.ogg" pos="0,0,5351451">marisa</bgm>
+		<bgm file="data/bgm/ichirin1.ogg" pos="0,0,5351451">ichirin</bgm>
+	</bgmlist>
+</thxml>

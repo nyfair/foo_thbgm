@@ -1,7 +1,7 @@
 import struct
 
-thbgm = open("thbgm.fmt", "rb")
-format = "16siiii20s"
+thbgm = open('thbgm.fmt', 'rb')
+format = '16siiii20s'
 
 while True:
 	bgm = thbgm.read(52)
