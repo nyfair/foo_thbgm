@@ -44,10 +44,10 @@ root.append(_albumartist)
 
 # Get pretty look
 def indent(elem, level=0):
-	i = '\n' + level*'\t'
+	i = "\n" + level*"\t"
 	if len(elem):
 		if not elem.text or not elem.text.strip():
-			elem.text = i + '\t'
+			elem.text = i + "\t"
 		for e in elem:
 			indent(e, level+1)
 		if not e.tail or not e.tail.strip():
@@ -62,6 +62,6 @@ else:
 	thxml = open(sys.argv[1].split('.')[0] + '.thxml', \
 	mode='w', encoding='utf_8_sig')
 thxml.write('<?xml version="1.0" encoding="utf-8"?>')
-thxml.write('<!DOCTYPE thxml "nyfair_thxml.dtd">\n\n')
-thxml.write(tostring(indent(root), encoding = 'utf_8', \
+thxml.write('<!DOCTYPE thxml "nyfair_thxml.dtd">')
+thxml.write("\n\n" + tostring(indent(root), encoding = 'utf_8', \
 	method = 'html').decode('utf_8') + '\n')
