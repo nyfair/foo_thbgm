@@ -907,9 +907,9 @@ static archive_factory_t<archive_tasfro> g_archive_tasfro_factory;
 static archive_factory_t<raw_binary> g_raw_binary_factory;
 
 DECLARE_FILE_TYPE("Touhou-like BGM XML-Tag File", "*.thxml");
-DECLARE_COMPONENT_VERSION("ThBGM Player", "1.2", 
+DECLARE_COMPONENT_VERSION("ThBGM Player", "1.2pre", 
 "Play BGM files of Touhou and some related doujin games.\n\n"
 "If you have any feature request and bug report,\n"
 "feel free to contact me at my E-mail address below.\n\n"
-"http://code.google.com/p/foo-thbgm/issues/list\n"
+"https://github.com/nyfair/foo_thbgm/issues\n"
 "(C) nyfair <nyfair2012@gmail.com>");
