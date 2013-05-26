@@ -16,8 +16,8 @@
 		<bgm file="\data\bgm\nitori1.ogg" pos="0,476227,4908656">芥川龍之介の河童～Candid Friend</bgm>
 		<bgm file="\data\bgm\koishi1.ogg" pos="0,255188,5199641">ハルトマンの妖怪少女</bgm>
 		<bgm file="\data\bgm\mamizou1.ogg" pos="0,223124,5292128">佐渡のニッ岩</bgm>
-		<bgm file="\data\bgm\chuboss1.ogg" pos="0,621663,5008500">幻想郷の二ッ岩</bgm>
-		<bgm file="\data\bgm\kokoro1.ogg" pos="0,505673,11055912">亡失のエモーション</bgm>
+		<bgm file="\data\bgm\chuboss1.ogg" pos="0,621663,5008500" artist="ZUN">幻想郷の二ッ岩</bgm>
+		<bgm file="\data\bgm\kokoro1.ogg" pos="0,505673,11055912" artist="ZUN">亡失のエモーション</bgm>
 		<bgm file="\data\bgm\kaiwa1.ogg" pos="0,120942,2822401">人気のある場所</bgm>
 		<bgm file="\data\bgm\kaiwa3.ogg" pos="0,124999,2822398">人気のない場所</bgm>
 		<bgm file="\data\bgm\kaiwa5.ogg" pos="0,401746,2245017">丑三つ時の里</bgm>
