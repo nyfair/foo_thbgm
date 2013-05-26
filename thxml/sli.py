@@ -2,7 +2,7 @@ import glob
 
 for file in glob.glob('*.sli'):
 	with open(file) as thbgm:
-		title = file[0 : file.rindex('.') - 4]
+		title = file[0 : file.rindex('.')]
 		headlen = 0
 		looplen = 0
 		for line in thbgm:

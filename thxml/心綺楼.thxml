@@ -1,14 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
 
 <thxml>
-	<album artist="U2" codec="vorbis" encoding="lossy" pack="tfpk">東方心綺楼～Hopeless Masquerade</album>
+	<album artist="あきやまうに" codec="vorbis" encoding="lossy" pack="tfpk">東方心綺楼～Hopeless Masquerade</album>
 	<albumartist>黄昏フロンティア&上海アリス幻樂団</albumartist>
 	<path>th135.pak|</path>
 	<bgmlist>
-		<bgm file="data/bgm/title.ogg" pos="0,0,4669248">title</bgm>
-		<bgm file="data/bgm/op.ogg" pos="0,0,2056959">op</bgm>
-		<bgm file="data/bgm/reimu1.ogg" pos="0,0,5340036">reimu</bgm>
-		<bgm file="data/bgm/ichirin1.ogg" pos="0,0,5351451">marisa</bgm>
-		<bgm file="data/bgm/ichirin1.ogg" pos="0,0,5351451">ichirin</bgm>
+		<bgm file="data/bgm/chuboss1.ogg" pos="0,0,0">chuboss1</bgm>
+		<bgm file="data/bgm/ed.ogg" pos="0,0,0">ed</bgm>
+		<bgm file="data/bgm/futo1.ogg" pos="0,0,0">futo1</bgm>
+		<bgm file="data/bgm/hijiri1.ogg" pos="0,0,0">hijiri1</bgm>
+		<bgm file="data/bgm/ichirin1.ogg" pos="0,0,0">ichirin1</bgm>
+		<bgm file="data/bgm/kaiwa1.ogg" pos="0,0,0">kaiwa1</bgm>
+		<bgm file="data/bgm/kaiwa3.ogg" pos="0,0,0">kaiwa3</bgm>
+		<bgm file="data/bgm/kaiwa4.ogg" pos="0,0,0">kaiwa4</bgm>
+		<bgm file="data/bgm/kaiwa5.ogg" pos="0,0,0">kaiwa5</bgm>
+		<bgm file="data/bgm/koishi1.ogg" pos="0,0,0">koishi1</bgm>
+		<bgm file="data/bgm/kokoro1.ogg" pos="0,0,0">kokoro1</bgm>
+		<bgm file="data/bgm/mamizou1.ogg" pos="0,0,0">mamizou1</bgm>
+		<bgm file="data/bgm/marisa1.ogg" pos="0,0,0">marisa1</bgm>
+		<bgm file="data/bgm/miko1.ogg" pos="0,0,0">miko1</bgm>
+		<bgm file="data/bgm/nitori1.ogg" pos="0,0,0">nitori1</bgm>
+		<bgm file="data/bgm/op.ogg" pos="0,0,0">op</bgm>
+		<bgm file="data/bgm/reimu1.ogg" pos="0,0,0">reimu1</bgm>
+		<bgm file="data/bgm/staffroll.ogg" pos="0,0,0">staffroll</bgm>
+		<bgm file="data/bgm/staffroll2.ogg" pos="0,0,0">staffroll2</bgm>
+		<bgm file="data/bgm/title.ogg" pos="0,0,0">title</bgm>
+		<bgm file="data/bgm/win.ogg" pos="0,0,0">win</bgm>
 	</bgmlist>
 </thxml>

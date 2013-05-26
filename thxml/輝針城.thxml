@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
+
+<thxml>
+	<album>東方輝針城～Double Dealing Character</album>
+	<albumartist>上海アリス幻樂団</albumartist>
+	<path>thbgm_tr.dat</path>
+	<bgmlist>
+		<bgm pos="16,2862544,17924496">不思議なお祓い棒</bgm>
+		<bgm pos="20787056,1431744,14897216">ミストレイク</bgm>
+		<bgm pos="37116016,414080,15392384">秘境のマーメイド</bgm>
+		<bgm pos="52922480,2696320,15295984">運河を行き交う人妖</bgm>
+		<bgm pos="70914784,368944,18706608">柳の下のデュラハン</bgm>
+		<bgm pos="89990336,983792,24560288">満月の竹林</bgm>
+		<bgm pos="115534416,2346816,16339776">孤独なウェアウルフ</bgm>
+		<bgm pos="134221008,1879240,4861944">プレイヤーズスコア</bgm>
+	</bgmlist>
+</thxml>
