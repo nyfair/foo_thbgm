@@ -29,5 +29,6 @@
 		<bgm file="data/bgm/ta04.ogg" pos="0,187631,2469605">冷吟閑酔</bgm>
 		<bgm file="data/bgm/ta06.ogg" pos="0,431244,3175199">暮色蒼然</bgm>
 		<bgm file="data/bgm/st99.ogg" pos="0,291453,1512004">東方妖恋談(世紀末バージョン)</bgm>
+		<bgm file="data/bgm/room.ogg" pos="0,116130,146662">secret room</bgm>
 	</bgmlist>
 </thxml>

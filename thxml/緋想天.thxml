@@ -10,10 +10,10 @@
 		<bgm file="data/bgm/st00.ogg" pos="0,368897,3822025">地の色は黄色</bgm>
 		<bgm file="data/bgm/ta01.ogg" pos="0,563848,2352002">甲論乙駁</bgm>
 		<bgm file="data/bgm/ta03.ogg" pos="0,354279,2381457">風光明媚</bgm>
-		<bgm file="data/bgm/st01.ogg" pos="0,615630,3988209">香る樹葉花</bgm>
-		<bgm file="data/bgm/st02.ogg" pos="0,615622,3988191">踊る水飛沫</bgm>
+		<bgm file="data/bgm/st01.ogg" pos="0,615502,3988209">香る樹葉花</bgm>
+		<bgm file="data/bgm/st02.ogg" pos="0,615494,3988191">踊る水飛沫</bgm>
 		<bgm file="data/bgm/ta05.ogg" pos="0,657158,2236032">以魚駆蠅</bgm>
-		<bgm file="data/bgm/ta08.ogg" pos="0,331057,2352036">放縦不羈</bgm>
+		<bgm file="data/bgm/ta08.ogg" pos="0,331057,1984504">放縦不羈</bgm>
 		<bgm file="data/bgm/st03.ogg" pos="0,455266,3968988">嘲りの遊戯</bgm>
 		<bgm file="data/bgm/ta04.ogg" pos="0,187631,2469605">冷吟閑酔</bgm>
 		<bgm file="data/bgm/ta02.ogg" pos="0,192787,2520253">雲外蒼天</bgm>
