@@ -175,12 +175,11 @@ public:
 			t_size read_count = p_chunk.get_sample_count();
 			current_sample += read_count;
 			if(current_sample >= m_totallen || !result) {
-				double looptime = audio_math::samples_to_time(m_headlen, samplerate);
 				t_size redundant_sample = current_sample - m_totallen;
 				p_chunk.set_sample_count(read_count - redundant_sample);
-				p_chunk.set_data_size(read_count - redundant_sample * p_chunk.get_channel_count());
+				p_chunk.set_data_size((read_count - redundant_sample) * p_chunk.get_channel_count());
 				current_sample = m_headlen;
-				decoder->seek(audio_math::samples_to_time(m_offset + m_headlen, samplerate), p_abort);
+				seek(audio_math::samples_to_time(m_offset + m_headlen, samplerate));
 				if(!loopforever) current_loop++;
 			}
 		}
