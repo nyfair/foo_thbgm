@@ -5,24 +5,28 @@
 	<albumartist>黄昏フロンティア&上海アリス幻樂団</albumartist>
 	<path>th135.pak|</path>
 	<bgmlist>
-		<bgm file="\data\bgm\op.ogg" pos="0,0,2086578">塵界不変のペシミズム</bgm>
-		<bgm file="\data\bgm\title.ogg" pos="0,198120,4233578">心綺楼雜子</bgm>
-		<bgm file="\data\bgm\reimu1.ogg" pos="0,299644,4593045">春色小径～Colorful Path</bgm>
-		<bgm file="\data\bgm\marisa1.ogg" pos="0,25,5291975">メイガスナイト</bgm>
-		<bgm file="\data\bgm\ichirin1.ogg" pos="0,88500,4645196">時代親父とハイカラ少女</bgm>
-		<bgm file="\data\bgm\hijiri1.ogg" pos="0,625902,5532540">感情の摩天楼～Cosmic Mind</bgm>
-		<bgm file="\data\bgm\futo1.ogg" pos="0,203269,5388223">大神神話伝</bgm>
-		<bgm file="\data\bgm\miko1.ogg" pos="0,1677707,5230438">聖徳伝説～True Administrator</bgm>
-		<bgm file="\data\bgm\nitori1.ogg" pos="0,476227,4908656">芥川龍之介の河童～Candid Friend</bgm>
-		<bgm file="\data\bgm\koishi1.ogg" pos="0,255188,5199641">ハルトマンの妖怪少女</bgm>
-		<bgm file="\data\bgm\mamizou1.ogg" pos="0,223124,5292128">佐渡のニッ岩</bgm>
-		<bgm file="\data\bgm\chuboss1.ogg" pos="0,621663,5008500" artist="ZUN">幻想郷の二ッ岩</bgm>
-		<bgm file="\data\bgm\kokoro1.ogg" pos="0,505673,11055912" artist="ZUN">亡失のエモーション</bgm>
-		<bgm file="\data\bgm\kaiwa1.ogg" pos="0,120942,2822401">人気のある場所</bgm>
-		<bgm file="\data\bgm\kaiwa3.ogg" pos="0,124999,2822398">人気のない場所</bgm>
-		<bgm file="\data\bgm\kaiwa5.ogg" pos="0,401746,2245017">丑三つ時の里</bgm>
-		<bgm file="\data\bgm\win.ogg" pos="0,441337,940775">本日の一面記事</bgm>
-		<bgm file="\data\bgm\ed.ogg" pos="0,152857,3175200">暁雲</bgm>
-		<bgm file="\data\bgm\staffroll.ogg" pos="0,0,3167218">官版黄昏新聞</bgm>
+		<bgm file="data/bgm/op.ogg" pos="0,0,2086578">塵界不変のペシミズム</bgm>
+		<bgm file="data/bgm/title.ogg" pos="0,198144,4233602">心綺楼囃子</bgm>
+		<bgm file="data/bgm/reimu1.ogg" pos="0,299644,4593045">春色小径～Colorful Path</bgm>
+		<bgm file="data/bgm/marisa1.ogg" pos="0,248349,5292000">メイガスナイト</bgm>
+		<bgm file="data/bgm/ichirin1.ogg" pos="0,88524,4645196">時代親父とハイカラ少女</bgm>
+		<bgm file="data/bgm/hijiri1.ogg" pos="0,625902,5532540">感情の摩天楼～Cosmic Mind</bgm>
+		<bgm file="data/bgm/futo1.ogg" pos="0,203269,5388223">大神神話伝</bgm>
+		<bgm file="data/bgm/miko1.ogg" pos="0,1677731,5230462">聖徳伝説～True Administrator</bgm>
+		<bgm file="data/bgm/nitori1.ogg" pos="0,476227,4908656">芥川龍之介の河童～Candid Friend</bgm>
+		<bgm file="data/bgm/koishi1.ogg" pos="0,255188,5199641">ハルトマンの妖怪少女</bgm>
+		<bgm file="data/bgm/mamizou1.ogg" pos="0,223196,5292200">佐渡のニッ岩</bgm>
+		<bgm file="data/bgm/chuboss1.ogg" pos="0,621687,5008524" artist="ZUN">幻想郷の二ッ岩</bgm>
+		<bgm file="data/bgm/kokoro1.ogg" pos="0,505673,11055912" artist="ZUN">亡失のエモーション</bgm>
+		<bgm file="data/bgm/kaiwa1.ogg" pos="0,120942,2822401">人気のある場所</bgm>
+		<bgm file="data/bgm/kaiwa3.ogg" pos="0,124999,2822398">人気のない場所</bgm>
+		<bgm file="data/bgm/kaiwa5.ogg" pos="0,401818,2245089">丑三つ時の里</bgm>
+		<bgm file="data/bgm/win.ogg" pos="0,441361,940799">本日の一面記事</bgm>
+		<bgm file="data/bgm/ed.ogg" pos="0,152857,3175200">暁雲</bgm>
+		<bgm file="data/bgm/staffroll.ogg" pos="0,0,3167218">官板黄昏新聞</bgm>
+		<!-- Secret BGMs -->
+		<bgm file="data/bgm/staffroll2.ogg" pos="0,0,3544619">心綺楼囃子ED Ver</bgm>
+		<!-- only has sfl file <bgm file="data/bgm/kaiwa2.ogg" pos="0,362357,3023997">kaiwa2</bgm> -->
+		<bgm file="data/bgm/kaiwa4.ogg" pos="0,228004,940819">本日の一面記事Interval</bgm>
 	</bgmlist>
 </thxml>

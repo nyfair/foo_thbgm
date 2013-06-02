@@ -29,9 +29,11 @@ Undefined Fantastic Object (東方星蓮船)
 Double Spoiler (ダブルスポイラー～東方文花帖)
 Fairy Wars (妖精大戦争～東方三月精)
 Ten Desires (東方神霊廟)
+Double Dealing Character (東方輝針城)
 Immaterial and Missing Power (東方萃夢想)
 Scarlet Weather Rhapsody (東方緋想天)
-Touhou Hisōtensoku (東方非想天則～超弩級ギニョルの謎を追え)
+Hisoutensoku (東方非想天則～超弩級ギニョルの謎を追え)
+Hopeless Masquerade (東方心綺楼)
 Uwabami Breakers (黄昏酒場)
 Kioh Gyoku (稀翁玉)
 Banshiryuu (幡紫竜) both c67 and later version
@@ -39,6 +41,8 @@ Samidare (五月雨)
 
 ChangeLog:
 1.2
+add 輝針城tr support
+add tfpk unpacker for 心綺楼
 raw stream dump support
 1.1
 add 神霊廟 support

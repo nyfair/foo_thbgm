@@ -132,6 +132,7 @@ public:
 		}
 	}
 };
+static mainmenu_commands_factory_t<mainmenu_loopsetting> loopsetting_factory;
 
 class input_raw {
 private:
@@ -412,6 +413,7 @@ public:
 		throw exception_io_data();
 	}
 };
+static archive_factory_t<archive_ac6> g_archive_ac6_factory;
 
 // Mersenne Twister
 class RNG_MT {
@@ -620,6 +622,10 @@ public:
 		throw exception_io_data();
 	}
 };
+static archive_factory_t<archive_tasfro> g_archive_tasfro_factory;
+
+// No interest in attaching tfpk unpacker now 
+#include "unpack_tfpk.inc"
 
 class raw_binary : public archive_impl {
 public:
@@ -657,6 +663,7 @@ public:
 		throw exception_io_data();
 	}
 };
+static archive_factory_t<raw_binary> g_raw_binary_factory;
 
 class input_thxml {
 protected:
@@ -898,15 +905,10 @@ public:
 		return stricmp_utf8(p_extension, "thxml") == 0;
 	}
 };
-
-static mainmenu_commands_factory_t<mainmenu_loopsetting> loopsetting_factory;
 static input_factory_t<input_thxml> g_input_thbgm_factory;
-static archive_factory_t<archive_ac6> g_archive_ac6_factory;
-static archive_factory_t<archive_tasfro> g_archive_tasfro_factory;
-static archive_factory_t<raw_binary> g_raw_binary_factory;
 
 DECLARE_FILE_TYPE("Touhou-like BGM XML-Tag File", "*.thxml");
-DECLARE_COMPONENT_VERSION("ThBGM Player", "1.2pre", 
+DECLARE_COMPONENT_VERSION("ThBGM Player", "1.2", 
 "Play BGM files of Touhou and some related doujin games.\n\n"
 "If you have any feature request and bug report,\n"
 "feel free to contact me at my E-mail address below.\n\n"
