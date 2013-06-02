@@ -29,6 +29,13 @@ t_uint32 current_loop;
 t_filesize internaloffset;
 t_filesize internalsize;
 
+inline t_uint32 swap_endian(const t_uint32 &x) {
+	return ((x & 0x000000ff) << 24) |
+			((x & 0x0000ff00) << 8) |
+			((x & 0x00ff0000) >> 8) |
+			((x & 0xff000000) >> 24);
+}
+
 class mainmenu_loopsetting : public mainmenu_commands {
 public:
 	enum {
@@ -194,31 +201,21 @@ public:
 	}
 };
 
-namespace unpack_ac6 {
-	struct AC6File {
-		t_uint32 pos;		// Position inside the archive
-		t_uint32 insize;	// Encrypted file size
-		t_uint32 outsize;	// Decrypted file size
-	};
-	const t_uint32 CP1_SIZE = 0x102;
-	const t_uint32 CP2_SIZE = 0x400;
-	std::map<pfc::string8, AC6File> ac6files;
-	pfc::string8 ac6archive;
-}
-using namespace unpack_ac6;
+struct AC6File {
+	t_uint32 pos;		// Position inside the archive
+	t_uint32 insize;	// Encrypted file size
+	t_uint32 outsize;	// Decrypted file size
+};
+const t_uint32 CP1_SIZE = 0x102;
+const t_uint32 CP2_SIZE = 0x400;
+map<pfc::string8, AC6File> ac6files;
+pfc::string8 ac6archive;
 
 class archive_ac6 : public archive_impl {
 private:
 	t_uint32 filecount;
 	t_uint32 pool1[CP1_SIZE];
 	t_uint32 pool2[CP2_SIZE];
-
-	inline t_uint32 swap_endian(const t_uint32 &x) {
-		return ((x & 0x000000ff) << 24) |
-				((x & 0x0000ff00) << 8) |
-				((x & 0x00ff0000) >> 8) |
-				((x & 0xff000000) >> 24);
-	}
 
 	void cryptstep(t_uint32 &ecx) {
 		static const t_uint32 cmp = (CP1_SIZE - 1);
@@ -350,7 +347,7 @@ private:
 			unpackdir.add_string("_unpack\\");
 			if(!filesystem::g_exists(unpackdir, p_abort))
 				filesystem::g_create_directory(unpackdir, p_abort);
-			std::map<pfc::string8, AC6File>::iterator it;
+			map<pfc::string8, AC6File>::iterator it;
 			for(it = ac6files.begin(); it != ac6files.end(); it++) {
 				service_ptr_t<file> out;
 				pfc::string8 outfile = unpackdir;
@@ -383,7 +380,7 @@ public:
 		service_ptr_t<file> m_file;
 		filesystem::g_open(m_file, p_archive, filesystem::open_mode_read, p_abort);
 		t_filestats status(m_file->get_stats(p_abort));
-		std::map<pfc::string8, AC6File>::iterator it = ac6files.find(p_file);
+		map<pfc::string8, AC6File>::iterator it = ac6files.find(p_file);
 		status.m_size = (it == ac6files.end()) ? 0 : it->second.outsize;
 		return status;
 	}
@@ -477,19 +474,16 @@ public:
   }
 };
 
-namespace unpack_tasfro {
-	struct TASFROFile {
-		t_uint32 pos;		// Position inside the archive
-		t_uint32 size;		// File size
-	};
-	std::map<pfc::string8, TASFROFile> tasfrofiles;
-	pfc::string8 tasfroarchive;
-	t_uint16 filecount;
-}
-using namespace unpack_tasfro;
+struct TASFROFile {
+	t_uint32 pos;		// Position inside the archive
+	t_uint32 size;		// File size
+};
+map<pfc::string8, TASFROFile> tasfrofiles;
+pfc::string8 tasfroarchive;
 
 class archive_tasfro : public archive_impl {
 private:
+	t_uint16 filecount;
 	bool decrypt(char *head, t_uint32 headsize, t_uint32 archivesize) {
 		char *t = head;
 		t_uint32 offset = 0;
@@ -547,7 +541,7 @@ private:
 		if(dump_thbgm) {
 			pfc::string8 unpackdir = p_archive;
 			unpackdir.add_string("_unpack");
-			std::map<pfc::string8, TASFROFile>::iterator it;
+			map<pfc::string8, TASFROFile>::iterator it;
 			for(it = tasfrofiles.begin(); it != tasfrofiles.end(); it++) {
 				service_ptr_t<file> out;
 				pfc::string8 outfile = unpackdir;
@@ -593,7 +587,7 @@ public:
 		service_ptr_t<file> m_file;
 		filesystem::g_open(m_file, p_archive, filesystem::open_mode_read, p_abort);
 		t_filestats status(m_file->get_stats(p_abort));
-		std::map<pfc::string8, TASFROFile>::iterator it = tasfrofiles.find(p_file);
+		map<pfc::string8, TASFROFile>::iterator it = tasfrofiles.find(p_file);
 		status.m_size = (it == tasfrofiles.end()) ? 0 : it->second.size;
 		return status;
 	}
@@ -624,7 +618,7 @@ public:
 };
 static archive_factory_t<archive_tasfro> g_archive_tasfro_factory;
 
-// No interest in attaching tfpk unpacker now 
+// No interest in attaching tfpk unpacker until tasfro make enough $$$ haha
 #include "unpack_tfpk.inc"
 
 class raw_binary : public archive_impl {
