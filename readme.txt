@@ -41,7 +41,7 @@ Samidare (五月雨)
 
 ChangeLog:
 1.2
-add 輝針城tr support
+add 輝針城 support
 add tfpk unpacker for 心綺楼
 raw stream dump support
 1.1
