@@ -34,6 +34,7 @@ Immaterial and Missing Power (東方萃夢想)
 Scarlet Weather Rhapsody (東方緋想天)
 Hisoutensoku (東方非想天則～超弩級ギニョルの謎を追え)
 Hopeless Masquerade (東方心綺楼)
+Impossible Spell Card (弾幕アマノジャク)
 Uwabami Breakers (黄昏酒場)
 Kioh Gyoku (稀翁玉)
 Banshiryuu (幡紫竜) both c67 and later version
@@ -41,7 +42,7 @@ Samidare (五月雨)
 
 ChangeLog:
 1.2
-add 輝針城 support
+add 輝針城&弾幕アマノジャク support
 add tfpk unpacker for 心綺楼
 raw stream dump support
 1.1
