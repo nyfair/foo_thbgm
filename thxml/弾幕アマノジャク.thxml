@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
+
+<thxml>
+	<album>弾幕アマノジャク～Impossible Spell Card.</album>
+	<albumartist>上海アリス幻樂団</albumartist>
+	<path>thbgm.dat</path>
+	<bgmlist>
+		<bgm pos="16,2891584,18063232">反則の狼煙を上げろ</bgm>
+		<bgm pos="20954832,2560512,19799936">不可能弾幕には反則を</bgm>
+		<bgm pos="43315280,1355828,14817612">ミッドナイトスペルカード</bgm>
+		<bgm pos="59488720,2444560,20049744">ロマンチック逃飛行</bgm>
+		<bgm pos="81983024,797504,34295336">永遠の三日天下</bgm>
+		<bgm pos="117075864,414080,15392384">秘境のマーメイド</bgm>
+		<bgm pos="132882328,926016,22226448">リバースイデオロギー</bgm>
+		<bgm pos="156034792,5390560,19984736">幻想浄瑠璃</bgm>
+		<bgm pos="181410088,2120352,13104000">妖怪の山～Mysterious Mountain</bgm>
+		<bgm pos="196634440,1879240,4861944">プレイヤーズスコア</bgm>
+	</bgmlist>
+</thxml>
