@@ -1,22 +1,22 @@
 ﻿Usage:
-step1: Install foo_thbgm.fb2k-component.
+step1: Install foo_thbgm.fb2k-component or extract foo_thbgm.dll into fb2k's components folder.
 step2: Move thxml file to your game's installation directory.
-step3: Open thxml files by foobar2000, then enjoy your life!
+step3: Using fb2k to open the thxml file, then enjoy your life!
 
 Something you should know:
 Foobar2000 v1.1 or newer required to run this plugin.
-Four new thbgm entries are added into foobar2000's playback menu.
+Four new thbgm entries are added into fb2k's playback menu.
 
 Loop forever means BGM will always loop. Don't forget to disable loop forever mode when converting these BGMs.
-Read metadata will use foobar2000's built-in splitter and decoder to read real BGM file's music tag instead of thxml. It's not a preset option since it will speed down unpack efficiency a lot.
-The plugin can also extract files from raw binary stream or several type of file archives(緋想天or非想天則or幡紫竜), just check Extract Files option, the extrated files will be created in a new folder under current path.
+Read metadata will use fb2k's built-in splitter and decoder to read real BGM file's music tag instead of thxml. It's not a preset option since it will speed down unpack efficiency a lot.
+The plugin can also extract files from raw binary stream or several type of file archives, just check the Extract Files option, all the bgm files will be dumped in a new folder under current path.
 
 Some sound cards don't support play 神霊廟's ghost mode in Kernel Streaming or WASAPI becuase the frequency is 22050Hz.
-You could add resampler in DSP Manager or change the output setting to others.
+You have to add resampler in DSP Manager or change the output setting to others.
 
 Feature:
 1. A-B loop for any audio format.
-2. Directly play bgm files of touhou and some related doujin games.
+2. Directly play bgm files of touhou and some related doujin games below.
 
 Supported Games
 The Embodiment of Scarlet Devil (東方紅魔郷)
@@ -35,6 +35,7 @@ Immaterial and Missing Power (東方萃夢想)
 Scarlet Weather Rhapsody (東方緋想天)
 Hisoutensoku (東方非想天則～超弩級ギニョルの謎を追え)
 Hopeless Masquerade (東方心綺楼)
+Legacy of Lunatic Kingdom （東方紺珠伝）
 Impossible Spell Card (弾幕アマノジャク)
 Uwabami Breakers (黄昏酒場)
 Kioh Gyoku (稀翁玉)
@@ -42,12 +43,12 @@ Banshiryuu (幡紫竜) both c67 and later version
 Samidare (五月雨)
 
 ChangeLog:
+1.3
+full support for tfpk
 1.2
-add 輝針城&弾幕アマノジャク support
 add tfpk unpacker for 心綺楼
 raw stream dump support
 1.1
-add 神霊廟 support
 add loop count setting
 fix a bug that configuration can't be saved
 1.0
@@ -58,13 +59,13 @@ fix 幡紫竜 thxml file
 add ac6 unpacker for 幡紫竜c74 and later version
 0.8
 add common unpacker support
-now we can play music in archive if only foobar2000 can handle it
+now we can play music in archive if only fb2k can handle it
 0.5
 add 幡紫竜c67 version support
 add python3 script for converting THxxBGM files
+add 神霊廟 ghost mode support
 0.4
 add 萃夢想&黄昏酒場&稀翁玉 support
-add 神霊廟trial ghost mode support
 change tag file from cue to thxml
 0.3
 fix decode error in foobar2000 1.1.6

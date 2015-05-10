@@ -1024,7 +1024,7 @@ public:
 static input_factory_t<input_thxml> g_input_thbgm_factory;
 
 DECLARE_FILE_TYPE("Touhou-like BGM XML-Tag File", "*.thxml");
-DECLARE_COMPONENT_VERSION("ThBGM Player", "\xE2\x91\xA8", 
+DECLARE_COMPONENT_VERSION("ThBGM Player", "1.5", 
 "Play BGM files of Touhou and some related doujin games.\n\n"
 "If you have any feature request and bug report,\n"
 "feel free to contact me at my E-mail address below.\n\n"
