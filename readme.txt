@@ -4,6 +4,7 @@ Move thxml file to your game's installation directory.
 Open thxml files by foobar2000, then enjoy your life!
 
 Something you should know:
+Foobar2000 v1.1 or newer required to run this plugin.
 Four new thbgm entries are added into foobar2000's playback menu.
 
 Loop forever means BGM will always loop. Don't forget to disable loop forever mode when converting these BGMs.

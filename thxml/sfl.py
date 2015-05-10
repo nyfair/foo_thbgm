@@ -1,5 +1,5 @@
-import glob
-import struct
+#dump sfl loop info
+import glob, struct
 
 for file in glob.glob('*.sfl'):
 	with open(file, 'rb') as thbgm:

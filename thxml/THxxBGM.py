@@ -3,8 +3,7 @@ import sys, codecs
 from xml.etree.cElementTree import *
 
 if len(sys.argv) < 2:
-	print('usage: python THxxBGM.py <THxxBGM file> {<thxml file>}')
-	sys.exit(2)
+	sys.exit('usage: python THxxBGM.py <THxxBGM file> {<thxml file>}')
 
 file = open(sys.argv[1], mode='r', encoding='shift_jis')
 bgmlist = []

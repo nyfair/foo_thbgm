@@ -1,5 +1,4 @@
-import glob
-import struct
+import glob, struct
 
 format = '16siiii20s'
 for file in glob.glob('*.fmt'):
@@ -9,5 +8,5 @@ for file in glob.glob('*.fmt'):
 			if len(bgm) < 52:
 				thbgm.close()
 				break
-			title, offset, nonuse1, headlen, totallen, nonuse2 = struct.unpack(format, bgm)
+			title, offset, x1, headlen, totallen, x2 = struct.unpack(format, bgm)
 			print('<bgm pos="%s,%s,%s">%s</bgm>' % (offset, headlen, totallen-headlen, title))

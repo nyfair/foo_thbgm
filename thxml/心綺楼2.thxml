@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
+
+<thxml>
+	<album artist="あきやまうに" codec="vorbis" encoding="lossy" pack="tfpk">東方心綺楼～Hopeless Masquerade</album>
+	<albumartist>黄昏フロンティア&上海アリス幻樂団</albumartist>
+	<path>th135b.pak|</path>
+	<bgmlist>
+		<bgm file="win.ogg" pos="0,441518,940787">本日の一面記事</bgm>
+		<bgm file="charasel.ogg" pos="0,328319,3221220">演者選択</bgm>
+		<bgm file="reimu2.ogg" pos="0,0,948034">春色小径～Colorful Path ■MAXタイム</bgm>
+		<bgm file="marisa2.ogg" pos="0,0,948096">メイガスナイト ■MAXタイム</bgm>
+		<bgm file="ichirin2.ogg" pos="0,0,948123">時代親父とハイカラ少女 ■MAXタイム</bgm>
+		<bgm file="hijiri2.ogg" pos="0,0,948109">感情の摩天楼～Cosmic Mind ■MAXタイム</bgm>
+		<bgm file="futo2.ogg" pos="0,0,948108">大神神話伝 ■MAXタイム</bgm>
+		<bgm file="miko2.ogg" pos="0,0,948106">聖徳伝説～True Administrator ■MAXタイム</bgm>
+		<bgm file="nitori2.ogg" pos="0,0,948119">芥川龍之介の河童～Candid Friend ■MAXタイム</bgm>
+		<bgm file="koishi2.ogg" pos="0,0,948073">ハルトマンの妖怪少女 ■MAXタイム</bgm>
+		<bgm file="mamizou2.ogg" pos="0,0,948091">佐渡のニッ岩 ■MAXタイム</bgm>
+		<bgm file="kokoro2.ogg" pos="0,0,948095" artist="ZUN">亡失のエモーション ■MAXタイム</bgm>
+		<bgm file="maxwaza.ogg" pos="0,169593,1846045">ラストワード発動</bgm>
+	</bgmlist>
+</thxml>

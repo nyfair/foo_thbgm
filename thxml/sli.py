@@ -1,3 +1,4 @@
+#dump sli loop info
 import glob
 
 for file in glob.glob('*.sli'):
