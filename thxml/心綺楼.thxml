@@ -29,4 +29,46 @@
 		<bgm file="kaiwa4.ogg" pos="0,228004,940819">本日の一面記事Interval</bgm>
 		<!-- only has sfl file <bgm file="kaiwa2.ogg" pos="0,362357,3023997">kaiwa2</bgm> -->
 	</bgmlist>
+	<filelist>
+		<file pos="174014852", len="1148172", key="F8A2701B0DDE6773BC76AC768C8297F7">op.ogg</file>
+		<file pos="181698273", len="2605111", key="BE801C5EBB2F95B5715E62C402D611C6">title.ogg</file>
+		<file pos="184303384", len="102", key="6A98CE28688B78C29F6EC52A02991CF5">title.sfl</file>
+		<file pos="145103565", len="1810954", key="428A078659B6030A5FE433247EFBBA26">kaiwa1.ogg</file>
+		<file pos="146914519", len="104", key="019D1F64429D5A9D104BD22CA80BA827">kaiwa1.sfl</file>
+		<file pos="146914727", len="1803140", key="FA7B182651EF20645CD77A574C1862DA">kaiwa3.ogg</file>
+		<file pos="148717867", len="104", key="F533F7AB0F9413FA69BE102A3B059E08">kaiwa3.sfl</file>
+		<file pos="149486213", len="1588739", key="864144DEBCF52F3397004117D9344150">kaiwa5.ogg</file>
+		<file pos="151074952", len="104", key="B77A824BFF80EFEDEB40E72E55FDDA55">kaiwa5.sfl</file>
+		<file pos="184303486", len="893466", key="68AD2B69ADB7E1C47D1D8F7DE87AAD75">win.ogg</file>
+		<file pos="185196952", len="100", key="F1155646BAE62FCCDF9AC2D0E3D9D35D">win.sfl</file>
+		<file pos="133646132", len="1997617", key="CE8201F9B5223F855CC0CA351B44EC4F">ed.ogg</file>
+		<file pos="135643749", len="100", key="024DC20B4135F5269350EC42C22E82AA">ed.sfl</file>
+		<file pos="178010036", len="1722805", key="B5B25165CC2838DB9C6D7581CB8537CB">staffroll.ogg</file>
+		<file pos="179732841", len="1965432", key="3635C98898D867D766159DF2AE0C3E38">staffroll2.ogg</file>
+		<file pos="146914623", len="104", key="85BA8309C1D499299F9C82887CDC646B">kaiwa2.sfl</file>
+		<file pos="148717971", len="768138", key="B54CDE40350D7628D2CE3065B192187D">kaiwa4.ogg</file>
+		<file pos="149486109", len="104", key="3777B50696B385E8EDE9A2D14381EE2B">kaiwa4.sfl</file>
+		<file pos="175163024", len="2846908", key="69397CE63F5DB52854B915D524D1314F">reimu1.ogg</file>
+		<file pos="178009932", len="104", key="0B14FEDC679A2807BE7FA68B0297FCE8">reimu1.sfl</file>
+		<file pos="163794089", len="3228378", key="0201B47858557AE784971BD6B9448050">marisa1.ogg</file>
+		<file pos="167022467", len="104", key="657F952414C0660E04648E55D888B730">marisa1.sfl</file>
+		<file pos="142350428", len="2753031", key="420BCADC962B08125AA95BE94E7E9D2D">ichirin1.ogg</file>
+		<file pos="145103459", len="106", key="CD1624C9129A4806B17A5B6CF1DA9172">ichirin1.sfl</file>
+		<file pos="138870213", len="3480111", key="34DA1885FABB992AE1699FFB03A20A4C">hijiri1.ogg</file>
+		<file pos="142350324", len="104", key="AB9D8589FD69E68914022B7E5EC2E68A">hijiri1.sfl</file>
+		<file pos="135643849", len="3226262", key="66280FB2AB2C2DC8A18E9ACF00AF8FEA">futo1.ogg</file>
+		<file pos="138870111", len="102", key="9139110EF93C164713082238CF05E445">futo1.sfl</file>
+		<file pos="167022571", len="3912900", key="922E42E6FE46D0C263620930FE4FBF57">miko1.ogg</file>
+		<file pos="170935471", len="102", key="52F615451BBF051E18BB3B3170282F63">miko1.sfl</file>
+		<file pos="170935573", len="3079175", key="FB23E451BC5D532C2C00A05DDC9F57A3">nitori1.ogg</file>
+		<file pos="174014748", len="104", key="E7EC9A373F7B392EE5716D5DEA232578">nitori1.sfl</file>
+		<file pos="151075056", len="3091653", key="363810BF346170C4E1DA8978195C9169">koishi1.ogg</file>
+		<file pos="154166709", len="104", key="5090FFBBB7A2E347DBEC7DF808D7BD0F">koishi1.sfl</file>
+		<file pos="160658553", len="3135430", key="C5CB75A5E169F2833FC56968E6400200">mamizou1.ogg</file>
+		<file pos="163793983", len="106", key="61894FC8F058C509D6BC2D2989B5D104">mamizou1.sfl</file>
+		<file pos="130371826", len="3274200", key="0DB0D96027F59092D0826278D2AA25BD">chuboss1.ogg</file>
+		<file pos="133646026", len="106", key="1602B801366FCCDE93FD418226826566">chuboss1.sfl</file>
+		<file pos="154166813", len="6491636", key="BE60DBC2AC296BDD7921D63E65F8D051">kokoro1.ogg</file>
+		<file pos="160658449", len="104", key="75E48DA178BF819E95F350EFC867C170">kokoro1.sf</file>
+	</filelist>
 </thxml>

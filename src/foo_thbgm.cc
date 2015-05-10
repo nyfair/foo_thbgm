@@ -1,6 +1,5 @@
 #include "SDK/foobar2000.h"
 #include "helpers/helpers.h"
-
 #include <map>
 #include <string>
 #include <vector>
@@ -28,12 +27,20 @@ t_filesize current_sample;
 t_uint32 current_loop;
 t_filesize internaloffset;
 t_filesize internalsize;
+vector<map<string, string>> filelist;
 
 inline t_uint32 swap_endian(const t_uint32 &x) {
 	return ((x & 0x000000ff) << 24) |
 			((x & 0x0000ff00) << 8) |
 			((x & 0x00ff0000) >> 8) |
 			((x & 0xff000000) >> 24);
+}
+
+inline int char2int(const char input) {
+	if (input >= '0' && input <= '9')
+		return input - '0';
+	if (input >= 'A' && input <= 'F')
+		return input - 'A' + 10;
 }
 
 class mainmenu_loopsetting : public mainmenu_commands {
@@ -127,8 +134,8 @@ public:
 			case loop_count:
 				loopforever = false;
 				loopcount = atoi(_InputBox("Please specify loop counts"));
-				if(!loopcount || loopcount == 0) loopcount = 1;
-				if(loopcount > 65535 || loopcount < 0) loopcount = 65535;
+				if (!loopcount || loopcount == 0) loopcount = 1;
+				if (loopcount > 65535 || loopcount < 0) loopcount = 65535;
 				break;
 			case thbgm_readinfo:
 				read_thbgm_info = !read_thbgm_info;
@@ -150,9 +157,9 @@ public:
 	void open(const char *p_path, t_input_open_reason p_reason,
 				bool isWave, abort_callback &p_abort) {
 		m_file.release();
-		if(isWave) {
+		if (isWave) {
 			input_open_file_helper(m_file, p_path, p_reason, p_abort);
-		} else {
+		}else {
 			decoder.release();
 			input_entry::g_open_for_decoding(decoder, m_file, p_path, p_abort);
 		}
@@ -171,7 +178,7 @@ public:
 	}
 
 	bool run(audio_chunk &p_chunk, abort_callback &p_abort) {
-		if(first_packet) {
+		if (first_packet) {
 			decoder->initialize(0, 4, p_abort);
 			double time_offset = audio_math::samples_to_time(m_offset, samplerate);
 			decoder->seek(seek_seconds + time_offset, p_abort);
@@ -179,16 +186,16 @@ public:
 		}
 		
 		bool result = decoder->run(p_chunk, p_abort);
-		if(needloop) {
+		if (needloop) {
 			t_size read_count = p_chunk.get_sample_count();
 			current_sample += read_count;
-			if(current_sample >= m_totallen || !result) {
+			if (current_sample >= m_totallen || !result) {
 				t_size redundant_sample = current_sample - m_totallen;
 				p_chunk.set_sample_count(read_count - redundant_sample);
 				p_chunk.set_data_size((read_count - redundant_sample) * p_chunk.get_channel_count());
 				current_sample = m_headlen;
 				seek(audio_math::samples_to_time(m_offset + m_headlen, samplerate));
-				if(!loopforever) current_loop++;
+				if (!loopforever) current_loop++;
 			}
 		}
 		return result;
@@ -222,14 +229,14 @@ private:
 
 		pool2[ecx]++;
 		ecx++;
-		while(ecx <= cmp) {
+		while (ecx <= cmp) {
 			pool1[ecx]++;
 			ecx++;
 		}
-		if(pool1[cmp] < 0x10000) return;
+		if (pool1[cmp] < 0x10000) return;
 
 		pool1[0] = 0;
-		for(int i = 0; i < cmp; i++) {
+		for (int i = 0; i < cmp; i++) {
 			pool2[i] = (pool2[i] | 2) >> 1;
 			pool1[i + 1] = pool1[i] + pool2[i];
 		}
@@ -242,53 +249,53 @@ private:
 		t_uint32 cryptval[2];
 		t_uint32 s = 4, d = 0;	// source and destination bytes
 
-		for(int i = 0; i < CP1_SIZE; i++) pool1[i] = i;
-		for(int i = 0; i < CP2_SIZE; i++) pool2[i] = 1;
+		for (int i = 0; i < CP1_SIZE; i++) pool1[i] = i;
+		for (int i = 0; i < CP2_SIZE; i++) pool2[i] = 1;
 	
 		edi = swap_endian(*(t_uint32*)source);
 		esi = 0xFFFFFFFF;
 	
-		while(1) {
+		while (1) {
 			edx = 0x100;
 			cryptval[0] = esi / pool1[0x101];
 			cryptval[1] = (edi - ebx) / cryptval[0];
 			ecx = 0x80;
 			esi = 0;
 
-			while(1) {
-				while((ecx != 0x100) && (pool1[ecx] > cryptval[1])) {
+			while (1) {
+				while ((ecx != 0x100) && (pool1[ecx] > cryptval[1])) {
 					ecx--;
 					edx = ecx;
 					ecx = (esi+ecx) >> 1;
 				}
-				if(cryptval[1] < pool1[ecx+1]) break;
+				if (cryptval[1] < pool1[ecx+1]) break;
 				esi = ecx+1;
 				ecx = (esi+edx) >> 1;
 			}
 
 			*(dest + d) = (char)ecx;
-			if(++d >= destsize) return true;
+			if (++d >= destsize) return true;
 			esi = (long)pool2[ecx] * (long)cryptval[0];
 			ebx += pool1[ecx] * cryptval[0];
 			cryptstep(ecx);
 			ecx = (ebx + esi) ^ ebx;
 
-			while(!(ecx & 0xFF000000)) {
+			while (!(ecx & 0xFF000000)) {
 				ebx = ebx << 8;
 				esi = esi << 8;
 				edi = edi << 8;
 				ecx = (ebx+esi) ^ ebx;
 				edi += *(source + s) & 0x000000FF;
-				if(++s >= sourcesize) return true;
+				if (++s >= sourcesize) return true;
 			}
 		
-			while(esi < 0x10000) {
+			while (esi < 0x10000) {
 				esi = 0x10000 - (ebx & 0x0000FFFF);
 				ebx = ebx << 8;
 				esi = esi << 8;
 				edi = edi << 8;
 				edi += *(source + s) & 0x000000FF;
-				if(++s >= sourcesize) return true;
+				if (++s >= sourcesize) return true;
 			}
 		}
 	}
@@ -297,7 +304,7 @@ private:
 		AC6File dest;
 		pfc::string8 name;
 		char *t = source;
-		if(*t = '/') t++;	// Jump over directory slash
+		if (*t = '/') t++;	// Jump over directory slash
 		t_uint32 fnlen = strlen(t) + 1;
 		name.add_string(t, fnlen);
 		t += fnlen;
@@ -314,12 +321,12 @@ private:
 	void parse_archive(service_ptr_t<file> &m_file,
 			const char *p_archive, abort_callback &p_abort) {
 		filesystem::g_open(m_file, p_archive, filesystem::open_mode_read, p_abort);
-		if(stricmp_utf8(ac6archive, p_archive)) {
+		if (stricmp_utf8(ac6archive, p_archive)) {
 			ac6files.clear();
 			ac6archive = p_archive;
 			char sig[4];
 			m_file->read_object_t(sig, p_abort);
-			if(memcmp(sig, "PBG6", 4)) throw exception_io_data();
+			if (memcmp(sig, "PBG6", 4)) throw exception_io_data();
 
 			t_uint32 toc_start, toc_size;
 			char *t;
@@ -337,18 +344,18 @@ private:
 			memcpy(&filecount, toc.get_ptr(), 4);
 			t = toc.get_ptr() + 4;
 
-			for(t_uint32 i = 0; i < filecount; i++) {
+			for (t_uint32 i = 0; i < filecount; i++) {
 				t = getfileinfo(t);
 			}
 		}
 
-		if(dump_thbgm) {
+		if (dump_thbgm) {
 			pfc::string8 unpackdir = p_archive;
 			unpackdir.add_string("_unpack\\");
-			if(!filesystem::g_exists(unpackdir, p_abort))
+			if (!filesystem::g_exists(unpackdir, p_abort))
 				filesystem::g_create_directory(unpackdir, p_abort);
 			map<pfc::string8, AC6File>::iterator it;
-			for(it = ac6files.begin(); it != ac6files.end(); it++) {
+			for (it = ac6files.begin(); it != ac6files.end(); it++) {
 				service_ptr_t<file> out;
 				pfc::string8 outfile = unpackdir;
 				outfile.add_string(it->first);
@@ -387,7 +394,7 @@ public:
 
 	virtual void open_archive(service_ptr_t<file> &p_out, const char *p_archive,
 				const char *p_file, abort_callback &p_abort) {
-		if(stricmp_utf8(pfc::string_extension(p_archive), "ac6")) {
+		if (stricmp_utf8(pfc::string_extension(p_archive), "ac6")) {
 			throw exception_io_data();
 		}
 		service_ptr_t<file> m_file;
@@ -434,7 +441,7 @@ public:
 
   void init(unsigned int s) {
     mt[0] = s;
-    for(mti = 1; mti < N; ++mti) {
+    for (mti = 1; mti < N; ++mti) {
       mt[mti] =
         (1812433253UL * (mt[mti-1] ^ (mt[mti-1] >> 30)) + mti);
     }
@@ -487,7 +494,7 @@ private:
 	bool decrypt(char *head, t_uint32 headsize, t_uint32 archivesize) {
 		char *t = head;
 		t_uint32 offset = 0;
-		for(t_uint16 i = 0; i < filecount; ++i) {
+		for (t_uint16 i = 0; i < filecount; ++i) {
 			TASFROFile dest;
 			memcpy(&dest.pos, t, 4);
 			t += 4;
@@ -495,13 +502,13 @@ private:
 			t += 4;
 			t_uint8 name_len = *t;
 			t++;
-			if(offset + 9 + name_len > archivesize) return false;
+			if (offset + 9 + name_len > archivesize) return false;
 			pfc::string8 name(t, name_len);
 			tasfrofiles[name] = dest;
 			t += name_len;
 			offset += 9 + name_len;
-			if(dest.pos < headsize + 6 || dest.pos > archivesize) return false;
-			if(dest.size > archivesize - dest.pos) return false;
+			if (dest.pos < headsize + 6 || dest.pos > archivesize) return false;
+			if (dest.size > archivesize - dest.pos) return false;
 		}
 		return true;
 	}
@@ -509,40 +516,40 @@ private:
 	void parse_archive(service_ptr_t<file> &m_file, const char *p_archive,
 				abort_callback &p_abort) {
 		filesystem::g_open(m_file, p_archive, filesystem::open_mode_read, p_abort);
-		if(stricmp_utf8(tasfroarchive, p_archive)) {
+		if (stricmp_utf8(tasfroarchive, p_archive)) {
 			tasfrofiles.clear();
 			tasfroarchive = p_archive;
 			t_filesize archivesize = m_file->get_size(p_abort);
-			if(archivesize < 6) throw exception_io_data();
+			if (archivesize < 6) throw exception_io_data();
 			t_uint32 headsize;
 			m_file->read_object_t(filecount, p_abort);
 			m_file->read_object_t(headsize, p_abort);
-			if(filecount == 0 || headsize == 0 || archivesize < 6 + headsize) 
+			if (filecount == 0 || headsize == 0 || archivesize < 6 + headsize) 
 				throw exception_io_data();
 
 			pfc::array_t<char> head;
 			head.set_size(headsize);
 			m_file->read(head.get_ptr(), headsize, p_abort);
 			RNG_MT mt(headsize + 6);
-			for(t_uint32 i = 0; i < headsize; ++i)
+			for (t_uint32 i = 0; i < headsize; ++i)
 				head[i] ^= mt.next_int32() & 0xFF;
 
-			if(!decrypt(head.get_ptr(), headsize, archivesize)) {
+			if (!decrypt(head.get_ptr(), headsize, archivesize)) {
 				tasfrofiles.clear();
 				t_uint8 k = 0xC5, t = 0x83;
-				for(t_uint32 i = 0; i < headsize; ++i) {
+				for (t_uint32 i = 0; i < headsize; ++i) {
 					head[i] ^= k; k += t; t += 0x53;
 				}
-				if(!decrypt(head.get_ptr(), headsize, archivesize))
+				if (!decrypt(head.get_ptr(), headsize, archivesize))
 					throw exception_io_data();
 			}
 		}
 
-		if(dump_thbgm) {
+		if (dump_thbgm) {
 			pfc::string8 unpackdir = p_archive;
 			unpackdir.add_string("_unpack");
 			map<pfc::string8, TASFROFile>::iterator it;
-			for(it = tasfrofiles.begin(); it != tasfrofiles.end(); it++) {
+			for (it = tasfrofiles.begin(); it != tasfrofiles.end(); it++) {
 				service_ptr_t<file> out;
 				pfc::string8 outfile = unpackdir;
 				pfc::string8 archive_path = it->first;
@@ -552,9 +559,9 @@ private:
 				char *parts;
 				directory[archive_path.length()] = 0;
 				parts = strtok(directory, "/");
-				while(parts != NULL) {
+				while (parts != NULL) {
 					outfile.add_string("\\");
-					if(!filesystem::g_exists(outfile, p_abort))
+					if (!filesystem::g_exists(outfile, p_abort))
 						filesystem::g_create_directory(outfile, p_abort);
 					outfile.add_string(parts);
 					parts = strtok(NULL, "/");
@@ -566,7 +573,7 @@ private:
 				m_file->seek(it->second.pos, p_abort);
 				m_file->read(buffer.get_ptr(), it->second.size, p_abort);
 				t_uint8 k = (it->second.pos >> 1) | 0x23;
-				for(t_uint32 i = 0; i < it->second.size; ++i) buffer[i] ^= k;
+				for (t_uint32 i = 0; i < it->second.size; ++i) buffer[i] ^= k;
 				out->write(buffer.get_ptr(), it->second.size, p_abort);
 			}
 			dump_thbgm = false;
@@ -594,7 +601,7 @@ public:
 
 	virtual void open_archive(service_ptr_t<file> &p_out, const char *p_archive,
 				const char *p_file, abort_callback &p_abort) {
-		if(stricmp_utf8(pfc::string_extension(p_archive), "dat")) {
+		if (stricmp_utf8(pfc::string_extension(p_archive), "dat")) {
 			throw exception_io_data();
 		}
 		service_ptr_t<file> m_file;
@@ -606,7 +613,7 @@ public:
 		m_file->seek(tasfrofiles[p_file].pos, p_abort);
 		m_file->read(buffer.get_ptr(), tasfrofiles[p_file].size, p_abort);
 		t_uint8 k = (tasfrofiles[p_file].pos >> 1) | 0x23;
-		for(t_uint32 i = 0; i < tasfrofiles[p_file].size; ++i) buffer[i] ^= k;
+		for (t_uint32 i = 0; i < tasfrofiles[p_file].size; ++i) buffer[i] ^= k;
 		p_out->write(buffer.get_ptr(), tasfrofiles[p_file].size, p_abort);
 	}
 
@@ -618,8 +625,123 @@ public:
 };
 static archive_factory_t<archive_tasfro> g_archive_tasfro_factory;
 
-// No interest in attaching tfpk unpacker until tasfro make enough $$$ haha
-#include "unpack_tfpk.inc"
+struct TFPKFile {
+	t_uint32 pos;		// Position inside the archive
+	t_uint32 size;		// File size
+	byte key[16];		// Dump key
+};
+map<pfc::string8, TFPKFile> tfpkfiles;
+pfc::string8 tfpkarchive;
+
+class archive_tfpk : public archive_impl {
+private:
+	void parse_archive(service_ptr_t<file> &m_file, const char *p_archive,
+		abort_callback &p_abort) {
+		filesystem::g_open(m_file, p_archive, filesystem::open_mode_read, p_abort);
+		if (stricmp_utf8(tfpkarchive, p_archive)) {
+			//tfpkfiles.clear();
+			tfpkarchive = p_archive;
+			char sig[4];
+			m_file->read_object_t(sig, p_abort);
+			if (memcmp(sig, "TFPK", 4)) throw exception_io_data();
+			for (size_t i = 0; i < filelist.size(); i++) {
+				map<string, string> f = filelist[i];
+				const char* keyhex = f["key"].c_str();
+				byte v[16];
+				for (int i = 0; i < 16; i++)
+					v[i] = (char2int(*(keyhex+(i<<1)))<<4) + char2int(*(keyhex+(i<<1)+1));
+				TFPKFile file = {_atoi64(f["pos"].c_str()), _atoi64(f["len"].c_str()),
+					{v[0],v[1],v[2],v[3],v[4],v[5],v[6],v[7],v[8],v[9],v[10],v[11],v[12],v[13],v[14],v[15]}};
+				tfpkfiles[f["name"].c_str()] = file;
+			}
+		}
+
+		if (dump_thbgm) {
+			pfc::string8 unpackdir = p_archive;
+			unpackdir.add_string("_unpack");
+			std::map<pfc::string8, TFPKFile>::iterator it;
+			for (it = tfpkfiles.begin(); it != tfpkfiles.end(); it++) {
+				service_ptr_t<file> out;
+				pfc::string8 outfile = unpackdir;
+				pfc::string8 archive_path = it->first;
+				char directory[255];
+				strncpy(directory, archive_path.toString(), archive_path.length());
+
+				char *parts;
+				directory[archive_path.length()] = 0;
+				parts = strtok(directory, "/");
+				while (parts != NULL) {
+					outfile.add_string("\\");
+					if (!filesystem::g_exists(outfile, p_abort))
+						filesystem::g_create_directory(outfile, p_abort);
+					outfile.add_string(parts);
+					parts = strtok(NULL, "/");
+				}
+
+				filesystem::g_open_write_new(out, outfile, p_abort);
+				pfc::array_t<char> buffer;
+				buffer.set_size(it->second.size);
+				m_file->seek(it->second.pos, p_abort);
+				m_file->read(buffer.get_ptr(), it->second.size, p_abort);
+				t_uint8 k = 0;
+				for (t_uint32 i = 0; i < it->second.size; ++i) {
+					buffer[i] ^= it->second.key[k];
+					k = (k + 1) & 0xf;
+				}
+				out->write(buffer.get_ptr(), it->second.size, p_abort);
+			}
+			dump_thbgm = false;
+		}
+	}
+
+public:
+	virtual bool supports_content_types() {
+		return false;
+	}
+
+	virtual const char* get_archive_type() {
+		return "tfpk";
+	}
+
+	virtual t_filestats get_stats_in_archive(const char *p_archive,
+		const char *p_file, abort_callback &p_abort) {
+		service_ptr_t<file> m_file;
+		filesystem::g_open(m_file, p_archive, filesystem::open_mode_read, p_abort);
+		t_filestats status(m_file->get_stats(p_abort));
+		std::map<pfc::string8, TFPKFile>::iterator it = tfpkfiles.find(p_file);
+		status.m_size = (it == tfpkfiles.end()) ? 0 : it->second.size;
+		return status;
+	}
+
+	virtual void open_archive(service_ptr_t<file> &p_out, const char *p_archive,
+		const char *p_file, abort_callback &p_abort) {
+		if (stricmp_utf8(pfc::string_extension(p_archive), "pak")) {
+			throw exception_io_data();
+		}
+		service_ptr_t<file> m_file;
+		parse_archive(m_file, p_archive, p_abort);
+
+		filesystem::g_open_tempmem(p_out, p_abort);
+		pfc::array_t<char> buffer;
+		buffer.set_size(tfpkfiles[p_file].size);
+		m_file->seek(tfpkfiles[p_file].pos, p_abort);
+		m_file->read(buffer.get_ptr(), tfpkfiles[p_file].size, p_abort);
+		t_uint8 k = 0;
+		for (t_uint32 i = 0; i < tfpkfiles[p_file].size; ++i) {
+			buffer[i] ^= tfpkfiles[p_file].key[k];
+			k = (k + 1) & 0xf;
+		}
+		p_out->write(buffer.get_ptr(), tfpkfiles[p_file].size, p_abort);
+	}
+
+	virtual void archive_list(const char *p_archive,
+		const service_ptr_t<file> &p_out,
+		archive_callback &p_abort, bool p_want_readers) {
+		throw exception_io_data();
+	}
+};
+
+static archive_factory_t<archive_tfpk> g_archive_tfpk_factory;
 
 class raw_binary : public archive_impl {
 public:
@@ -663,7 +785,7 @@ class input_thxml {
 protected:
 	file::ptr m_file;
 	pfc::string8 basepath;
-	vector<map<string, string> > bgmlist;
+	vector<map<string, string>> bgmlist;
 	pfc::string8 title;
 	pfc::string8 artist;
 	t_uint32 bits;
@@ -692,17 +814,17 @@ protected:
 	void open_raw(t_uint32 p_subsong, abort_callback &p_abort) {
 		string bgm_path = bgmlist[p_subsong]["file"];
 		string path;
-		if(isStream) {
+		if (isStream) {
 			string filepos;
 			size_t name_pos, pos_size;
-			if(dump_thbgm) {
+			if (dump_thbgm) {
 				pfc::string8 filepath = basepath;
 				filepath.add_string(bgm_path.c_str());
 				pfc::string8 unpackdir = filepath;
 				unpackdir.add_string("_unpack\\");
-				if(!filesystem::g_exists(unpackdir, p_abort))
+				if (!filesystem::g_exists(unpackdir, p_abort))
 					filesystem::g_create_directory(unpackdir, p_abort);
-				for(unsigned int i=1; i<bgmlist.size(); i++) {
+				for (int i=1; i<bgmlist.size(); i++) {
 					filepos = bgmlist[i]["filepos"];
 					name_pos = filepos.find(',');
 					pos_size = filepos.rfind(',');
@@ -730,7 +852,7 @@ protected:
 			internaloffset = _atoi64(filepos.substr(++name_pos, pos_size).c_str());
 			internalsize = _atoi64(filepos.substr(++pos_size).c_str());
 		}
-		if(isArchive) {
+		if (isArchive) {
 			t_uint32 fl = basepath.length() + bgm_path.find_first_of('|');
 			char flstr[4];
 			_itoa_s(fl, flstr, 10);
@@ -740,7 +862,7 @@ protected:
 			path.append(flstr);
 			path.append("|");
 			path.append(basepath);
-		} else {
+		}else {
 			path = basepath;
 		}
 		path.append(bgm_path);
@@ -751,7 +873,7 @@ protected:
 public:
 	void open(file::ptr p_filehint, const char *p_path,
 				t_input_open_reason p_reason, abort_callback &p_abort) {
-		if(p_reason == input_open_info_write) {
+		if (p_reason == input_open_info_write) {
 			throw exception_io_unsupported_format();
 		}
 		m_file = p_filehint;
@@ -762,14 +884,14 @@ public:
 		basepath.set_string(p_path, baselen);
 		t_filesize length = m_file->get_size(p_abort);
 		thxmlparser parser = thxmlparser();
-		parser.parsestream(
-			(char*) (m_file->read_string_ex(length, p_abort).get_ptr()));
+		parser.parsestream( (char*) (m_file->read_string_ex(length, p_abort).get_ptr()));
 		bgmlist = parser.thbgm;
+		filelist = parser.filelist;
 		pack = bgmlist[0]["pack"];
-		if(bgmlist[1]["filepos"] != "") {
+		if (bgmlist[1]["filepos"] != "") {
 			pack = "raw";
 			isStream = true;
-		} else {
+		}else {
 			isStream = false;
 		}
 		isArchive = pack != "";
@@ -809,14 +931,14 @@ public:
 		p_info.info_set_int("bitspersample", bits);
 		p_info.info_set("encoding", encoding);
 		p_info.info_set("codec", codec);
-		if(isWave) {
+		if (isWave) {
 			p_info.info_set_bitrate((bits * channels * samplerate + 500) / 1000);
 			p_info.set_length(audio_math::samples_to_time(
 				length_to_samples(m_headlen + m_looplen), samplerate));
-		} else {
+		}else {
 			p_info.set_length(audio_math::samples_to_time(
 				m_headlen + m_looplen, samplerate));
-			if(read_thbgm_info) {
+			if (read_thbgm_info) {
 				open_raw(p_subsong, p_abort);
 				raw.get_info(p_info, p_abort);
 			}
@@ -837,7 +959,7 @@ public:
 	void decode_initialize(t_uint32 p_subsong, unsigned p_flags,
 				abort_callback &p_abort) {
 		open_raw(get_subsong(--p_subsong), p_abort);
-		if(isWave) {
+		if (isWave) {
 			m_buffer.set_size(samples_to_length(deltaread));
 		}
 		current_loop = 1;
@@ -845,41 +967,41 @@ public:
 	}
 
 	bool decode_run(audio_chunk &p_chunk, abort_callback &p_abort) {
-		if(isWave) {
-			if(m_filepos >= m_maxseeksize) return false; 
+		if (isWave) {
+			if (m_filepos >= m_maxseeksize) return false; 
 			t_size deltaread_size = pfc::downcast_guarded<t_size>
 				(pfc::min_t(samples_to_length(deltaread), m_maxseeksize - m_filepos));
 			t_size deltaread_done = 
 				raw.read(m_buffer.get_ptr(), deltaread_size, p_abort);
 			m_filepos += deltaread_done;
 		
-			if(needloop && m_filepos >= m_maxseeksize) {
+			if (needloop && m_filepos >= m_maxseeksize) {
 				t_filesize remain = samples_to_length(deltaread) - deltaread_done;
 				m_filepos = m_headlen + remain;
 				raw.raw_seek(m_offset + m_headlen, p_abort);
 				deltaread_done += raw.read(m_buffer.get_ptr()
 					+ deltaread_done, remain, p_abort);
-				if(!loopforever) current_loop++;
+				if (!loopforever) current_loop++;
 			}
 
 			p_chunk.set_data_fixedpoint(m_buffer.get_ptr(), deltaread_done,
 				samplerate, channels, bits,
 				audio_chunk::g_guess_channel_config(channels));
 			return true;
-		} else {
+		}else {
 			return raw.run(p_chunk, p_abort);
 		}
 	}
 
 	void decode_seek(double p_seconds, abort_callback &p_abort) {
-		if(isWave) {
+		if (isWave) {
 			t_uint64 samples = audio_math::time_to_samples(p_seconds, samplerate);
 			m_filepos = samples * samplewidth;
 			m_maxseeksize = m_headlen + m_looplen;
-			if(m_filepos > m_maxseeksize)
+			if (m_filepos > m_maxseeksize)
 				m_filepos = m_maxseeksize;
 			raw.raw_seek(m_offset + m_filepos, p_abort);
-		} else {
+		}else {
 			raw.seek(p_seconds);
 		}
 	}
@@ -902,9 +1024,9 @@ public:
 static input_factory_t<input_thxml> g_input_thbgm_factory;
 
 DECLARE_FILE_TYPE("Touhou-like BGM XML-Tag File", "*.thxml");
-DECLARE_COMPONENT_VERSION("ThBGM Player", "9.9", 
+DECLARE_COMPONENT_VERSION("ThBGM Player", "\xE2\x91\xA8", 
 "Play BGM files of Touhou and some related doujin games.\n\n"
 "If you have any feature request and bug report,\n"
 "feel free to contact me at my E-mail address below.\n\n"
 "https://github.com/nyfair/foo_thbgm/issues\n"
-"(C) nyfair <nyfair2012@gmail.com>");
+"(C) nyfair <nyfair2012@gmail.com>\n\xE6\xB1\x82\xE6\x90\x9E\xE5\xA7\xAC\xE6\xB1\x82\xE7\x99\xBE\xE5\x90\x88");

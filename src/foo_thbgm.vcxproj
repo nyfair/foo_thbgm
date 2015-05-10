@@ -48,7 +48,7 @@
     <LinkIncremental>false</LinkIncremental>
     <IgnoreImportLibrary>false</IgnoreImportLibrary>
     <GenerateManifest>false</GenerateManifest>
-    <OutDir>$(ProjectDir)\debug\components\</OutDir>
+    <OutDir>$(SolutionDir)$(Configuration)\components\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -70,7 +70,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>shlwapi.lib;../SDK/foobar2000/shared/shared.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>../SDK/foobar2000/shared/shared.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)foo_thbgm$(TargetExt)</OutputFile>
     </Link>
   </ItemDefinitionGroup>

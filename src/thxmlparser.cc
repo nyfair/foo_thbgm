@@ -33,24 +33,34 @@ void thxmlparser::parsestream(char *thxml_stream) {
 	xml_node<> *album_node = root->first_node("album");
 	thbgm[0]["album"] = album_node->value();
 
-	for(xml_attribute<> *attr = album_node->first_attribute();
-			attr; attr = attr->next_attribute()) {
+	for (xml_attribute<> *attr = album_node->first_attribute(); attr; attr = attr->next_attribute()) {
 		thbgm[0][attr->name()] = attr->value();
 	}
 	thbgm[0]["albumartist"] = root->first_node("albumartist")->value();
 	thbgm[0]["path"] = root->first_node("path")->value();
 
 	xml_node<> *bgmlist_node = root->first_node("bgmlist");
-	for(xml_node<> *bgm_node = bgmlist_node->first_node();
-			bgm_node; bgm_node = bgm_node->next_sibling()) {
+	for (xml_node<> *bgm_node = bgmlist_node->first_node(); bgm_node; bgm_node = bgm_node->next_sibling()) {
 		map<string, string> bgm = construct_basebgm();
 		bgm["title"] = bgm_node->value();
-		for(xml_attribute<> *attr = bgm_node->first_attribute();
+		for (xml_attribute<> *attr = bgm_node->first_attribute();
 				attr; attr = attr->next_attribute()) {
 			bgm[attr->name()] = attr->value();
 		}
 		bgm["file"] = thbgm[0]["path"] + bgm["file"];
 		thbgm.push_back(bgm);
+	}
+
+	xml_node<> *filelist_node = root->first_node("filelist");
+	if (filelist_node) {
+		for (xml_node<> *file_node = filelist_node->first_node(); file_node; file_node = file_node->next_sibling()) {
+			map<string, string> file;
+			file["name"] = file_node->value();
+			for (xml_attribute<> *attr = file_node->first_attribute(); attr; attr = attr->next_attribute()) {
+				file[attr->name()] = attr->value();
+			}
+			filelist.push_back(file);
+		}
 	}
 }
 

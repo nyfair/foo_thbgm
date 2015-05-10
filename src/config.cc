@@ -18,7 +18,7 @@ int WINAPI WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam) {
 	WORD uBtnID;
 	switch(uMsg) {
 		case WM_DESTROY:
-			if(_hWndFont) ::DeleteObject(_hWndFont);
+			if (_hWndFont) ::DeleteObject(_hWndFont);
 			::PostQuitMessage(0);
 			break;
 		case WM_CREATE:
@@ -94,7 +94,7 @@ int WINAPI WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam) {
 			::SendDlgItemMessage(hWnd, IDCANCEL, WM_SETFONT, (WPARAM)_hWndFont, 0);
 			break;
 		case WM_KEYDOWN:
-			if(wParam == VK_RETURN) ::SendMessage(hWnd, WM_COMMAND, IDOK, 0);
+			if (wParam == VK_RETURN) ::SendMessage(hWnd, WM_COMMAND, IDOK, 0);
 			break;
 		case WM_SETFOCUS:
 			::SetFocus(_hEdit);
@@ -148,11 +148,11 @@ HWND _CreateWindow(HINSTANCE hInst) {
 
 int _Run(HWND hWnd) {
 	MSG st_Msg;
-	if(!hWnd) return 0;
+	if (!hWnd) return 0;
 	::ShowWindow(hWnd, SW_SHOW);
 	::UpdateWindow(hWnd);
-	while(::GetMessage(&st_Msg, 0, 0, 0)) {
-		if(st_Msg.message == WM_KEYDOWN && st_Msg.wParam == VK_RETURN) {
+	while (::GetMessage(&st_Msg, 0, 0, 0)) {
+		if (st_Msg.message == WM_KEYDOWN && st_Msg.wParam == VK_RETURN) {
 			::SendMessage(hWnd, st_Msg.message, st_Msg.wParam, st_Msg.wParam);
 		}
 		::TranslateMessage(&st_Msg);

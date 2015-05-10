@@ -3,7 +3,8 @@
 
 class thxmlparser {
 public:
-	vector<map<string, string> > thbgm;
+	vector<map<string, string>> thbgm;
+	vector<map<string, string>> filelist;
 	thxmlparser();
 	virtual void parsefile(const char*);
 	virtual void parsestream(char*);

@@ -1,7 +1,7 @@
 ﻿Usage:
-Install foo_thbgm.fb2k-component or move foo_thbgm.dll to your foobar2000's components directory.
-Move thxml file to your game's installation directory.
-Open thxml files by foobar2000, then enjoy your life!
+step1: Install foo_thbgm.fb2k-component.
+step2: Move thxml file to your game's installation directory.
+step3: Open thxml files by foobar2000, then enjoy your life!
 
 Something you should know:
 Foobar2000 v1.1 or newer required to run this plugin.
