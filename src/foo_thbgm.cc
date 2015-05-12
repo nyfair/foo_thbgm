@@ -430,7 +430,6 @@ private:
     LOWER_MASK = 0x7FFFFFFFUL
   };
 
-private:
   unsigned int mt[N];
   int mti;
 
@@ -647,11 +646,9 @@ private:
 			for (size_t i = 0; i < filelist.size(); i++) {
 				map<string, string> f = filelist[i];
 				const char* keyhex = f["key"].c_str();
-				byte v[16];
+				TFPKFile file = { _atoi64(f["pos"].c_str()), _atoi64(f["len"].c_str()) };
 				for (int i = 0; i < 16; i++)
-					v[i] = (char2int(*(keyhex+(i<<1)))<<4) + char2int(*(keyhex+(i<<1)+1));
-				TFPKFile file = {_atoi64(f["pos"].c_str()), _atoi64(f["len"].c_str()),
-					{v[0],v[1],v[2],v[3],v[4],v[5],v[6],v[7],v[8],v[9],v[10],v[11],v[12],v[13],v[14],v[15]}};
+					file.key[i] = (char2int(*(keyhex+(i<<1)))<<4) + char2int(*(keyhex+(i<<1)+1));
 				tfpkfiles[f["name"].c_str()] = file;
 			}
 		}
@@ -1024,7 +1021,7 @@ public:
 static input_factory_t<input_thxml> g_input_thbgm_factory;
 
 DECLARE_FILE_TYPE("Touhou-like BGM XML-Tag File", "*.thxml");
-DECLARE_COMPONENT_VERSION("ThBGM Player", "1.5", 
+DECLARE_COMPONENT_VERSION("ThBGM Player", "2.0", 
 "Play BGM files of Touhou and some related doujin games.\n\n"
 "If you have any feature request and bug report,\n"
 "feel free to contact me at my E-mail address below.\n\n"

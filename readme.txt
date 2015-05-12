@@ -43,7 +43,7 @@ Banshiryuu (幡紫竜) both c67 and later version
 Samidare (五月雨)
 
 ChangeLog:
-1.3
+2.0
 full support for tfpk
 1.2
 add tfpk unpacker for 心綺楼
