@@ -19,4 +19,23 @@
 		<bgm file="kokoro2.ogg" pos="0,0,948095" artist="ZUN">亡失のエモーション ■MAXタイム</bgm>
 		<bgm file="maxwaza.ogg" pos="0,169593,1846045">ラストワード発動</bgm>
 	</bgmlist>
+	<filelist>
+		<file pos="27759888" len="3493" key="65D7CA91BEB12498DF329ACCC0D6A004">bgm.csv</file>
+		<file pos="27763381" len="2084493" key="2E125A1F1D3C789DD35FE0806E0C3DEF">charasel.ogg</file>
+		<file pos="29847874" len="106" key="B7BE9D641DF8437F2AD79A402BED694D">charasel.sfl</file>
+		<file pos="29847980" len="514547" key="13D929B8D285CBAE58872D38EBA8FB6E">futo2.ogg</file>
+		<file pos="30362527" len="510466" key="9A0C4ECA220E69F6AA58EC6CFFA0F398">hijiri2.ogg</file>
+		<file pos="30872993" len="511833" key="6F79A4206A4A670964C3AB3DB345004D">ichirin2.ogg</file>
+		<file pos="31384826" len="514983" key="37DB57F5993D2393DC6EC1D15FB928C6">koishi2.ogg</file>
+		<file pos="31899809" len="519597" key="0EE74A38DBFC40E6E71379CA06B1B376">kokoro2.ogg</file>
+		<file pos="32419406" len="516809" key="A44BCB47701621F922C147A282C3FBA1">mamizou2.ogg</file>
+		<file pos="32936215" len="517076" key="10E6CA38D895746D63ED2B77A0F96162">marisa2.ogg</file>
+		<file pos="33453291" len="1241233" key="B0254D44A202D3EAD73D3B0B6462170E">maxwaza.ogg</file>
+		<file pos="34694524" len="104" key="EDBD88781C8B4222C150A62AC78AC3F0">maxwaza.sfl</file>
+		<file pos="34694628" len="513792" key="50C0677888EBB91E781863E549676B64">miko2.ogg</file>
+		<file pos="35208420" len="512215" key="CD93464A83BBA859B2CE95FAC654AAAC">nitori2.ogg</file>
+		<file pos="35720635" len="516135" key="B18D60C222D9195D4175563B0E8BDBB6">reimu2.ogg</file>
+		<file pos="36236770" len="895314" key="5863ACBF66EC15688B0E0412A10E57E8">win.ogg</file>
+		<file pos="37132084" len="102" key="DB0AD592A2863FE89AC5F01F400E5F50">win.sfl</file>
+	</filelist>
 </thxml>

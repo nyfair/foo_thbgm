@@ -638,7 +638,7 @@ private:
 		abort_callback &p_abort) {
 		filesystem::g_open(m_file, p_archive, filesystem::open_mode_read, p_abort);
 		if (stricmp_utf8(tfpkarchive, p_archive)) {
-			//tfpkfiles.clear();
+			tfpkfiles.clear();
 			tfpkarchive = p_archive;
 			char sig[4];
 			m_file->read_object_t(sig, p_abort);
@@ -1024,6 +1024,6 @@ DECLARE_FILE_TYPE("Touhou-like BGM XML-Tag File", "*.thxml");
 DECLARE_COMPONENT_VERSION("ThBGM Player", "2.0", 
 "Play BGM files of Touhou and some related doujin games.\n\n"
 "If you have any feature request and bug report,\n"
-"feel free to contact me at my E-mail address below.\n\n"
+"feel free to post an issue in the Github project.\n\n"
 "https://github.com/nyfair/foo_thbgm/issues\n"
 "(C) nyfair <nyfair2012@gmail.com>\n\xE6\xB1\x82\xE6\x90\x9E\xE5\xA7\xAC\xE6\xB1\x82\xE7\x99\xBE\xE5\x90\x88");
