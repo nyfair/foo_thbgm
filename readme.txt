@@ -31,11 +31,12 @@ Double Spoiler (ダブルスポイラー～東方文花帖)
 Fairy Wars (妖精大戦争～東方三月精)
 Ten Desires (東方神霊廟)
 Double Dealing Character (東方輝針城)
+Legacy of Lunatic Kingdom （東方紺珠伝）
 Immaterial and Missing Power (東方萃夢想)
 Scarlet Weather Rhapsody (東方緋想天)
 Hisoutensoku (東方非想天則～超弩級ギニョルの謎を追え)
 Hopeless Masquerade (東方心綺楼)
-Legacy of Lunatic Kingdom （東方紺珠伝）
+Urban Legend in Limbo (東方深秘録)
 Impossible Spell Card (弾幕アマノジャク)
 Uwabami Breakers (黄昏酒場)
 Kioh Gyoku (稀翁玉)
