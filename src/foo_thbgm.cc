@@ -512,6 +512,17 @@ private:
 		return true;
 	}
 
+	void dump(pfc::array_t<char> &buffer, TASFROFile f, service_ptr_t<file> &m_file, abort_callback &p_abort) {
+		t_uint32 size = (f.size + 3) >> 2;
+		buffer.set_size(size << 2);
+		m_file->seek(f.pos, p_abort);
+		m_file->read(buffer.get_ptr(), f.size, p_abort);
+		t_uint32 *buf = (t_uint32*) (buffer.get_ptr());
+		t_uint8 k = (f.pos >> 1) | 0x23;
+		t_int32 kk = k + (k << 8) + (k << 16) + (k << 24);
+		for (t_uint32 i = 0; i < size; ++i) buf[i] ^= kk;
+	}
+
 	void parse_archive(service_ptr_t<file> &m_file, const char *p_archive,
 				abort_callback &p_abort) {
 		filesystem::g_open(m_file, p_archive, filesystem::open_mode_read, p_abort);
@@ -568,11 +579,7 @@ private:
 
 				filesystem::g_open_write_new(out, outfile, p_abort);
 				pfc::array_t<char> buffer;
-				buffer.set_size(it->second.size);
-				m_file->seek(it->second.pos, p_abort);
-				m_file->read(buffer.get_ptr(), it->second.size, p_abort);
-				t_uint8 k = (it->second.pos >> 1) | 0x23;
-				for (t_uint32 i = 0; i < it->second.size; ++i) buffer[i] ^= k;
+				dump(buffer, it->second, m_file, p_abort);
 				out->write(buffer.get_ptr(), it->second.size, p_abort);
 			}
 			dump_thbgm = false;
@@ -608,11 +615,7 @@ public:
 
 		filesystem::g_open_tempmem(p_out, p_abort);
 		pfc::array_t<char> buffer;
-		buffer.set_size(tasfrofiles[p_file].size);
-		m_file->seek(tasfrofiles[p_file].pos, p_abort);
-		m_file->read(buffer.get_ptr(), tasfrofiles[p_file].size, p_abort);
-		t_uint8 k = (tasfrofiles[p_file].pos >> 1) | 0x23;
-		for (t_uint32 i = 0; i < tasfrofiles[p_file].size; ++i) buffer[i] ^= k;
+		dump(buffer, tasfrofiles[p_file], m_file, p_abort);
 		p_out->write(buffer.get_ptr(), tasfrofiles[p_file].size, p_abort);
 	}
 
@@ -627,13 +630,42 @@ static archive_factory_t<archive_tasfro> g_archive_tasfro_factory;
 struct TFPKFile {
 	t_uint32 pos;		// Position inside the archive
 	t_uint32 size;		// File size
-	byte key[16];		// Dump key
+	t_uint8 key[16];	// Dump key
 };
 map<pfc::string8, TFPKFile> tfpkfiles;
 pfc::string8 tfpkarchive;
 
 class archive_tfpk : public archive_impl {
 private:
+	t_uint8 tfpk_ver;
+
+	void dump(pfc::array_t<char> &buffer, TFPKFile f, service_ptr_t<file> &m_file, abort_callback &p_abort) {
+		t_uint32 size = (f.size + 3) >> 2;
+		buffer.set_size(size << 2);
+		m_file->seek(f.pos, p_abort);
+		m_file->read(buffer.get_ptr(), f.size, p_abort);
+		t_uint32 *buf = (t_uint32*) (buffer.get_ptr());
+		t_uint32 *key = (t_uint32*) f.key;
+		t_uint j = 0;
+		switch (tfpk_ver) {
+			case 0:		// th135
+				for (t_uint32 i = 0; i < size; ++i) {
+					buf[i] ^= key[j];
+					j = (j + 1) & 3;
+				}
+				break;
+			default:	// th145(1)
+				t_uint32 c = key[0], k;
+				for (t_uint32 i = 0; i < size; ++i) {
+					k = key[j] ^ buf[i];
+					k ^= c;
+					c = buf[i];
+					buf[i] = k;
+					j = (j + 1) & 3;
+				}
+		}
+	}
+
 	void parse_archive(service_ptr_t<file> &m_file, const char *p_archive,
 		abort_callback &p_abort) {
 		filesystem::g_open(m_file, p_archive, filesystem::open_mode_read, p_abort);
@@ -642,6 +674,7 @@ private:
 			tfpkarchive = p_archive;
 			char sig[4];
 			m_file->read_object_t(sig, p_abort);
+			m_file->read_object_t(tfpk_ver, p_abort);
 			if (memcmp(sig, "TFPK", 4)) throw exception_io_data();
 			for (size_t i = 0; i < filelist.size(); i++) {
 				map<string, string> f = filelist[i];
@@ -677,14 +710,7 @@ private:
 
 				filesystem::g_open_write_new(out, outfile, p_abort);
 				pfc::array_t<char> buffer;
-				buffer.set_size(it->second.size);
-				m_file->seek(it->second.pos, p_abort);
-				m_file->read(buffer.get_ptr(), it->second.size, p_abort);
-				t_uint8 k = 0;
-				for (t_uint32 i = 0; i < it->second.size; ++i) {
-					buffer[i] ^= it->second.key[k];
-					k = (k + 1) & 0xf;
-				}
+				dump(buffer, it->second, m_file, p_abort);
 				out->write(buffer.get_ptr(), it->second.size, p_abort);
 			}
 			dump_thbgm = false;
@@ -720,14 +746,7 @@ public:
 
 		filesystem::g_open_tempmem(p_out, p_abort);
 		pfc::array_t<char> buffer;
-		buffer.set_size(tfpkfiles[p_file].size);
-		m_file->seek(tfpkfiles[p_file].pos, p_abort);
-		m_file->read(buffer.get_ptr(), tfpkfiles[p_file].size, p_abort);
-		t_uint8 k = 0;
-		for (t_uint32 i = 0; i < tfpkfiles[p_file].size; ++i) {
-			buffer[i] ^= tfpkfiles[p_file].key[k];
-			k = (k + 1) & 0xf;
-		}
+		dump(buffer, tfpkfiles[p_file], m_file, p_abort);
 		p_out->write(buffer.get_ptr(), tfpkfiles[p_file].size, p_abort);
 	}
 

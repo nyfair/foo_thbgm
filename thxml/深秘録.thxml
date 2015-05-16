@@ -8,6 +8,6 @@
 		<bgm file="reimu1.ogg" pos="0,0,6411702" artist="コンプ(豚乙女)">二色蓮花蝶～Red and White</bgm>
 	</bgmlist>
 	<filelist>
-		<file pos="331724033" len="3548760" key="E6FD16009E0E456CD65D11C59442E294">reimu1.ogg</file>
+		<file pos="331724033" len="3548760" key="1A02E9FF62F1BA932AA2EE3A6CBD1D6B">reimu1.ogg</file>
 	</filelist>
 </thxml>

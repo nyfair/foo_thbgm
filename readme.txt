@@ -74,6 +74,7 @@ add 紅魔郷 support
 0.1
 initial release, support all touhou stg games from 妖々夢 to 神霊廟trial
 
-For any feature request or bug report, feel free to contact me at my E-mail address below.
+For any feature request or bug report, feel free to post an issue in the Github project.
+https://github.com/nyfair/foo_thbgm/issues
 
 (C) nyfair <nyfair2012@gmail.com>
