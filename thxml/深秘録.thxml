@@ -5,9 +5,139 @@
 	<albumartist>黄昏フロンティア&上海アリス幻樂団</albumartist>
 	<path>th145.pak|</path>
 	<bgmlist>
-		<bgm file="reimu1.ogg" pos="0,0,6411702" artist="コンプ(豚乙女)">二色蓮花蝶～Red and White</bgm>
+		<bgm file="reimu1.ogg" pos="0,235822,5880000" artist="コンプ(豚乙女)">二色蓮花蝶～Red and White</bgm>
+		<bgm file="marisa1.ogg" pos="0,604378,6225883" artist="oiko">恋色マスタースパーク</bgm>
+		<bgm file="ichirin1.ogg" pos="0,158775,5318411" artist="しゃばだば(Sound CYCLONE)">時代親父とハイカラ少女</bgm>
+		<bgm file="hijiri1.ogg" pos="0,823990,5762368" artist="NYO(Silver Forest)">感情の摩天楼～Cosmic Mind</bgm>
+		<bgm file="futo1.ogg" pos="0,216837,6106122" artist="鯛の小骨">大神神話伝</bgm>
+		<bgm file="miko1.ogg" pos="0,1062240,6075999" artist="鷹(CROW'SCLAW)">聖徳伝説～True Administrator</bgm>
+		<bgm file="nitori1.ogg" pos="0,80778,5809273" artist="ゆうゆ">芥川龍之介の河童～Candid Friend</bgm>
+		<bgm file="koishi1.ogg" pos="0,101331,5237999" artist="岸田(岸田教団)">ハルトマンの妖怪少女</bgm>
+		<bgm file="mamizou1.ogg" pos="0,105758,4904780" artist="秀三(石鹸屋)">幻想郷の二ッ岩</bgm>
+		<bgm file="kokoro1.ogg" pos="0,606245,9918721" artist="どぶウサギ">亡失のエモーション</bgm>
+		<bgm file="mokou1.ogg" pos="0,463123,7257600" artist="ziki_7">月まで届け、不死の煙</bgm>
+		<bgm file="sinmyoumaru1.ogg" pos="0,744857,5856882">輝く針の小人族～Little Princess</bgm>
+		<bgm file="title.ogg" pos="0,235005,3969000">心揺さぶる都市伝説</bgm>
+		<bgm file="select.ogg" pos="0,259012,1994091">幻想郷ふしぎ発見</bgm>
+		<bgm file="ta02.ogg" pos="0,578323,2309238">ボールのある日常</bgm>
+		<bgm file="ta01.ogg" pos="0,353476,2822400">顕現した伝承の形</bgm>
+		<bgm file="ta04.ogg" pos="0,210583,2116790">時代の風の訪れ</bgm>
+		<bgm file="ta03.ogg" pos="0,93258,2540160">価値がわからない</bgm>
+		<bgm file="ta06.ogg" pos="0,327260,2976752">可能性を信じて</bgm>
+		<bgm file="ta05.ogg" pos="0,541304,2592001">真実を知る者</bgm>
+		<bgm file="ta07.ogg" pos="0,152645,2570397">外界フォークロア</bgm>
+		<bgm file="ed.ogg" pos="0,301386,2494039">各々の結末</bgm>
+		<bgm file="staffroll.ogg" pos="0,0,3767074">明かされる深秘</bgm>
+		<bgm file="st02_1.ogg" pos="0,365065,4415038">オカルトアラカルト</bgm>
+		<bgm file="st01_1.ogg" pos="0,314003,4927700">七玉蒐集ショウダウン</bgm>
+		<bgm file="st03_1.ogg" pos="0,524031,3985379">公正なる奪い合い</bgm>
+		<bgm file="st04_1.ogg" pos="0,643028,4218266">対蹠地の鐘</bgm>
+		<bgm file="st05_1.ogg" pos="0,441397,4233596">竹林インフレイム</bgm>
+		<bgm file="kasen1.ogg" pos="0,249077,6474920" artist="ZUN">華狭間のバトルフィールド</bgm>
+		<bgm file="usami1.ogg" pos="0,755877,10112367" artist="ZUN">ラストオカルティズム～現し世の秘術師</bgm>
+		<bgm file="reimu2.ogg" pos="0,0,941724" artist="コンプ(豚乙女)">二色蓮花蝶～Red and White</bgm>
+		<bgm file="marisa2.ogg" pos="0,0,961908" artist="oiko">恋色マスタースパーク</bgm>
+		<bgm file="ichirin2.ogg" pos="0,0,889498" artist="しゃばだば(Sound CYCLONE)">時代親父とハイカラ少女</bgm>
+		<bgm file="hijiri2.ogg" pos="0,0,896950" artist="NYO(Silver Forest)">感情の摩天楼～Cosmic Mind</bgm>
+		<bgm file="futo2.ogg" pos="0,0,915792" artist="鯛の小骨">大神神話伝</bgm>
+		<bgm file="miko2.ogg" pos="0,0,1045237" artist="鷹(CROW'SCLAW)">聖徳伝説～True Administrator</bgm>
+		<bgm file="nitori2.ogg" pos="0,0,962787" artist="ゆうゆ">芥川龍之介の河童～Candid Friend</bgm>
+		<bgm file="koishi2.ogg" pos="0,0,990235" artist="岸田(岸田教団)">ハルトマンの妖怪少女</bgm>
+		<bgm file="mamizou2.ogg" pos="0,0,1033064" artist="秀三(石鹸屋)">幻想郷の二ッ岩</bgm>
+		<bgm file="kokoro2.ogg" pos="0,0,967466" artist="どぶウサギ">亡失のエモーション</bgm>
+		<bgm file="mokou2.ogg" pos="0,0,907408" artist="ziki_7">月まで届け、不死の煙</bgm>
+		<bgm file="sinmyoumaru2.ogg" pos="0,0,951408">輝く針の小人族～Little Princess</bgm>
+		<bgm file="st02_2.ogg" pos="0,0,968522">オカルトアラカルト</bgm>
+		<bgm file="st01_2.ogg" pos="0,0,1016429">七玉蒐集ショウダウン</bgm>
+		<bgm file="st03_2.ogg" pos="0,0,914808">公正なる奪い合い</bgm>
+		<bgm file="st04_2.ogg" pos="0,0,919950">対蹠地の鐘</bgm>
+		<bgm file="st05_2.ogg" pos="0,0,962546">竹林インフレイム</bgm>
+		<bgm file="kasen2.ogg" pos="0,0,1029303" artist="ZUN">華狭間のバトルフィールド</bgm>
+		<bgm file="usami2.ogg" pos="0,0,996328" artist="ZUN">ラストオカルティズム～現し世の秘術師</bgm>
+		<bgm file="ta13.ogg" pos="0,0,1209599">Secret BGM1</bgm>
+		<bgm file="ta14.ogg" pos="0,126950,529200">Secret BGM2</bgm>
 	</bgmlist>
 	<filelist>
 		<file pos="331724033" len="3548760" key="1A02E9FF62F1BA932AA2EE3A6CBD1D6B">reimu1.ogg</file>
+		<file pos="335293991" len="104" key="1C3FA5DB0B219EDD4A9AD8D62DB18AC0">reimu1.sfl</file>
+		<file pos="313721851" len="4037489" key="8137B902DAE60F63BC549E284136A5E7">marisa1.ogg</file>
+		<file pos="317770290" len="104" key="FDCF0A2CF9C1C83B67BA5307928904CC">marisa1.sfl</file>
+		<file pos="292074118" len="3106946" key="E6788644821049E5859891CEB489BAB6">ichirin1.ogg</file>
+		<file pos="295205027" len="106" key="8F35994E8604C01C1FCC8F280B36E379">ichirin1.sfl</file>
+		<file pos="287863323" len="3692886" key="C9395A77D5C07533552A03F1581D190E">hijiri1.ogg</file>
+		<file pos="291575209" len="104" key="4252C5CC04551E0FFAE30298B58A8D46">hijiri1.sfl</file>
+		<file pos="283642923" len="3699134" key="6EFEDA95DC410C6D7E925FED791311E3">futo1.ogg</file>
+		<file pos="287351823" len="102" key="009AF48F27A75F4A6D34C0E0F268FCDA">futo1.sfl</file>
+		<file pos="318298275" len="4057341" key="56281879D9C9D83F9AD9698E107001D0">miko1.ogg</file>
+		<file pos="322374354" len="102" key="BB757C36C7363954339EBFE7CFDE9BB4">miko1.sfl</file>
+		<file pos="327823554" len="3347386" key="571CD43DB03057F92A6CB367EB5CA9AF">nitori1.ogg</file>
+		<file pos="331185668" len="104" key="1C247C70D42E1D5C3CB6CA3BB12B92D5">nitori1.sfl</file>
+		<file pos="300132249" len="3091996" key="5DDFCAD832BFE47E0318F536EA4F185D">koishi1.ogg</file>
+		<file pos="303241263" len="104" key="609F80F01AE61C33334902EF4E4ACC49">koishi1.sfl</file>
+		<file pos="310242070" len="2894229" key="5D6D060D5CA57BED54D8E707FC92D117">mamizou1.ogg</file>
+		<file pos="313151812" len="106" key="4A8A720E8C504FD078E5C4C1A4ED0205">mamizou1.sfl</file>
+		<file pos="303788460" len="5903127" key="F7521451611124D27B2116F7A83AE557">kokoro1.ogg</file>
+		<file pos="309708360" len="104" key="7234193D84F349786781CAEDF4D274F7">kokoro1.sfl</file>
+		<file pos="322955481" len="4351739" key="DF38354B8AABC98ACED65FADFC790BE0">mokou1.ogg</file>
+		<file pos="327319138" len="104" key="A19BC36078A59F6A79F0EC8B402B9480">mokou1.sfl</file>
+		<file pos="337143381" len="3886099" key="57396D1664B1EB537E0B6A6631B1E15E">sinmyoumaru1.ogg</file>
+		<file pos="341046121" len="110" key="B54538EDC731E45F6878DCF34EC59A05">sinmyoumaru1.sfl</file>
+		<file pos="373856141" len="2377849" key="F52A432479BFAD4337E884A9C28A6E7C">title.ogg</file>
+		<file pos="376248641" len="102" key="355616EE5A44824B3AD8E5EB994EA1EE">title.sfl</file>
+		<file pos="335824954" len="1304311" key="302263B5C621F0359CC00A1FB79ABA54">select.ogg</file>
+		<file pos="337143277" len="104" key="2CB000743EC494EAA2D5270F44AA01EF">select.sfl</file>
+		<file pos="362383445" len="1683556" key="5D49312A500C9576EF364FA173863644">ta02.ogg</file>
+		<file pos="364080126" len="102" key="94BCDBB333563EFB0522A63926BE4D15">ta02.sfl</file>
+		<file pos="360504530" len="1861085" key="94AB42AD356C2C71DD9F90390B5E8950">ta01.ogg</file>
+		<file pos="362379534" len="102" key="5536E11AA41108478472C77D277765CF">ta01.sfl</file>
+		<file pos="365655611" len="1396183" key="8707B6334726331411FDBF4DC8B64D1B">ta04.ogg</file>
+		<file pos="367064531" len="102" key="67DE93DB65639753760AE3DF20B19687">ta04.sfl</file>
+		<file pos="364083792" len="1554034" key="3906A57F3079982C5CD4E8F358604AC2">ta03.ogg</file>
+		<file pos="365651846" len="102" key="B0C38C590B1564062B537F610ABA79DA">ta03.sfl</file>
+		<file pos="368867453" len="1978206" key="F901CB13861ADED0A68DEF102DA6368F">ta06.ogg</file>
+		<file pos="370858615" len="102" key="B5089E4F9A27C3928EE4AF08E3BEF4ED">ta06.sfl</file>
+		<file pos="367068159" len="1783720" key="CFF8CD2394752867FAECE9E237D92A95">ta05.ogg</file>
+		<file pos="368863960" len="102" key="EC244E177553BEAE9FDABE94DF0468CA">ta05.sfl</file>
+		<file pos="370862211" len="1674646" key="E6CD388672AE517B37753F3E0363D0AC">ta07.ogg</file>
+		<file pos="372549166" len="102" key="827D82AFF086A2EB01A9DBA68A950C67">ta07.sfl</file>
+		<file pos="281954316" len="1676720" key="13A22D4A1FFA2D8BB4006DE6EDBF2172">ed.ogg</file>
+		<file pos="283642823" len="100" key="1F81F43205639D3C6FA9DB4063D93B36">ed.sfl</file>
+		<file pos="358433322" len="2057465" key="18508A84457A0FC6256D633D922B9AEE">staffroll.ogg</file>
+		<file pos="345465298" len="2737408" key="A226449516FBA956C567288A69206B94">st02_1.ogg</file>
+		<file pos="348216520" len="102" key="A746877CCD860B7E940EBDF6FEDBC89D">st02_1.sfl</file>
+		<file pos="341572210" len="3301708" key="D3CE234E5E358164D552F229BB30847C">st01_1.ogg</file>
+		<file pos="344887930" len="102" key="FD951077B95A671B7D2124A41869FC82">st01_1.sfl</file>
+		<file pos="348758095" len="2600172" key="F28B2D451DBB111EADD407A3CC5E4BB0">st03_1.ogg</file>
+		<file pos="351371883" len="102" key="75634DD84F11E7CBB36C4FCA06AD21AF">st03_1.sfl</file>
+		<file pos="351878339" len="2800791" key="55F208E64ECF5F74364C987CEF9CFC99">st04_1.ogg</file>
+		<file pos="354692900" len="102" key="7C9054AFF2F46748A772298B213E4330">st04_1.sfl</file>
+		<file pos="355198423" len="2696585" key="2B688BBD545D2A226255CBE650AF4A64">st05_1.ogg</file>
+		<file pos="357908010" len="102" key="C8B665A54AD283F6BA592A4B4CB99C7B">st05_1.sfl</file>
+		<file pos="295700580" len="3839066" key="41C081051BC61B9C9F27BEEF231FDFE4">kasen1.ogg</file>
+		<file pos="299551861" len="104" key="58F1E308B1E415820B7969CFA182112D">kasen1.sfl</file>
+		<file pos="376248743" len="6368585" key="E0C40E94D99A4D8EF4698181629B7559">usami1.ogg</file>
+		<file pos="382633619" len="102" key="F344BCCDE45C2125BF5716CD80B118B1">usami1.sfl</file>
+		<file pos="335299567" len="525387" key="C8D8DAA064E3E39ED015ED8DAA4D5397">reimu2.ogg</file>
+		<file pos="317773426" len="524849" key="EF684E2A8AFB65C3FDF33AB89CC249E5">marisa2.ogg</file>
+		<file pos="295211067" len="489513" key="F130F6E040D48779A79E46FA7768D295">ichirin2.ogg</file>
+		<file pos="291580223" len="493895" key="1E89670E96972964E44BCA46F2A77189">hijiri2.ogg</file>
+		<file pos="287354836" len="508487" key="34AA654F095DC4FE0539FDBFF042870B">futo2.ogg</file>
+		<file pos="322379296" len="576185" key="E9DEF43606E58E24B4BC8776D70BF272">miko2.ogg</file>
+		<file pos="331189838" len="534195" key="76E1BF0DD1E387516D433A30D583F0A5">nitori2.ogg</file>
+		<file pos="303245843" len="542617" key="330C74CC7D4B616EA20E005D4AEE31AB">koishi2.ogg</file>
+		<file pos="313155886" len="565965" key="F2625776DDC65415596B242004844E1B">mamizou2.ogg</file>
+		<file pos="309712684" len="529386" key="3F1FB91F5DA28CD43F231E3BFB0F8B5B">kokoro2.ogg</file>
+		<file pos="327322593" len="500961" key="A21112FE79F0E17204B7C4AB07D1A655">mokou2.ogg</file>
+		<file pos="341050782" len="521428" key="C702E2E08EE0222D7C634A2D3162538A">sinmyoumaru2.ogg</file>
+		<file pos="348220114" len="537981" key="32399ABE4A994FA202E0FDA5307A92C0">st02_2.ogg</file>
+		<file pos="344891791" len="573507" key="51CB2CB256DE8F32AF9A3FF038BD9359">st01_2.ogg</file>
+		<file pos="351375563" len="502776" key="4A8C8C95E65D03B7ED77C2EAE11B3EF8">st03_2.ogg</file>
+		<file pos="354696626" len="501797" key="928B21EEEA0095B58D84D7975E147C1F">st04_2.ogg</file>
+		<file pos="357911615" len="521707" key="0750F46CA271B7115376EADE69BB44F8">st05_2.ogg</file>
+		<file pos="299555315" len="576934" key="651B6C0AABE92AD20EC7A08223F7F3D8">kasen2.ogg</file>
+		<file pos="382637998" len="557216" key="41A91D2FD6768B4A8724415D11D23B34">usami2.ogg</file>
+		<file pos="372552603" len="661558" key="CB70F71992FD232003DE6AE8C5E48689">ta13.ogg</file>
+		<file pos="373214161" len="641878" key="D66F2EA43B2B31A4D3E355C2C8E27608">ta14.ogg</file>
+		<file pos="373856039" len="102" key="4C25EF42C22C0B90A2D23D04321C7A20">ta14.sfl</file>
 	</filelist>
 </thxml>
