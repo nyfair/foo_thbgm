@@ -646,7 +646,7 @@ private:
 		m_file->read(buffer.get_ptr(), f.size, p_abort);
 		t_uint32 *buf = (t_uint32*) (buffer.get_ptr());
 		t_uint32 *key = (t_uint32*) f.key;
-		t_uint j = 0;
+		t_uint8 j = 0;
 		switch (tfpk_ver) {
 			case 0:		// th135
 				for (t_uint32 i = 0; i < size; ++i) {

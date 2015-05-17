@@ -20,7 +20,6 @@
 		<bgm file="maxwaza.ogg" pos="0,169593,1846045">ラストワード発動</bgm>
 	</bgmlist>
 	<filelist>
-		<file pos="27759888" len="3493" key="65D7CA91BEB12498DF329ACCC0D6A004">bgm.csv</file>
 		<file pos="27763381" len="2084493" key="2E125A1F1D3C789DD35FE0806E0C3DEF">charasel.ogg</file>
 		<file pos="29847874" len="106" key="B7BE9D641DF8437F2AD79A402BED694D">charasel.sfl</file>
 		<file pos="29847980" len="514547" key="13D929B8D285CBAE58872D38EBA8FB6E">futo2.ogg</file>

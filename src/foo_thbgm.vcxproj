@@ -12,7 +12,6 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A03D36AE-0B97-4B77-AEBB-05B1A6B80287}</ProjectGuid>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <Keyword>ManagedCProj</Keyword>
     <RootNamespace>foo_thbgm</RootNamespace>
     <ProjectName>foo_thbgm</ProjectName>

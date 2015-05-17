@@ -1,7 +1,7 @@
 ﻿Usage:
 step1: Install foo_thbgm.fb2k-component or extract foo_thbgm.dll into fb2k's components folder.
 step2: Move thxml file to your game's installation directory.
-step3: Using fb2k to open the thxml file, then enjoy your life!
+step3: Open the thxml file by fb2k, then enjoy your life!
 
 Something you should know:
 Foobar2000 v1.1 or newer required to run this plugin.
@@ -45,7 +45,7 @@ Samidare (五月雨)
 
 ChangeLog:
 2.0
-full support for tfpk
+update tfpk unpacker for 深秘録 & 心綺楼's hidden music
 1.2
 add tfpk unpacker for 心綺楼
 raw stream dump support
@@ -63,10 +63,9 @@ add common unpacker support
 now we can play music in archive if only fb2k can handle it
 0.5
 add 幡紫竜c67 version support
-add python3 script for converting THxxBGM files
 add 神霊廟 ghost mode support
 0.4
-add 萃夢想&黄昏酒場&稀翁玉 support
+add 萃夢想 & 黄昏酒場 & 稀翁玉 support
 change tag file from cue to thxml
 0.3
 fix decode error in foobar2000 1.1.6
