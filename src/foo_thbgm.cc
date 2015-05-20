@@ -17,6 +17,9 @@ static cfg_bool dump_thbgm(cfg_thbgm_dump, false);
 
 const t_uint32 deltaread = 1024;
 double seek_seconds;
+t_uint32 bits;
+t_uint32 channels;
+t_uint32 samplewidth;
 t_uint32 samplerate;
 string pack;
 t_filesize m_offset;
@@ -159,7 +162,7 @@ public:
 		m_file.release();
 		if (isWave) {
 			input_open_file_helper(m_file, p_path, p_reason, p_abort);
-		}else {
+		} else {
 			decoder.release();
 			input_entry::g_open_for_decoding(decoder, m_file, p_path, p_abort);
 		}
@@ -804,9 +807,6 @@ protected:
 	vector<map<string, string>> bgmlist;
 	pfc::string8 title;
 	pfc::string8 artist;
-	t_uint32 bits;
-	t_uint32 channels;
-	t_uint32 samplewidth;
 	pfc::string8 encoding;
 	pfc::string8 codec;
 	t_filesize m_filepos;
@@ -878,7 +878,7 @@ protected:
 			path.append(flstr);
 			path.append("|");
 			path.append(basepath);
-		}else {
+		} else {
 			path = basepath;
 		}
 		path.append(bgm_path);
@@ -907,7 +907,7 @@ public:
 		if (bgmlist[1]["filepos"] != "") {
 			pack = "raw";
 			isStream = true;
-		}else {
+		} else {
 			isStream = false;
 		}
 		isArchive = pack != "";
@@ -951,7 +951,7 @@ public:
 			p_info.info_set_bitrate((bits * channels * samplerate + 500) / 1000);
 			p_info.set_length(audio_math::samples_to_time(
 				length_to_samples(m_headlen + m_looplen), samplerate));
-		}else {
+		} else {
 			p_info.set_length(audio_math::samples_to_time(
 				m_headlen + m_looplen, samplerate));
 			if (read_thbgm_info) {
@@ -1004,7 +1004,7 @@ public:
 				samplerate, channels, bits,
 				audio_chunk::g_guess_channel_config(channels));
 			return true;
-		}else {
+		} else {
 			return raw.run(p_chunk, p_abort);
 		}
 	}
@@ -1017,7 +1017,7 @@ public:
 			if (m_filepos > m_maxseeksize)
 				m_filepos = m_maxseeksize;
 			raw.raw_seek(m_offset + m_filepos, p_abort);
-		}else {
+		} else {
 			raw.seek(p_seconds);
 		}
 	}
