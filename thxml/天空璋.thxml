@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
+
+<thxml>
+	<album>東方天空璋～Hidden Star in Four Seasons</album>
+	<albumartist>上海アリス幻樂団</albumartist>
+	<path>thbgm_tr.dat</path>
+	<bgmlist>
+		<bgm pos="16,1174528,14388224">桜舞い散る天空</bgm>
+		<bgm pos="15562768,633712,18252120">希望の星は青霄に昇る</bgm>
+		<bgm pos="34448600,1070848,18143872">真夏の妖精の夢</bgm>
+		<bgm pos="53663320,1124608,19580032">色無き風は妖怪の山に</bgm>
+		<bgm pos="74367960,2286080,15846144">山奥のエンカウンター</bgm>
+		<bgm pos="92500184,571888,22246536">桜色の海を泳いで</bgm>
+		<bgm pos="115318608,7488468,15845096">一対の神獣</bgm>
+		<bgm pos="138652172,1879240,4861944">プレイヤーズスコア</bgm>
+	</bgmlist>
+</thxml>
