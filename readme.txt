@@ -42,6 +42,7 @@ Uwabami Breakers (黄昏酒場)
 Kioh Gyoku (稀翁玉)
 Banshiryuu (幡紫竜) both c67 and later version
 Samidare (五月雨)
+Hidden Star in Four Seasons (天空璋)
 
 ChangeLog:
 2.0
