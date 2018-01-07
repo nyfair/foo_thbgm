@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
+
+<thxml>
+	<album artist="あきやまうに" codec="vorbis" encoding="lossy" pack="tfpk">東方憑依華～Antinomy of Common Flowers</album>
+	<albumartist>黄昏フロンティア&上海アリス幻樂団</albumartist>
+	<path>th155.pak|</path>
+	<bgmlist>
+		<bgm file="155reimu1.ogg" pos="0,235822,5880000" artist="コンプ(豚乙女)">二色蓮花蝶～Red and White</bgm>
+		<bgm file="155marisa1.ogg" pos="0,604378,6225883" artist="oiko(SOUNDOT)">恋色マスタースパーク</bgm>
+		<bgm file="155ichirin1.ogg" pos="0,158775,5318411" artist="しゃばだば(Sound CYCLONE)">時代親父とハイカラ少女</bgm>
+		<bgm file="155hijiri1.ogg" pos="0,823990,5762368" artist="NYO(Silver Forest)">感情の摩天楼～Cosmic Mind</bgm>
+		<bgm file="155futo1.ogg" pos="0,216837,6106122" artist="鯛の小骨(Azure&Sands)">大神神話伝</bgm>
+		<bgm file="155miko1.ogg" pos="0,1062240,6075999" artist="鷹(CROW'SCLAW)">聖徳伝説～True Administrator</bgm>
+		<bgm file="155nitori1.ogg" pos="0,80778,5809273" artist="ゆうゆ(ゆや｡)">芥川龍之介の河童～Candid Friend</bgm>
+		<bgm file="155koishi1.ogg" pos="0,101331,5237999" artist="岸田(岸田教団)">ハルトマンの妖怪少女</bgm>
+		<bgm file="155mamizou1.ogg" pos="0,105758,4904780" artist="秀三(石鹸屋)">幻想郷の二ッ岩</bgm>
+		<bgm file="155kokoro1.ogg" pos="0,605447,9918652" artist="どぶウサギ(dBu music)">亡失のエモーション</bgm>
+		<bgm file="155mokou1.ogg" pos="0,463123,7257600" artist="ziki_7(SOUNDOT)">月まで届け、不死の煙</bgm>
+		<bgm file="155sinmyoumaru1.ogg" pos="0,238721,5968885" artist="ぴずや(ぴずやの独房/Pizuya's Cell)">輝く針の小人族～Little Princess</bgm>
+		<bgm file="155kasen1.ogg" pos="0,580033,5660139" artist="Kou Ogata(k-waves LAB)">華狭間のバトルフィールド</bgm>
+		<bgm file="155usami1.ogg" pos="0,501412,5459117" artist="ARM(IOSYS)">ラストオカルティズム～現し世の秘術師</bgm>
+		<bgm file="155udonge1.ogg" pos="0,1530065,5292035" artist="ビートまりお(COOL&CREATE)">狂気の瞳～Invisible Full Moon</bgm>
+		<bgm file="155doremy1.ogg" pos="0,882037,7191692" artist="狐夢想(狐夢想屋)">永遠の春夢</bgm>
+		<bgm file="155tenshi1.ogg" pos="0,165485,7144599" artist="紅い流星(東京アクティブNEETs)">有頂天変～Wonderful Heaven</bgm>
+		<bgm file="155yukari1.ogg" pos="0,240190,5582825" artist="ELEMENTAS(A-One)">夜が降りてくる～Evening Star</bgm>
+		<bgm file="bgst01.ogg" pos="0,371162,3822005">地の色は黄色～Primrose</bgm>
+		<bgm file="bgst02.ogg" pos="0,434867,4268903">マッシュルーム・ワルツ</bgm>
+		<bgm file="bgst03.ogg" pos="0,396990,4338207">聖輦船空を往く</bgm>
+		<bgm file="bgst04.ogg" pos="0,282093,4089290">法力の下の平等</bgm>
+		<bgm file="bgst05.ogg" pos="0,537181,3968996">恒常不変の参廟祀</bgm>
+		<bgm file="bgst06.ogg" pos="0,506607,3690474">光輝く天球儀</bgm>
+		<bgm file="bgst07.ogg" pos="0,187507,3988177">沢の河童の技術力</bgm>
+		<bgm file="bgst08.ogg" pos="0,343059,4011678">地底に咲く薔薇</bgm>
+		<bgm file="bgst09.ogg" pos="0,340644,4103221">深緑の狸森にて</bgm>
+		<bgm file="bgst10.ogg" pos="0,157314,3948951">心綺楼演舞</bgm>
+		<bgm file="bgst11.ogg" pos="0,687145,4233596">不滅のレッドソウル</bgm>
+		<bgm file="bgst12.ogg" pos="0,162514,4022978">落日に映える逆さ城</bgm>
+		<bgm file="bgst13.ogg" pos="0,1147357,4004753">千の試練を超えて</bgm>
+		<bgm file="bgst14.ogg" pos="0,477334,4433834">夢世界フォークロア</bgm>
+		<bgm file="bgst15.ogg" pos="0,772357,3969000">永遠に続く回廊</bgm>
+		<bgm file="bgst16.ogg" pos="0,77343,3911482">スリープシープ・パレード</bgm>
+		<bgm file="bgst17.ogg" pos="0,575189,3988177">至る有頂天</bgm>
+		<bgm file="midboss.ogg" pos="0,516150,6030189" artist="ZUN">憑坐は夢と現の間に～Necro-Fantasia</bgm>
+		<bgm file="lastboss.ogg" pos="0,752819,10295090" artist="ZUN">今宵は飄逸なエゴイスト(Live ver)～Egoistic Flowers.</bgm>
+		<bgm file="145st01.ogg" pos="0,243791,4415054">オカルトアトラクト</bgm>
+		<bgm file="145st02.ogg" pos="0,116507,4051689">ネオ竹林インフレイム</bgm>
+		<bgm file="145st03.ogg" pos="0,242274,4409994">億万劫の鐘</bgm>
+		<bgm file="145st04.ogg" pos="0,1924501,6795416" artist="ZUN">アンノウンX～Occultly Madness</bgm>
+		<bgm file="story01.ogg" pos="0,208022,2697881">憑依投合</bgm>
+		<bgm file="story02.ogg" pos="0,383395,2811375">連帯責人</bgm>
+		<bgm file="story03.ogg" pos="0,132485,2751840">合縁奇縁</bgm>
+		<bgm file="story04.ogg" pos="0,83140,2811375">異心同体</bgm>
+		<bgm file="story05.ogg" pos="0,159402,2751839">壮言大語</bgm>
+		<bgm file="story06.ogg" pos="0,191909,2778298">知略縦横</bgm>
+		<bgm file="story07.ogg" pos="0,191537,2998797">意気揚々</bgm>
+		<bgm file="story08.ogg" pos="0,324796,2726178">開演間近</bgm>
+		<bgm file="story09.ogg" pos="0,464729,2822396">天衣無縫～Yellow Lily</bgm>
+		<bgm file="th155op1.ogg" pos="0,529564,3307500">異変の種子</bgm>
+		<bgm file="th155op2.ogg" pos="0,529614,3307501">疑惑の芽生え</bgm>
+		<bgm file="th155op3.ogg" pos="0,529607,3307500">真相へ繋がる枝葉</bgm>
+		<bgm file="th155op4.ogg" pos="0,529624,3307500">舞い散る憑依華吹雪</bgm>
+		<bgm file="ending.ogg" pos="0,235499,3083586">行雲流水</bgm>
+		<bgm file="staffroll0.ogg" pos="0,0,3813515">未だ蕾む憑依華</bgm>
+		<bgm file="staffroll1.ogg" pos="0,0,4475592">咲き誇る憑依華</bgm>
+		<bgm file="staffroll2.ogg" pos="0,0,4318853" artist="Kou Ogata(k-waves LAB)">悠久の蒸気機関</bgm>
+		<bgm file="155reimu1_20.ogg" pos="0,0,941724">二色蓮花蝶～Red and White【20秒版】</bgm>
+		<bgm file="155marisa1_20.ogg" pos="0,0,961908">恋色マスタースパーク【20秒版】</bgm>
+		<bgm file="155ichirin1_20.ogg" pos="0,0,889498">時代親父とハイカラ少女【20秒版】</bgm>
+		<bgm file="155hijiri1_20.ogg" pos="0,0,896950">感情の摩天楼～Cosmic Mind【20秒版】</bgm>
+		<bgm file="155futo1_20.ogg" pos="0,0,915792">大神神話伝【20秒版】</bgm>
+		<bgm file="155miko1_20.ogg" pos="0,0,1045237">聖徳伝説～True Administrator【20秒版】</bgm>
+		<bgm file="155nitori1_20.ogg" pos="0,0,962787">芥川龍之介の河童～Candid Friend【20秒版】</bgm>
+		<bgm file="155koishi1_20.ogg" pos="0,0,990235">ハルトマンの妖怪少女【20秒版】</bgm>
+		<bgm file="155mamizou1_20.ogg" pos="0,0,1033064">幻想郷の二ッ岩【20秒版】</bgm>
+		<bgm file="155kokoro1_20.ogg" pos="0,0,968143">亡失のエモーション【20秒版】</bgm>
+		<bgm file="155mokou1_20.ogg" pos="0,0,907408">月まで届け、不死の煙【20秒版】</bgm>
+		<bgm file="155sinmyoumaru1_20.ogg" pos="0,0,882000">輝く針の小人族～Little Princess【20秒版】</bgm>
+		<bgm file="155kasen1_20.ogg" pos="0,0,882001">華狭間のバトルフィールド【20秒版】</bgm>
+		<bgm file="155usami1_20.ogg" pos="0,0,882000">ラストオカルティズム～現し世の秘術師【20秒版】</bgm>
+		<bgm file="155udonge1_20.ogg" pos="0,0,872806">狂気の瞳～Invisible Full Moon【20秒版】</bgm>
+		<bgm file="155doremy1_20.ogg" pos="0,0,882000">永遠の春夢【20秒版】</bgm>
+		<bgm file="155tenshi1_20.ogg" pos="0,0,1014300">有頂天変～Wonderful Heaven【20秒版】</bgm>
+		<bgm file="155yukari1_20.ogg" pos="0,0,882000">夜が降りてくる～Evening Star【20秒版】</bgm>
+		<bgm file="bgst01_20.ogg" pos="0,0,882000">地の色は黄色～Primrose【20秒版】</bgm>
+		<bgm file="bgst02_20.ogg" pos="0,0,882000">マッシュルーム・ワルツ【20秒版】</bgm>
+		<bgm file="bgst03_20.ogg" pos="0,0,882000">聖輦船空を往く【20秒版】</bgm>
+		<bgm file="bgst04_20.ogg" pos="0,0,882000">法力の下の平等【20秒版】</bgm>
+		<bgm file="bgst05_20.ogg" pos="0,0,964922">恒常不変の参廟祀【20秒版】</bgm>
+		<bgm file="bgst06_20.ogg" pos="0,0,882000">光輝く天球儀【20秒版】</bgm>
+		<bgm file="bgst07_20.ogg" pos="0,0,882000">沢の河童の技術力【20秒版】</bgm>
+		<bgm file="bgst08_20.ogg" pos="0,0,882000">地底に咲く薔薇【20秒版】</bgm>
+		<bgm file="bgst09_20.ogg" pos="0,0,939130">深緑の狸森にて【20秒版】</bgm>
+		<bgm file="bgst10_20.ogg" pos="0,0,882000">心綺楼演舞【20秒版】</bgm>
+		<bgm file="bgst11_20.ogg" pos="0,0,1029452">不滅のレッドソウル【20秒版】</bgm>
+		<bgm file="bgst12_20.ogg" pos="0,0,940320">落日に映える逆さ城【20秒版】</bgm>
+		<bgm file="bgst13_20.ogg" pos="0,0,882000">千の試練を超えて【20秒版】</bgm>
+		<bgm file="bgst14_20.ogg" pos="0,0,882000">夢世界フォークロア【20秒版】</bgm>
+		<bgm file="bgst15_20.ogg" pos="0,0,882000">永遠に続く回廊【20秒版】</bgm>
+		<bgm file="bgst16_20.ogg" pos="0,0,919737">スリープシープ・パレード【20秒版】</bgm>
+		<bgm file="bgst17_20.ogg" pos="0,0,882000">至る有頂天【20秒版】</bgm>
+		<bgm file="midboss_20.ogg" pos="0,0,970200">憑坐は夢と現の間に～Necro-Fantasia【20秒版】</bgm>
+		<bgm file="lastboss_20.ogg" pos="0,0,882000">今宵は飄逸なエゴイスト(Live ver)～Egoistic Flowers.【20秒版】</bgm>
+		<bgm file="145st01_20.ogg" pos="0,0,972626">オカルトアトラクト【20秒版】</bgm>
+		<bgm file="145st02_20.ogg" pos="0,0,905602">ネオ竹林インフレイム【20秒版】</bgm>
+		<bgm file="145st03_20.ogg" pos="0,0,962056">億万劫の鐘【20秒版】</bgm>
+		<bgm file="145st04_20.ogg" pos="0,0,961770">アンノウンX～Occultly Madness【20秒版】</bgm>
+	</bgmlist>
+	<filelist>
+		<file pos="374557476" len="2800533" key="D0627FA7FE6A1566BBB2B396FB5BC252">145st01.ogg</file>
+		<file pos="377358009" len="104" key="63CD8B85DC3F11C3D77BFD8EEA5E985E">145st01.sfl</file>
+		<file pos="377358113" len="541973" key="559D0E98291E9E79ED585CCFCFAFEDAF">145st01_20.ogg</file>
+		<file pos="377900086" len="2584704" key="0BF0868C26F9A05E3CA553EA91062AAF">145st02.ogg</file>
+		<file pos="380484790" len="104" key="F23F3E2A102DF66E6093198D11A70698">145st02.sfl</file>
+		<file pos="380484894" len="494194" key="CA79DEAA5283139960E9D88A6CDBEF26">145st02_20.ogg</file>
+		<file pos="380979088" len="3021070" key="6705F3AFEF0AFB172F4D808D30364919">145st03.ogg</file>
+		<file pos="384000158" len="104" key="507BFA9CF28E0DFD62BF3616CA8A4A59">145st03.sfl</file>
+		<file pos="384000262" len="537459" key="74946A33468FDE33173702FAA0EFCBD1">145st03_20.ogg</file>
+		<file pos="384537721" len="5062923" key="A590862690A9897E177764A5C979B157">145st04.ogg</file>
+		<file pos="389600644" len="102" key="4A914B1A3E03DA9764EA0B765934C6D9">145st04.sfl</file>
+		<file pos="389600746" len="533713" key="CC2AC3B78915BCFCBA4802F41658F4D3">145st04_20.ogg</file>
+		<file pos="390134459" len="4627085" key="6B11864D5BF86A823ED80C7E3BEC142C">155doremy1.ogg</file>
+		<file pos="394761544" len="108" key="6D6ADB5335A392753E2CD1D0CB657F3E">155doremy1.sfl</file>
+		<file pos="394761652" len="484471" key="73A9352FF62BE67AFDBE796EB9E7BDC7">155doremy1_20.ogg</file>
+		<file pos="395246123" len="3699134" key="7C452AC8CCD5557799B73D7716DCBDCC">155futo1.ogg</file>
+		<file pos="398945257" len="102" key="47333E033C99081EF3C4966F311EC588">155futo1.sfl</file>
+		<file pos="398945359" len="508487" key="5A66DF90CD77446D69E268B14D529B3A">155futo1_20.ogg</file>
+		<file pos="399453846" len="3692886" key="8C627648D9977FFB37EF6D764AA9CA66">155hijiri1.ogg</file>
+		<file pos="403146732" len="104" key="4EA5B008EFD4DE38706B9EBCEFDEAC68">155hijiri1.sfl</file>
+		<file pos="403146836" len="493895" key="16D111F437EAC66A82EF170EC2C554CB">155hijiri1_20.ogg</file>
+		<file pos="403640731" len="3106946" key="9CBBBF936B9010326883D90ED7B90CAC">155ichirin1.ogg</file>
+		<file pos="406747677" len="106" key="D09709B41328772E103479DF52E0F9B2">155ichirin1.sfl</file>
+		<file pos="406747783" len="489513" key="5DA241D6EC3564C090F0DC930588B414">155ichirin1_20.ogg</file>
+		<file pos="407237296" len="3658673" key="CF7F62A3F17560181C732008F6D94B19">155kasen1.ogg</file>
+		<file pos="410895969" len="106" key="ACA634B5890901805DB40BD971789FE7">155kasen1.sfl</file>
+		<file pos="410896075" len="489451" key="2F27160CFE63FFF1B065DA2B170759B9">155kasen1_20.ogg</file>
+		<file pos="411385526" len="3091996" key="55B4256191CC606B568B401B43BDDCF7">155koishi1.ogg</file>
+		<file pos="414477522" len="104" key="95E0A363EEC5961D669A2D1828B9FF66">155koishi1.sfl</file>
+		<file pos="414477626" len="542617" key="A1EDB35C7893E6FDABC7B160FAE04208">155koishi1_20.ogg</file>
+		<file pos="415020243" len="5898329" key="73DF10D14F9AE476F1AA7DC775CE4B33">155kokoro1.ogg</file>
+		<file pos="420918572" len="104" key="BE8B63704B36354E0BFA0F9C6A706A00">155kokoro1.sfl</file>
+		<file pos="420918676" len="529517" key="637BE30901CE9214AC433075F2740CEB">155kokoro1_20.ogg</file>
+		<file pos="421448193" len="2894229" key="C77AE070CE55FBF5BB1091EC453455FB">155mamizou1.ogg</file>
+		<file pos="424342422" len="106" key="33AE0AE8124E69F5F23D556AF6403F1F">155mamizou1.sfl</file>
+		<file pos="424342528" len="565965" key="D40D16C551C46331E9A227EF3067C95A">155mamizou1_20.ogg</file>
+		<file pos="424908493" len="4037489" key="2777F74ED52854E7004805D3CF6C754D">155marisa1.ogg</file>
+		<file pos="428945982" len="104" key="43BD0274AF373DA811B894721264D82F">155marisa1.sfl</file>
+		<file pos="428946086" len="524849" key="8285457137CD0D28D870953644A5CC35">155marisa1_20.ogg</file>
+		<file pos="429470935" len="4057341" key="8328DEFB8BA0C95AFFB3D4C1E37A33DD">155miko1.ogg</file>
+		<file pos="433528276" len="102" key="DBE0401FE7A061C82E5EE0C9038970D6">155miko1.sfl</file>
+		<file pos="433528378" len="576185" key="35726944296E3407340558C4C6135E6A">155miko1_20.ogg</file>
+		<file pos="434104563" len="4351739" key="21136810D2BFC5B1DB45F52EB41EAB4C">155mokou1.ogg</file>
+		<file pos="438456302" len="104" key="64567254313994D3E09A288E00B25677">155mokou1.sfl</file>
+		<file pos="438456406" len="500961" key="4F2B6C999B82F2BCF29E8E6370D9AA91">155mokou1_20.ogg</file>
+		<file pos="438957367" len="3347386" key="F859DACE8A0578675C2E52E8FC46186B">155nitori1.ogg</file>
+		<file pos="442304753" len="104" key="46ABFF8EF2870410D49508B2F9BD3AED">155nitori1.sfl</file>
+		<file pos="442304857" len="534195" key="7E8EE923908422132F7C5C0304E98598">155nitori1_20.ogg</file>
+		<file pos="442839052" len="3548760" key="48256ED1BD235C05A75C89181DC52C70">155reimu1.ogg</file>
+		<file pos="446387812" len="104" key="9DC1AC532AF7B60DBE6344B65872AFD9">155reimu1.sfl</file>
+		<file pos="446387916" len="525387" key="B643DF8DBC5C3B3A5F73C45EDC71C470">155reimu1_20.ogg</file>
+		<file pos="446913303" len="3592393" key="D24A922A7CFD54EC0D5824AF9C5E295A">155sinmyoumaru1.ogg</file>
+		<file pos="450505696" len="112" key="9797B75F7D7A8FD033DD0B5D616C4782">155sinmyoumaru1.sfl</file>
+		<file pos="450505808" len="483286" key="BFEFEE31627E28B26F78B4A25063D580">155sinmyoumaru1_20.ogg</file>
+		<file pos="450989094" len="4053372" key="90A07EE0D2DAC7C08ED44A39C64FEFAC">155tenshi1.ogg</file>
+		<file pos="455042466" len="108" key="D7A57038A54E531794255D4419CC1E5B">155tenshi1.sfl</file>
+		<file pos="455042574" len="553238" key="816A61189BD3D7DEAB1E17560E743C7E">155tenshi1_20.ogg</file>
+		<file pos="455595812" len="4045501" key="00DBCDF090FDBF57FE7766947185DB92">155udonge1.ogg</file>
+		<file pos="459641313" len="104" key="8C893A80C3DCE3B4A909AA655376A81C">155udonge1.sfl</file>
+		<file pos="459641417" len="487972" key="D2501F0E421F83EF34316E5BA3D931A9">155udonge1_20.ogg</file>
+		<file pos="460129389" len="3368784" key="C118D09BD852ED38F269FE47E76C2DBE">155usami1.ogg</file>
+		<file pos="463498173" len="106" key="9B1999A800EE20244F8207D3F665EBFB">155usami1.sfl</file>
+		<file pos="463498279" len="481940" key="FC9CBC80B43F7346937E9594FD5B4FC8">155usami1_20.ogg</file>
+		<file pos="463980219" len="3344418" key="D470571CC7AFB60E780A232ACB47C9A0">155yukari1.ogg</file>
+		<file pos="467324637" len="108" key="317105DE12B5367ADC0B263686FA7E45">155yukari1.sfl</file>
+		<file pos="467324745" len="487301" key="901C2470B9C6D7F1E0D4765C6FFE01DC">155yukari1_20.ogg</file>
+		<file pos="467815213" len="2644213" key="446BF27B9FF7984A926C3862DA4A3C48">bgst01.ogg</file>
+		<file pos="470459426" len="104" key="E61A854AC20E16C675AF9FA0E739C1BC">bgst01.sfl</file>
+		<file pos="470459530" len="492418" key="E6EA7753BC547489CE0248F71EEAFE7D">bgst01_20.ogg</file>
+		<file pos="470951948" len="2770527" key="DA197B96B3D7D496490181DB416E9CC6">bgst02.ogg</file>
+		<file pos="473722475" len="104" key="2206B91D71A73C62CD93B920CC89961A">bgst02.sfl</file>
+		<file pos="473722579" len="491735" key="A43B45193491F659641A38446895EA1F">bgst02_20.ogg</file>
+		<file pos="474214314" len="2874369" key="69E8F5E8761DBD3E7386A94EEF41C6A4">bgst03.ogg</file>
+		<file pos="477088683" len="104" key="93FB560998E12CE73435498C10E09F55">bgst03.sfl</file>
+		<file pos="477088787" len="497815" key="7419C04006C70846F5B86FE2281C2B4B">bgst03_20.ogg</file>
+		<file pos="477586602" len="2679413" key="2A823BCB6CB6C47110DA3A3A97919FBF">bgst04.ogg</file>
+		<file pos="480266015" len="104" key="D4C0B76C193FA0A45DECEBC6A1B7E49A">bgst04.sfl</file>
+		<file pos="480266119" len="491876" key="50CC048896042C7ADCB029E9F6D38347">bgst04_20.ogg</file>
+		<file pos="480757995" len="2652879" key="9A7221207FBFAB636BA4C3EFB5F1CF4D">bgst05.ogg</file>
+		<file pos="483410874" len="104" key="12D76B092498445AEE89CFF08EF6CCED">bgst05.sfl</file>
+		<file pos="483410978" len="526759" key="95E0329132097E387C6110126F151DC8">bgst05_20.ogg</file>
+		<file pos="483937737" len="2484523" key="59010A4CA39DF89192A0E167FCA32A8E">bgst06.ogg</file>
+		<file pos="486422260" len="104" key="AF0082341136AA142A434843CA156B32">bgst06.sfl</file>
+		<file pos="486422364" len="487694" key="FDABE0D8FD6A7642765F7E9E1B705E90">bgst06_20.ogg</file>
+		<file pos="486910058" len="2635873" key="401DF7E79E4CD93AD9CF38C3D94BC9FD">bgst07.ogg</file>
+		<file pos="489545931" len="104" key="028320C44D966C6AB8E553EA11F8BC54">bgst07.sfl</file>
+		<file pos="489546035" len="495013" key="50EBD58B6048B59CC5A24456A747D942">bgst07_20.ogg</file>
+		<file pos="490041048" len="2618449" key="A466CA68BA05E746E8441E871F39CFF6">bgst08.ogg</file>
+		<file pos="492659497" len="104" key="883980F8447D5DD3BF6DC8235EF8632B">bgst08.sfl</file>
+		<file pos="492659601" len="501211" key="998D6CD6CE5D39B752058F634C06D4B0">bgst08_20.ogg</file>
+		<file pos="493160812" len="2734504" key="9750DD7434946ADB0D643C87B4893B85">bgst09.ogg</file>
+		<file pos="495895316" len="104" key="AE5D2B7177CAF82845430D8C9FC3FFD3">bgst09.sfl</file>
+		<file pos="495895420" len="525455" key="74C4D1CE871C51EDCA0A5CE59353D14D">bgst09_20.ogg</file>
+		<file pos="496420875" len="2511995" key="F9EC33602692E4FDE0EE32F3788158A7">bgst10.ogg</file>
+		<file pos="498932870" len="104" key="51940E5309BE42974B8D0C7503CFBAD8">bgst10.sfl</file>
+		<file pos="498932974" len="488661" key="C2EBAD9BC8975DCA5C284CBC19BCC5CA">bgst10_20.ogg</file>
+		<file pos="499421635" len="2847627" key="FB1FA3C84C7592871A7215A9B8799590">bgst11.ogg</file>
+		<file pos="502269262" len="104" key="008360DCB5B832C3329EF19759FAF025">bgst11.sfl</file>
+		<file pos="502269366" len="573081" key="592AD29183ABDC1CFDED65EE2E4B059F">bgst11_20.ogg</file>
+		<file pos="502842447" len="2506392" key="B858BF21039556DC70510BCAC79743CB">bgst12.ogg</file>
+		<file pos="505348839" len="104" key="F36BB79051471482C2ECBEA38E096097">bgst12.sfl</file>
+		<file pos="505348943" len="508955" key="C8B62185FCFA6B08673D36799B2969BC">bgst12_20.ogg</file>
+		<file pos="505857898" len="3011643" key="1622B1D3A9D3EBDB5D1535FE19E5245B">bgst13.ogg</file>
+		<file pos="508869541" len="104" key="583D0F6C6B533FDE21CE8BF3E974FCB6">bgst13.sfl</file>
+		<file pos="508869645" len="492834" key="B5DCD896F304423034A0A47E738BAA3E">bgst13_20.ogg</file>
+		<file pos="509362479" len="2995163" key="364A8800DCC0CD1D629C98B4C2A88351">bgst14.ogg</file>
+		<file pos="512357642" len="104" key="7C873FC3333B041D14F842C7E173E09F">bgst14.sfl</file>
+		<file pos="512357746" len="477576" key="36C9BB3AAFB33F1DD48D70BCE10ECAE4">bgst14_20.ogg</file>
+		<file pos="512835322" len="2650619" key="37DDF439AF26C0738F29FC119CB7872A">bgst15.ogg</file>
+		<file pos="515485941" len="104" key="C4B26F66E3A526326DBC4DBD07C359E1">bgst15.sfl</file>
+		<file pos="515486045" len="487205" key="574CBA9EA01487379D5F4C0ED67F09BB">bgst15_20.ogg</file>
+		<file pos="515973250" len="2584504" key="489BD43F354C5F0D4FCAEF824EED1AD1">bgst16.ogg</file>
+		<file pos="518557754" len="104" key="7377C90CDB99163E25B5D44222D13949">bgst16.sfl</file>
+		<file pos="518557858" len="506169" key="4E3DD867437957861073B8C03A284BEF">bgst16_20.ogg</file>
+		<file pos="519064027" len="2670365" key="35C455177DF100E0696652F57F9E4492">bgst17.ogg</file>
+		<file pos="521734392" len="104" key="A41F85F4B3577166093EA36C069A7C29">bgst17.sfl</file>
+		<file pos="521734496" len="486022" key="351709E864FAB04EB00D936B54C3611F">bgst17_20.ogg</file>
+		<file pos="522220518" len="1971061" key="79BCE1C7A54A79521263A61A4D18A468">ending.ogg</file>
+		<file pos="524191579" len="104" key="C924EAB6012F0EFE6843B4C09415B1CB">ending.sfl</file>
+		<file pos="524191683" len="6237223" key="E000D86C3451D2B48DDC251D5A512718">lastboss.ogg</file>
+		<file pos="530428906" len="106" key="0546B4ABA2570768F4D3905CD2849B1B">lastboss.sfl</file>
+		<file pos="530429012" len="489825" key="33EAB2B279B50FE59FDD92CFB35A6050">lastboss_20.ogg</file>
+		<file pos="530918837" len="3849249" key="521E25A9B07B7885A75CF505CBD57A72">midboss.ogg</file>
+		<file pos="534768086" len="104" key="9FB6F307F231A74659D8C45E0AB64641">midboss.sfl</file>
+		<file pos="534768190" len="527134" key="08660222FCABD25072AD56E687F1DD7D">midboss_20.ogg</file>
+		<file pos="535295324" len="2084709" key="B93D6D61D78FC059DE0B388AA1B10FC3">staffroll0.ogg</file>
+		<file pos="537380033" len="2469723" key="8EAE4CA4FA1646E1C8053CA671C0A2E9">staffroll1.ogg</file>
+		<file pos="539849756" len="2366222" key="2AACD2099A84101A781CAF8733D10B35">staffroll2.ogg</file>
+		<file pos="542215978" len="1689870" key="75294C5CD12767658C0E81CEF461D53A">story01.ogg</file>
+		<file pos="543905848" len="104" key="1965B7101463E16C5E894B2660B8D20D">story01.sfl</file>
+		<file pos="543905952" len="1982951" key="F1E5D9054D4028890E60A7F6F38B312F">story02.ogg</file>
+		<file pos="545888903" len="104" key="63BF64C74CA697B05C66DFDFB0DC61D9">story02.sfl</file>
+		<file pos="545889007" len="1800887" key="40535945496D2CA69C83DF39230CF8E5">story03.ogg</file>
+		<file pos="547689894" len="104" key="D13AAD1E49F9E7936C3E1A541059ECEB">story03.sfl</file>
+		<file pos="547689998" len="1718221" key="E29E8F68D23E5EC62AC69580BA7D2C1E">story04.ogg</file>
+		<file pos="549408219" len="104" key="27C724CDEAB8416DFDA903E0D9BC8B5A">story04.sfl</file>
+		<file pos="549408323" len="2006234" key="3D902F9EBD47C5E210F3495C8C2E5992">story05.ogg</file>
+		<file pos="551414557" len="104" key="A307B43E4091A5329C22CE718A291966">story05.sfl</file>
+		<file pos="551414661" len="1685607" key="CE1C398CCAD0C6F4153884A8F60231A4">story06.ogg</file>
+		<file pos="553100268" len="104" key="92F11D1854E6FE6E9471E37099D863D1">story06.sfl</file>
+		<file pos="553100372" len="1801090" key="DC6839D7AE53DD3BE6A83C5343110C34">story07.ogg</file>
+		<file pos="554901462" len="104" key="637EEEB4EC7586C1C6F8377845F97F52">story07.sfl</file>
+		<file pos="554901566" len="1957335" key="4F14A052F5D6F438B606AB7DADBC3EE3">story08.ogg</file>
+		<file pos="556858901" len="104" key="72960AFB8D807556E121C5080582DE6E">story08.sfl</file>
+		<file pos="556859005" len="2144069" key="323B4ECD8E1BD102A4FF3AE1BAE66E88">story09.ogg</file>
+		<file pos="559003074" len="104" key="398D78D3AFB3196DA3B311FA5FCCA8A1">story09.sfl</file>
+		<file pos="559003178" len="2268019" key="EA021F2F532A34329E1371CB021B34F9">th155op1.ogg</file>
+		<file pos="561271197" len="106" key="6701FED5BB2B8071993E19D18CA3664F">th155op1.sfl</file>
+		<file pos="561271303" len="2243431" key="F95E16E4DDDD0DA1AE68BD48076F13A9">th155op2.ogg</file>
+		<file pos="563514734" len="106" key="BA9078838480403AEA7C3FDD1DEABED7">th155op2.sfl</file>
+		<file pos="563514840" len="2253947" key="2DEB3475EC4F347BDA068262C51A6E41">th155op3.ogg</file>
+		<file pos="565768787" len="106" key="18A0DFA2B3D14D6B639F12E1A004E132">th155op3.sfl</file>
+		<file pos="565768893" len="2256321" key="28A3E00FA89B44E6E9D5D19B63E16C38">th155op4.ogg</file>
+		<file pos="568025214" len="106" key="0F3B72AA2921D1A57E38F164B2A529F6">th155op4.sfl</file>
+	</filelist>
+</thxml>

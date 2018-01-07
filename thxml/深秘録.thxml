@@ -35,25 +35,25 @@
 		<bgm file="st05_1.ogg" pos="0,441397,4233596">竹林インフレイム</bgm>
 		<bgm file="kasen1.ogg" pos="0,249077,6474920" artist="ZUN">華狭間のバトルフィールド</bgm>
 		<bgm file="usami1.ogg" pos="0,755877,10112367" artist="ZUN">ラストオカルティズム～現し世の秘術師</bgm>
-		<bgm file="reimu2.ogg" pos="0,0,941724" artist="コンプ(豚乙女)">二色蓮花蝶～Red and White</bgm>
-		<bgm file="marisa2.ogg" pos="0,0,961908" artist="oiko">恋色マスタースパーク</bgm>
-		<bgm file="ichirin2.ogg" pos="0,0,889498" artist="しゃばだば(Sound CYCLONE)">時代親父とハイカラ少女</bgm>
-		<bgm file="hijiri2.ogg" pos="0,0,896950" artist="NYO(Silver Forest)">感情の摩天楼～Cosmic Mind</bgm>
-		<bgm file="futo2.ogg" pos="0,0,915792" artist="鯛の小骨">大神神話伝</bgm>
-		<bgm file="miko2.ogg" pos="0,0,1045237" artist="鷹(CROW'SCLAW)">聖徳伝説～True Administrator</bgm>
-		<bgm file="nitori2.ogg" pos="0,0,962787" artist="ゆうゆ">芥川龍之介の河童～Candid Friend</bgm>
-		<bgm file="koishi2.ogg" pos="0,0,990235" artist="岸田(岸田教団)">ハルトマンの妖怪少女</bgm>
-		<bgm file="mamizou2.ogg" pos="0,0,1033064" artist="秀三(石鹸屋)">幻想郷の二ッ岩</bgm>
-		<bgm file="kokoro2.ogg" pos="0,0,967466" artist="どぶウサギ">亡失のエモーション</bgm>
-		<bgm file="mokou2.ogg" pos="0,0,907408" artist="ziki_7">月まで届け、不死の煙</bgm>
-		<bgm file="sinmyoumaru2.ogg" pos="0,0,951408">輝く針の小人族～Little Princess</bgm>
-		<bgm file="st02_2.ogg" pos="0,0,968522">オカルトアラカルト</bgm>
-		<bgm file="st01_2.ogg" pos="0,0,1016429">七玉蒐集ショウダウン</bgm>
-		<bgm file="st03_2.ogg" pos="0,0,914808">公正なる奪い合い</bgm>
-		<bgm file="st04_2.ogg" pos="0,0,919950">対蹠地の鐘</bgm>
-		<bgm file="st05_2.ogg" pos="0,0,962546">竹林インフレイム</bgm>
-		<bgm file="kasen2.ogg" pos="0,0,1029303" artist="ZUN">華狭間のバトルフィールド</bgm>
-		<bgm file="usami2.ogg" pos="0,0,996328" artist="ZUN">ラストオカルティズム～現し世の秘術師</bgm>
+		<bgm file="reimu2.ogg" pos="0,0,941724" artist="コンプ(豚乙女)">二色蓮花蝶～Red and White【20秒版】</bgm>
+		<bgm file="marisa2.ogg" pos="0,0,961908" artist="oiko">恋色マスタースパーク【20秒版】</bgm>
+		<bgm file="ichirin2.ogg" pos="0,0,889498" artist="しゃばだば(Sound CYCLONE)">時代親父とハイカラ少女【20秒版】</bgm>
+		<bgm file="hijiri2.ogg" pos="0,0,896950" artist="NYO(Silver Forest)">感情の摩天楼～Cosmic Mind【20秒版】</bgm>
+		<bgm file="futo2.ogg" pos="0,0,915792" artist="鯛の小骨">大神神話伝【20秒版】</bgm>
+		<bgm file="miko2.ogg" pos="0,0,1045237" artist="鷹(CROW'SCLAW)">聖徳伝説～True Administrator【20秒版】</bgm>
+		<bgm file="nitori2.ogg" pos="0,0,962787" artist="ゆうゆ">芥川龍之介の河童～Candid Friend【20秒版】</bgm>
+		<bgm file="koishi2.ogg" pos="0,0,990235" artist="岸田(岸田教団)">ハルトマンの妖怪少女【20秒版】</bgm>
+		<bgm file="mamizou2.ogg" pos="0,0,1033064" artist="秀三(石鹸屋)">幻想郷の二ッ岩【20秒版】</bgm>
+		<bgm file="kokoro2.ogg" pos="0,0,967466" artist="どぶウサギ">亡失のエモーション【20秒版】</bgm>
+		<bgm file="mokou2.ogg" pos="0,0,907408" artist="ziki_7">月まで届け、不死の煙【20秒版】</bgm>
+		<bgm file="sinmyoumaru2.ogg" pos="0,0,951408">輝く針の小人族～Little Princess【20秒版】</bgm>
+		<bgm file="st02_2.ogg" pos="0,0,968522">オカルトアラカルト【20秒版】</bgm>
+		<bgm file="st01_2.ogg" pos="0,0,1016429">七玉蒐集ショウダウン【20秒版】</bgm>
+		<bgm file="st03_2.ogg" pos="0,0,914808">公正なる奪い合い【20秒版】</bgm>
+		<bgm file="st04_2.ogg" pos="0,0,919950">対蹠地の鐘【20秒版】</bgm>
+		<bgm file="st05_2.ogg" pos="0,0,962546">竹林インフレイム【20秒版】</bgm>
+		<bgm file="kasen2.ogg" pos="0,0,1029303" artist="ZUN">華狭間のバトルフィールド【20秒版】</bgm>
+		<bgm file="usami2.ogg" pos="0,0,996328" artist="ZUN">ラストオカルティズム～現し世の秘術師【20秒版】</bgm>
 		<bgm file="ta13.ogg" pos="0,0,1209599">Secret BGM1</bgm>
 		<bgm file="ta14.ogg" pos="0,126950,529200">Secret BGM2</bgm>
 	</bgmlist>
