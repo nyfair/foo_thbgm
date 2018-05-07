@@ -21,19 +21,19 @@
 		<bgm file="155usami1.ogg" pos="0,501412,5459117" artist="ARM(IOSYS)">ラストオカルティズム～現し世の秘術師</bgm>
 		<bgm file="155udonge1.ogg" pos="0,1530065,5292035" artist="ビートまりお(COOL&CREATE)">狂気の瞳～Invisible Full Moon</bgm>
 		<bgm file="155doremy1.ogg" pos="0,882037,7191692" artist="狐夢想(狐夢想屋)">永遠の春夢</bgm>
-		<bgm file="155tenshi1.ogg" pos="0,165485,7144599" artist="紅い流星(東京アクティブNEETs)">有頂天変～Wonderful Heaven</bgm>
-		<bgm file="155yukari1.ogg" pos="0,240190,5582825" artist="ELEMENTAS(A-One)">夜が降りてくる～Evening Star</bgm>
+		<!-- <bgm file="155tenshi1.ogg" pos="0,165485,7144599" artist="紅い流星(東京アクティブNEETs)">有頂天変～Wonderful Heaven</bgm> -->
+		<!-- <bgm file="155yukari1.ogg" pos="0,240190,5582825" artist="ELEMENTAS(A-One)">夜が降りてくる～Evening Star</bgm> -->
 		<bgm file="bgst01.ogg" pos="0,371162,3822005">地の色は黄色～Primrose</bgm>
 		<bgm file="bgst02.ogg" pos="0,434867,4268903">マッシュルーム・ワルツ</bgm>
-		<bgm file="bgst03.ogg" pos="0,396990,4338207">聖輦船空を往く</bgm>
+		<!-- <bgm file="bgst03.ogg" pos="0,396990,4338207">聖輦船空を往く</bgm> -->
 		<bgm file="bgst04.ogg" pos="0,282093,4089290">法力の下の平等</bgm>
 		<bgm file="bgst05.ogg" pos="0,537181,3968996">恒常不変の参廟祀</bgm>
-		<bgm file="bgst06.ogg" pos="0,506607,3690474">光輝く天球儀</bgm>
+		<!-- <bgm file="bgst06.ogg" pos="0,506607,3690474">光輝く天球儀</bgm> -->
 		<bgm file="bgst07.ogg" pos="0,187507,3988177">沢の河童の技術力</bgm>
 		<bgm file="bgst08.ogg" pos="0,343059,4011678">地底に咲く薔薇</bgm>
 		<bgm file="bgst09.ogg" pos="0,340644,4103221">深緑の狸森にて</bgm>
 		<bgm file="bgst10.ogg" pos="0,157314,3948951">心綺楼演舞</bgm>
-		<bgm file="bgst11.ogg" pos="0,687145,4233596">不滅のレッドソウル</bgm>
+		<!-- <bgm file="bgst11.ogg" pos="0,687145,4233596">不滅のレッドソウル</bgm> -->
 		<bgm file="bgst12.ogg" pos="0,162514,4022978">落日に映える逆さ城</bgm>
 		<bgm file="bgst13.ogg" pos="0,1147357,4004753">千の試練を超えて</bgm>
 		<bgm file="bgst14.ogg" pos="0,477334,4433834">夢世界フォークロア</bgm>
@@ -79,19 +79,19 @@
 		<bgm file="155usami1_20.ogg" pos="0,0,882000">ラストオカルティズム～現し世の秘術師【20秒版】</bgm>
 		<bgm file="155udonge1_20.ogg" pos="0,0,872806">狂気の瞳～Invisible Full Moon【20秒版】</bgm>
 		<bgm file="155doremy1_20.ogg" pos="0,0,882000">永遠の春夢【20秒版】</bgm>
-		<bgm file="155tenshi1_20.ogg" pos="0,0,1014300">有頂天変～Wonderful Heaven【20秒版】</bgm>
-		<bgm file="155yukari1_20.ogg" pos="0,0,882000">夜が降りてくる～Evening Star【20秒版】</bgm>
+		<!-- <bgm file="155tenshi1_20.ogg" pos="0,0,1014300">有頂天変～Wonderful Heaven【20秒版】</bgm> -->
+		<!-- <bgm file="155yukari1_20.ogg" pos="0,0,882000">夜が降りてくる～Evening Star【20秒版】</bgm> -->
 		<bgm file="bgst01_20.ogg" pos="0,0,882000">地の色は黄色～Primrose【20秒版】</bgm>
 		<bgm file="bgst02_20.ogg" pos="0,0,882000">マッシュルーム・ワルツ【20秒版】</bgm>
-		<bgm file="bgst03_20.ogg" pos="0,0,882000">聖輦船空を往く【20秒版】</bgm>
+		<!-- <bgm file="bgst03_20.ogg" pos="0,0,882000">聖輦船空を往く【20秒版】</bgm> -->
 		<bgm file="bgst04_20.ogg" pos="0,0,882000">法力の下の平等【20秒版】</bgm>
 		<bgm file="bgst05_20.ogg" pos="0,0,964922">恒常不変の参廟祀【20秒版】</bgm>
-		<bgm file="bgst06_20.ogg" pos="0,0,882000">光輝く天球儀【20秒版】</bgm>
+		<!-- <bgm file="bgst06_20.ogg" pos="0,0,882000">光輝く天球儀【20秒版】</bgm> -->
 		<bgm file="bgst07_20.ogg" pos="0,0,882000">沢の河童の技術力【20秒版】</bgm>
 		<bgm file="bgst08_20.ogg" pos="0,0,882000">地底に咲く薔薇【20秒版】</bgm>
 		<bgm file="bgst09_20.ogg" pos="0,0,939130">深緑の狸森にて【20秒版】</bgm>
 		<bgm file="bgst10_20.ogg" pos="0,0,882000">心綺楼演舞【20秒版】</bgm>
-		<bgm file="bgst11_20.ogg" pos="0,0,1029452">不滅のレッドソウル【20秒版】</bgm>
+		<!-- <bgm file="bgst11_20.ogg" pos="0,0,1029452">不滅のレッドソウル【20秒版】</bgm> -->
 		<bgm file="bgst12_20.ogg" pos="0,0,940320">落日に映える逆さ城【20秒版】</bgm>
 		<bgm file="bgst13_20.ogg" pos="0,0,882000">千の試練を超えて【20秒版】</bgm>
 		<bgm file="bgst14_20.ogg" pos="0,0,882000">夢世界フォークロア【20秒版】</bgm>
