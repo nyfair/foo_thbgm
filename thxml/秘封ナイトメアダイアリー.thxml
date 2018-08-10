@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
+
+<thxml>
+	<album>秘封ナイトメアダイアリー～Violet Detector</album>
+	<albumartist>上海アリス幻樂団</albumartist>
+	<path>thbgm.dat</path>
+	<bgmlist>
+		<bgm pos="16,6741120,11864960">悪夢日記</bgm>
+		<bgm pos="31089168,689536,18036096">ルーシッドドリーマー</bgm>
+		<bgm pos="69541456,2011840,18815360">ルナティックドリーマー</bgm>
+		<bgm pos="90368656,616192,23627264">ナイトメアダイアリー</bgm>
+		<bgm pos="18606096,529152,11953920">バー・オールドアダム</bgm>
+		<bgm pos="49814800,4422336,15304320">燕石博物誌が連れてきた闇</bgm>
+		<bgm pos="114612112,4198460,26489284">永遠の春夢</bgm>
+		<bgm pos="145299856,1159520,32438464">秘匿されたフォーシーズンズ</bgm>
+	</bgmlist>
+</thxml>
