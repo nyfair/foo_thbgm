@@ -1,0 +1,20 @@
+image: Visual Studio 2017
+
+before_deploy:
+  - 7z a thxml.7z thxml/
+  - appveyor PushArtifact thxml.7z
+
+deploy:
+  artifact: /.*\.7z/
+  auth_token:
+    secure: J1DFsRUBaJKZ2HqHKOQEA427FUsKo6rDTxtxyUwARP7k0Ac5SgX1qn77+LYXdwk6
+  description: ''
+  on:
+    appveyor_repo_tag: true
+  provider: GitHub
+
+branches:
+  only:
+    - latest
+
+build: false
