@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
+
+<thxml>
+	<album>東方鬼形獣～Wily Beast and Weakest Creature</album>
+	<albumartist>上海アリス幻樂団</albumartist>
+	<path>thbgm_tr.dat</path>
+	<bgmlist>
+		<bgm pos="16,4759360,10850112">物言わぬ獣の霊</bgm>
+		<bgm pos="15609488,2680704,20774400">地蔵だけが知る哀嘆</bgm>
+		<bgm pos="39064592,1182184,13870704">ジェリーストーン</bgm>
+		<bgm pos="54117480,3588096,22358272">ロストリバー</bgm>
+		<bgm pos="80063848,2123392,19265600">石の赤子と水中の牛</bgm>
+		<bgm pos="101452840,2498256,27516176">不朽の曼珠沙華</bgm>
+		<bgm pos="131467272,1711952,23783200">セラフィックチキン</bgm>
+		<bgm pos="156962424,1879240,4861944">プレイヤーズスコア</bgm>
+	</bgmlist>
+</thxml>

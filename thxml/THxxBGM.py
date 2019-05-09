@@ -1,4 +1,4 @@
-﻿# Convert THxxBGM file to thxml file
+# Convert THxxBGM file to thxml file
 import sys, codecs
 from xml.etree.cElementTree import *
 
