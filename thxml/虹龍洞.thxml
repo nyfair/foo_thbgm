@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
+
+<thxml>
+	<album>東方虹龍洞～Unconnected Marketeers</album>
+	<albumartist>上海アリス幻樂団</albumartist>
+	<path>thbgm_tr.dat</path>
+	<bgmlist>
+		<bgm pos="16,493216,18910080">虹の架かる幻想郷</bgm>
+		<bgm pos="19403312,4341120,16351296">妖異達の通り雨</bgm>
+		<bgm pos="40095728,402432,16437248">大吉キトゥン</bgm>
+		<bgm pos="56935408,2484416,15579456">深緑に隠された断崖</bgm>
+		<bgm pos="74999280,1147904,18618368">バンデットリィテクノロジー</bgm>
+		<bgm pos="94765552,1654784,29090816">駒草咲くパーペチュアルスノー</bgm>
+		<bgm pos="125511152,1133824,22175488">スモーキングドラゴン</bgm>
+		<bgm pos="148820464,1879240,4861944">プレイヤーズスコア</bgm>
+	</bgmlist>
+</thxml>
