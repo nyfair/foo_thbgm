@@ -42,6 +42,7 @@ TH155: Antinomy of Common Flowers (東方憑依華)
 TH16 : Hidden Star in Four Seasons (東方天空璋)
 TH165: Violet Detector (秘封ナイトメアダイアリー)
 TH17 : Wily Beast and Weakest Creature (東方鬼形獣)
+TH18 : Unconnected Marketeers (東方虹龍洞)
 Uwabami Breakers (黄昏酒場)
 Kioh Gyoku (稀翁玉)
 Banshiryuu (幡紫竜) both c67 and later version
