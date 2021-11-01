@@ -1,27 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
 
 <thxml>
-	<album>東方風神録～Mountain of Faith</album>
+	<album>東方風神録 ～ Mountain of Faith</album>
 	<albumartist>上海アリス幻樂団</albumartist>
 	<path>thbgm.dat</path>
 	<bgmlist>
 		<bgm pos="16,3944448,10930688">封印されし神々</bgm>
-		<bgm pos="14875152,2718720,21285888">人恋し神樣～Romantic Fall</bgm>
+		<bgm pos="14875152,2718720,21285888">人恋し神樣 ～ Romantic Fall</bgm>
 		<bgm pos="38879760,243200,7625216">稲田姫樣に叱られるから</bgm>
-		<bgm pos="46748176,651776,20761088">厄神樣の通り道～Dark Road</bgm>
+		<bgm pos="46748176,651776,20761088">厄神樣の通り道 ～ Dark Road</bgm>
 		<bgm pos="68161040,510464,18144256">運命のダークサイド</bgm>
 		<bgm pos="86815760,3145728,29013504">神々が恋した幻想郷</bgm>
-		<bgm pos="118974992,1746944,24042752">芥川龍之介の河童～Candid Friend</bgm>
-		<bgm pos="144764688,1708032,34281472">フォールオブフォール～秋めく滝</bgm>
-		<bgm pos="180754192,1652736,13104640">妖怪の山～Mysterious Mountain</bgm>
+		<bgm pos="118974992,1746944,24042752">芥川龍之介の河童 ～ Candid Friend</bgm>
+		<bgm pos="144764688,1708032,34281472">フォールオブフォール ～ 秋めく滝</bgm>
+		<bgm pos="180754192,1652736,13104640">妖怪の山 ～ Mysterious Mountain</bgm>
 		<bgm pos="195511568,532480,31750656">少女が見た日本の原風景</bgm>
 		<bgm pos="227794704,2565120,28866816">信仰は儚き人間の為に</bgm>
-		<bgm pos="259226640,2197504,9734400">御柱の墓場～Grave of Being</bgm>
-		<bgm pos="271158544,5085952,23639296">神さびた古戦場～Suwa Foughten Field</bgm>
+		<bgm pos="259226640,2197504,9734400">御柱の墓場 ～ Grave of Being</bgm>
+		<bgm pos="271158544,5085952,23639296">神さびた古戦場 ～ Suwa Foughten Field</bgm>
 		<bgm pos="299883792,413952,34962048">明日ハレの日、ケの昨日</bgm>
 		<bgm pos="335259792,881184,29557792">ネイティブフェイス</bgm>
 		<bgm pos="365698768,8006656,7415296">麓の神社</bgm>
-		<bgm pos="381120720,11131396,4796320">神は恵みの雨を降らす～Sylphid Dream</bgm>
+		<bgm pos="381120720,11131396,4796320">神は恵みの雨を降らす ～ Sylphid Dream</bgm>
 		<bgm pos="397048436,1879240,4861944">プレイヤーズスコア</bgm>
 	</bgmlist>
 </thxml>

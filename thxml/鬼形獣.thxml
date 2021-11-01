@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
 
 <thxml>
-	<album>東方鬼形獣～Wily Beast and Weakest Creature</album>
+	<album>東方鬼形獣 ～ Wily Beast and Weakest Creature</album>
 	<albumartist>上海アリス幻樂団</albumartist>
 	<path>thbgm.dat</path>
 	<bgmlist>
@@ -13,13 +13,13 @@
 		<bgm pos="101452840,2498256,27516176">不朽の曼珠沙華</bgm>
 		<bgm pos="131467272,1711952,23783200">セラフィックチキン</bgm>
 		<bgm pos="156962424,4265472,30007424">アンロケイテッドヘル</bgm>
-		<bgm pos="191235320,367232,29365568">トータスドラゴン～幸運と不運</bgm>
+		<bgm pos="191235320,367232,29365568">トータスドラゴン ～ 幸運と不運</bgm>
 		<bgm pos="220968120,893824,26459008">ビーストメトロポリス</bgm>
 		<bgm pos="248320952,4284036,20412016">セラミックスの杖刀人</bgm>
 		<bgm pos="273017004,6478080,14368896">エレクトリックヘリテージ</bgm>
-		<bgm pos="293863980,5278080,35984512">偶像に世界を委ねて～Idoratrize World</bgm>
+		<bgm pos="293863980,5278080,35984512">偶像に世界を委ねて ～ Idoratrize World</bgm>
 		<bgm pos="335126572,4542592,27884416">輝かしき弱肉強食の掟</bgm>
-		<bgm pos="367553580,4545472,35860288">聖徳太子のペガサス～Dark Pegasus</bgm>
+		<bgm pos="367553580,4545472,35860288">聖徳太子のペガサス ～ Dark Pegasus</bgm>
 		<bgm pos="407959340,4389120,5334528">畜生達の休息</bgm>
 		<bgm pos="417682988,16085760,4453120">地下からの帰還</bgm>
 		<bgm pos="438221868,1879240,4861944">プレイヤーズスコア</bgm>

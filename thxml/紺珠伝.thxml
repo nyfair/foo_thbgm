@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
 
 <thxml>
-	<album>東方紺珠伝～Legacy of Lunatic Kingdom</album>
+	<album>東方紺珠伝 ～ Legacy of Lunatic Kingdom</album>
 	<albumartist>上海アリス幻樂団</albumartist>
 	<path>thbgm.dat</path>
 	<bgmlist>
@@ -17,7 +17,7 @@
 		<bgm pos="225631024,1252736,35651584">遥か３８万キロのボヤージュ</bgm>
 		<bgm pos="262535344,4703232,37632000">星条旗のピエロ</bgm>
 		<bgm pos="304870576,9413376,17721600">故郷の星が映る海</bgm>
-		<bgm pos="332005552,1079296,49071872">ピュアヒューリーズ～心の在処</bgm>
+		<bgm pos="332005552,1079296,49071872">ピュアヒューリーズ ～ 心の在処</bgm>
 		<bgm pos="382156720,2041344,35650560">見た事も無い悪夢の世界</bgm>
 		<bgm pos="419848624,2032256,37548928">パンデモニックプラネット</bgm>
 		<bgm pos="459429808,486288,8466688">神社から見える月</bgm>

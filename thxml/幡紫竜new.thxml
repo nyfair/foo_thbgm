@@ -2,7 +2,7 @@
 
 <thxml>
 	<album artist="halt, 毒電P" codec="vorbis" samplerate="48000" encoding="lossy" pack="ac6">幡紫竜</album>
-	<albumartist>Amusement Makers&瞬殺サレ道？</albumartist>
+	<albumartist>Amusement Makers & 瞬殺サレ道？</albumartist>
 	<path>music.ac6|</path>
 	<bgmlist>
 		<bgm file="bsr_16.ogg" pos="0,0,1880064">はじまりの前に</bgm>

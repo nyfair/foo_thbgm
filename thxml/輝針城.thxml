@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
 
 <thxml>
-	<album>東方輝針城～Double Dealing Character</album>
+	<album>東方輝針城 ～ Double Dealing Character</album>
 	<albumartist>上海アリス幻樂団</albumartist>
 	<path>thbgm.dat</path>
 	<bgmlist>
@@ -17,9 +17,9 @@
 		<bgm pos="192224608,3661512,22315352">空中に沈む輝針城</bgm>
 		<bgm pos="218201472,926016,22226448">リバースイデオロギー</bgm>
 		<bgm pos="241353936,3320064,14724096">針小棒大の天守閣</bgm>
-		<bgm pos="259398096,1161216,39238528">輝く針の小人族～Little Princess</bgm>
+		<bgm pos="259398096,1161216,39238528">輝く針の小人族 ～ Little Princess</bgm>
 		<bgm pos="328293616,1838432,24115552">魔力の雷雲</bgm>
-		<bgm pos="354247600,2544832,34297920">始原のビート～Pristine Beat</bgm>
+		<bgm pos="354247600,2544832,34297920">始原のビート ～ Pristine Beat</bgm>
 		<bgm pos="299797840,525568,14411424">小槌の魔力</bgm>
 		<bgm pos="314734832,3123264,10435520">不思議な不思議な道具達</bgm>
 		<bgm pos="391090352,1879240,4861944">プレイヤーズスコア</bgm>

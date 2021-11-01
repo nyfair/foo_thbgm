@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
 
 <thxml>
-	<album>東方虹龍洞～Unconnected Marketeers</album>
+	<album>東方虹龍洞 ～ Unconnected Marketeers</album>
 	<albumartist>上海アリス幻樂団</albumartist>
 	<path>thbgm.dat</path>
 	<bgmlist>
@@ -17,7 +17,7 @@
 		<bgm pos="212445964,706208,30019776">待ちわびた逢魔が時</bgm>
 		<bgm pos="243171948,646880,24930912">星降る天魔の山</bgm>
 		<bgm pos="268749740,725056,28348928">ルナレインボー</bgm>
-		<bgm pos="297823724,4557728,39398784">あの賑やかな市場は今どこに～Immemorial Marketeers</bgm>
+		<bgm pos="297823724,4557728,39398784">あの賑やかな市場は今どこに ～ Immemorial Marketeers</bgm>
 		<bgm pos="341780236,3743744,6548480">嵐の後の日曜日</bgm>
 		<bgm pos="352072460,8984064,4179584">虹色の世界</bgm>
 		<bgm pos="365236108,876032,29349376">幻想の地下大線路網</bgm>

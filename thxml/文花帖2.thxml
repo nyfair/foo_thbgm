@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
 
 <thxml>
-	<album>ダブルスポイラー～東方文花帖</album>
+	<album>ダブルスポイラー ～ 東方文花帖</album>
 	<albumartist>上海アリス幻樂団</albumartist>
 	<path>thbgm.dat</path>
 	<bgmlist>
@@ -9,8 +9,8 @@
 		<bgm pos="15469584,2832576,16861248">あなたの町の怪事件</bgm>
 		<bgm pos="35163408,2514176,15942144">妖怪モダンコロニー</bgm>
 		<bgm pos="53619728,1825536,14429824">ネメシスの要塞</bgm>
-		<bgm pos="69875088,5661056,25561344">無間の鐘～Infinite Nightmare</bgm>
-		<bgm pos="101097488,2120352,13104000">妖怪の山～Mysterious Mountain</bgm>
+		<bgm pos="69875088,5661056,25561344">無間の鐘 ～ Infinite Nightmare</bgm>
+		<bgm pos="101097488,2120352,13104000">妖怪の山 ～ Mysterious Mountain</bgm>
 		<bgm pos="116321840,5178112,3877760">はたてモード開放画面のテーマ</bgm>
 	</bgmlist>
 </thxml>

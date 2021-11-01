@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
 
 <thxml>
-	<album artist="あきやまうに" codec="vorbis" encoding="lossy" pack="tfpk">東方心綺楼～Hopeless Masquerade</album>
-	<albumartist>黄昏フロンティア&上海アリス幻樂団</albumartist>
+	<album artist="あきやまうに" codec="vorbis" encoding="lossy" pack="tfpk">東方心綺楼 ～ Hopeless Masquerade</album>
+	<albumartist>黄昏フロンティア & 上海アリス幻樂団</albumartist>
 	<path>th135.pak|</path>
 	<bgmlist>
 		<bgm file="op.ogg" pos="0,0,2086578">塵界不変のペシミズム</bgm>
 		<bgm file="title.ogg" pos="0,198144,4233602">心綺楼囃子</bgm>
-		<bgm file="reimu1.ogg" pos="0,299644,4593045">春色小径～Colorful Path</bgm>
+		<bgm file="reimu1.ogg" pos="0,299644,4593045">春色小径 ～ Colorful Path</bgm>
 		<bgm file="marisa1.ogg" pos="0,248349,5292000">メイガスナイト</bgm>
 		<bgm file="ichirin1.ogg" pos="0,88524,4645196">時代親父とハイカラ少女</bgm>
-		<bgm file="hijiri1.ogg" pos="0,625902,5532540">感情の摩天楼～Cosmic Mind</bgm>
+		<bgm file="hijiri1.ogg" pos="0,625902,5532540">感情の摩天楼 ～ Cosmic Mind</bgm>
 		<bgm file="futo1.ogg" pos="0,203269,5388223">大神神話伝</bgm>
-		<bgm file="miko1.ogg" pos="0,1677731,5230462">聖徳伝説～True Administrator</bgm>
-		<bgm file="nitori1.ogg" pos="0,476227,4908656">芥川龍之介の河童～Candid Friend</bgm>
+		<bgm file="miko1.ogg" pos="0,1677731,5230462">聖徳伝説 ～ True Administrator</bgm>
+		<bgm file="nitori1.ogg" pos="0,476227,4908656">芥川龍之介の河童 ～ Candid Friend</bgm>
 		<bgm file="koishi1.ogg" pos="0,255188,5199641">ハルトマンの妖怪少女</bgm>
 		<bgm file="mamizou1.ogg" pos="0,223196,5292200">佐渡のニッ岩</bgm>
 		<bgm file="chuboss1.ogg" pos="0,621687,5008524" artist="ZUN">幻想郷の二ッ岩</bgm>

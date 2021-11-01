@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
 
 <thxml>
-	<album>東方天空璋～Hidden Star in Four Seasons</album>
+	<album>東方天空璋 ～ Hidden Star in Four Seasons</album>
 	<albumartist>上海アリス幻樂団</albumartist>
 	<path>thbgm.dat</path>
 	<bgmlist>
@@ -19,7 +19,7 @@
 		<bgm pos="242183932,2349680,16282656">イントゥ・バックドア</bgm>
 		<bgm pos="260816268,1159520,32438464">秘匿されたフォーシーズンズ</bgm>
 		<bgm pos="318662956,588800,30880768">もうドアには入れない</bgm>
-		<bgm pos="350132524,1133056,30870016">秘神マターラ～Hidden Star in All Seasons.</bgm>
+		<bgm pos="350132524,1133056,30870016">秘神マターラ ～ Hidden Star in All Seasons.</bgm>
 		<bgm pos="294414252,5175040,5016832">不自然な自然</bgm>
 		<bgm pos="304606124,9743488,4313344">白い旅人</bgm>
 		<bgm pos="382135596,1879240,4861944">プレイヤーズスコア</bgm>

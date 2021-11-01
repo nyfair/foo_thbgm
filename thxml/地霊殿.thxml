@@ -1,27 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
 
 <thxml>
-	<album>東方地霊殿～Subterranean Animism</album>
+	<album>東方地霊殿 ～ Subterranean Animism</album>
 	<albumartist>上海アリス幻樂団</albumartist>
 	<path>thbgm.dat</path>
 	<bgmlist>
 		<bgm pos="16,343552,13401984">地霊達の起床</bgm>
 		<bgm pos="13745552,413056,17067008">暗闇の風穴</bgm>
-		<bgm pos="31225616,815104,8980608">封じられた妖怪～Lost Place</bgm>
+		<bgm pos="31225616,815104,8980608">封じられた妖怪 ～ Lost Place</bgm>
 		<bgm pos="41021328,670208,19007488">渡る者の途絶えた橋</bgm>
 		<bgm pos="60699024,591872,18933248">緑眼のジェラシー</bgm>
 		<bgm pos="80224144,586368,19945472">旧地獄街道を行く</bgm>
 		<bgm pos="100755984,1054464,18027776">華のさかづき大江山</bgm>
 		<bgm pos="119838224,1431040,23286016">ハートフェルトファンシー</bgm>
-		<bgm pos="144555280,638464,21400192">少女さとり～3rd eye</bgm>
+		<bgm pos="144555280,638464,21400192">少女さとり ～ 3rd eye</bgm>
 		<bgm pos="166593936,708008,31154896">廃獄ララバイ</bgm>
-		<bgm pos="198456840,542208,17354496">死体旅行～Be of good cheer!</bgm>
+		<bgm pos="198456840,542208,17354496">死体旅行 ～ Be of good cheer!</bgm>
 		<bgm pos="216353544,616448,20002816">業火マントル</bgm>
-		<bgm pos="236972808,633088,29304064">霊知の太陽信仰～Nuclear Fusion</bgm>
+		<bgm pos="236972808,633088,29304064">霊知の太陽信仰 ～ Nuclear Fusion</bgm>
 		<bgm pos="266909960,1103744,32584960">ラストリモート</bgm>
 		<bgm pos="300598664,4111616,23098624">ハルトマンの妖怪少女</bgm>
 		<bgm pos="327808904,781824,11988480">地霊達の帰宅</bgm>
-		<bgm pos="340579208,5381088,9540576">エネルギー黎明～Future Dream...</bgm>
+		<bgm pos="340579208,5381088,9540576">エネルギー黎明 ～ Future Dream...</bgm>
 		<bgm pos="355500872,1879240,4861944">プレイヤーズスコア</bgm>
 	</bgmlist>
 </thxml>

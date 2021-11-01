@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
 
 <thxml>
-	<album>妖精大戦争～東方三月精</album>
+	<album>妖精大戦争 ～ 東方三月精</album>
 	<albumartist>上海アリス幻樂団</albumartist>
 	<path>thbgm.dat</path>
 	<bgmlist>
@@ -10,7 +10,7 @@
 		<bgm pos="34452144,172256,12861888">いたずらに命をかけて</bgm>
 		<bgm pos="47486288,2305600,12621952">年中夢中の好奇心</bgm>
 		<bgm pos="62413840,1901184,19604352">真夜中のフェアリーダンス</bgm>
-		<bgm pos="83919376,565632,17574144">妖精大戦争～Fairy Wars</bgm>
+		<bgm pos="83919376,565632,17574144">妖精大戦争 ～ Fairy Wars</bgm>
 		<bgm pos="114404240,1154816,26884096">ルーズレイン</bgm>
 		<bgm pos="142443152,819968,22308608">メイガスナイト</bgm>
 		<bgm pos="102059152,1841920,10503168">春の氷精 - 静 -</bgm>

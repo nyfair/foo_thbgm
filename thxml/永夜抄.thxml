@@ -1,30 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
 
 <thxml>
-	<album>東方永夜抄～Imperishable Night</album>
+	<album>東方永夜抄 ～ Imperishable Night</album>
 	<albumartist>上海アリス幻樂団</albumartist>
 	<path>thbgm.dat</path>
 	<bgmlist>
-		<bgm pos="16,989888,11725376">永夜抄～Eastern Night</bgm>
-		<bgm pos="12715280,699904,22428928">幻視の夜～Ghostly Eyes</bgm>
-		<bgm pos="35844112,2785280,10977280">蠢々秋月～Mooned Insect</bgm>
-		<bgm pos="49606672,487168,25911552">夜雀の歌声～Night Bird</bgm>
+		<bgm pos="16,989888,11725376">永夜抄 ～ Eastern Night</bgm>
+		<bgm pos="12715280,699904,22428928">幻視の夜 ～ Ghostly Eyes</bgm>
+		<bgm pos="35844112,2785280,10977280">蠢々秋月 ～ Mooned Insect</bgm>
+		<bgm pos="49606672,487168,25911552">夜雀の歌声 ～ Night Bird</bgm>
 		<bgm pos="76005392,4511360,12466816">もう歌しか聞こえない</bgm>
-		<bgm pos="92983568,2740736,13544960">懐かしき東方の血～Old World</bgm>
+		<bgm pos="92983568,2740736,13544960">懐かしき東方の血 ～ Old World</bgm>
 		<bgm pos="109269264,4761088,15434752">プレインエイジア</bgm>
-		<bgm pos="129465104,1460992,15348992">永夜の報い～Imperishable Night</bgm>
-		<bgm pos="146275088,2337536,26596608">少女綺想曲～Dream Battle</bgm>
+		<bgm pos="129465104,1460992,15348992">永夜の報い ～ Imperishable Night</bgm>
+		<bgm pos="146275088,2337536,26596608">少女綺想曲 ～ Dream Battle</bgm>
 		<bgm pos="175209232,1813504,20542464">恋色マスタースパーク</bgm>
-		<bgm pos="197565200,1178368,29601280">シンデレラケージ～Kagome-Kagome</bgm>
-		<bgm pos="228344848,534144,20666240">狂気の瞳～Invisible Full Moon</bgm>
+		<bgm pos="197565200,1178368,29601280">シンデレラケージ ～ Kagome-Kagome</bgm>
+		<bgm pos="228344848,534144,20666240">狂気の瞳 ～ Invisible Full Moon</bgm>
 		<bgm pos="249545232,1665728,13584864">ヴォヤージュ1969</bgm>
-		<bgm pos="264795824,1235712,30189824">千年幻想郷～History of the Moon</bgm>
-		<bgm pos="310671024,6678272,25069824">竹取飛翔～Lunatic Princess</bgm>
+		<bgm pos="264795824,1235712,30189824">千年幻想郷 ～ History of the Moon</bgm>
+		<bgm pos="310671024,6678272,25069824">竹取飛翔 ～ Lunatic Princess</bgm>
 		<bgm pos="296221360,12362624,2087040">ヴォヤージュ1970</bgm>
-		<bgm pos="376847792,881280,27134464">エクステンドアッシュ～蓬莱人</bgm>
+		<bgm pos="376847792,881280,27134464">エクステンドアッシュ ～ 蓬莱人</bgm>
 		<bgm pos="404863536,1334816,29849968">月まで届け、不死の煙</bgm>
 		<bgm pos="342419120,3086848,12740608">月見草</bgm>
-		<bgm pos="358246576,3434880,15166336">Eternal Dream～幽玄の槭樹</bgm>
+		<bgm pos="358246576,3434880,15166336">Eternal Dream ～ 幽玄の槭樹</bgm>
 		<bgm pos="436048320,1104896,12807808">東方妖怪小町</bgm>
 	</bgmlist>
 </thxml>

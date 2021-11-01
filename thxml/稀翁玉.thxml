@@ -5,15 +5,15 @@
 	<albumartist>Amusement Makers</albumartist>
 	<path>WAVE\</path>
 	<bgmlist>
-		<bgm file="kog_00.wav" pos="44,1111516,7516536">稀翁玉～Fairy Dance</bgm>
-		<bgm file="kog_01.wav" pos="44,3172648,27239572">天鵞絨少女戦～Velvet Battle</bgm>
+		<bgm file="kog_00.wav" pos="44,1111516,7516536">稀翁玉 ～ Fairy Dance</bgm>
+		<bgm file="kog_01.wav" pos="44,3172648,27239572">天鵞絨少女戦 ～ Velvet Battle</bgm>
 		<bgm file="kog_02.wav" pos="44,549356,18975636">Castle Explorer -in the Sky-</bgm>
-		<bgm file="kog_03.wav" pos="44,1279168,16779684">オルフェの詩～Pseudoclassic</bgm>
-		<bgm file="kog_04.wav" pos="44,555208,32128404">新幻想～New Fantasy</bgm>
+		<bgm file="kog_03.wav" pos="44,1279168,16779684">オルフェの詩 ～ Pseudoclassic</bgm>
+		<bgm file="kog_04.wav" pos="44,555208,32128404">新幻想 ～ New Fantasy</bgm>
 		<bgm file="kog_05.wav" pos="44,535436,21170036">オルレアンの聖騎士</bgm>
 		<bgm file="kog_06.wav" pos="44,3932932,16679044">My Maid, Sweet Maid</bgm>
-		<bgm file="kog_07.wav" pos="44,2708060,17043272">桜花之恋塚～Flower of Japan</bgm>
-		<bgm file="kog_08.wav" pos="44,238400,30061528">乙女戦士～Heart of Valkyrie</bgm>
-		<bgm file="kog_09.wav" pos="44,8739760,16760372">エニグマティクドール～God Knows</bgm>
+		<bgm file="kog_07.wav" pos="44,2708060,17043272">桜花之恋塚 ～ Flower of Japan</bgm>
+		<bgm file="kog_08.wav" pos="44,238400,30061528">乙女戦士 ～ Heart of Valkyrie</bgm>
+		<bgm file="kog_09.wav" pos="44,8739760,16760372">エニグマティクドール ～ God Knows</bgm>
 	</bgmlist>
 </thxml>

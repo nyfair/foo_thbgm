@@ -1,29 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
 
 <thxml>
-	<album>東方妖々夢～Perfect Cherry Blossom</album>
+	<album>東方妖々夢 ～ Perfect Cherry Blossom</album>
 	<albumartist>上海アリス幻樂団</albumartist>
 	<path>thbgm.dat</path>
 	<bgmlist>
-		<bgm pos="16,1217280,15328288">妖々夢～Snow or Cherry Petal</bgm>
-		<bgm pos="16545584,2858880,12640384">無何有の郷～Deep Mountain</bgm>
+		<bgm pos="16,1217280,15328288">妖々夢 ～ Snow or Cherry Petal</bgm>
+		<bgm pos="16545584,2858880,12640384">無何有の郷 ～ Deep Mountain</bgm>
 		<bgm pos="32044848,1912480,10375516">クリスタライズシルバー</bgm>
 		<bgm pos="44332844,4222040,20418100">遠野幻想物語</bgm>
 		<bgm pos="68972984,646696,9279440">ティアオイエツォン(withered leaf)</bgm>
 		<bgm pos="78899120,1404416,20614144">ブクレシュティの人形師</bgm>
-		<bgm pos="100917680,5019648,26667008">人形裁判～人の形弄びし少女</bgm>
+		<bgm pos="100917680,5019648,26667008">人形裁判 ～ 人の形弄びし少女</bgm>
 		<bgm pos="132604336,1433984,41759360">天空の花の都</bgm>
-		<bgm pos="175797680,746240,24153088">幽霊楽団～Phantom Ensemble</bgm>
-		<bgm pos="200697008,1725440,24528896">東方妖々夢～Ancient Temple</bgm>
-		<bgm pos="226951344,1186816,18571264">広有射怪鳥事～Till When?</bgm>
+		<bgm pos="175797680,746240,24153088">幽霊楽団 ～ Phantom Ensemble</bgm>
+		<bgm pos="200697008,1725440,24528896">東方妖々夢 ～ Ancient Temple</bgm>
+		<bgm pos="226951344,1186816,18571264">広有射怪鳥事 ～ Till When?</bgm>
 		<bgm pos="246709424,493568,9645056">アルティメットトゥルース</bgm>
-		<bgm pos="256848048,3055104,22357504">幽雅に咲かせ、墨染の桜～Border of Life</bgm>
+		<bgm pos="256848048,3055104,22357504">幽雅に咲かせ、墨染の桜 ～ Border of Life</bgm>
 		<bgm pos="282260656,11650048,4458752">ボーダーオブライフ</bgm>
 		<bgm pos="326951600,1018880,24154880">妖々跋扈</bgm>
-		<bgm pos="352125360,257792,37435776">少女幻葬～Necro-Fantasy</bgm>
-		<bgm pos="389818928,1018880,24154880">妖々跋扈～Who done it!</bgm>
+		<bgm pos="352125360,257792,37435776">少女幻葬 ～ Necro-Fantasy</bgm>
+		<bgm pos="389818928,1018880,24154880">妖々跋扈 ～ Who done it!</bgm>
 		<bgm pos="414992688,349440,29174528">ネクロファンタジア</bgm>
 		<bgm pos="298369456,827648,10584064">春風の夢</bgm>
-		<bgm pos="309781168,5245696,11924736">さくらさくら～Japanize Dream...</bgm>
+		<bgm pos="309781168,5245696,11924736">さくらさくら ～ Japanize Dream...</bgm>
 	</bgmlist>
 </thxml>

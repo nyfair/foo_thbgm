@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
 
 <thxml>
-	<album>弾幕アマノジャク～Impossible Spell Card.</album>
+	<album>弾幕アマノジャク ～ Impossible Spell Card.</album>
 	<albumartist>上海アリス幻樂団</albumartist>
 	<path>thbgm.dat</path>
 	<bgmlist>
@@ -13,7 +13,7 @@
 		<bgm pos="117075864,414080,15392384">秘境のマーメイド</bgm>
 		<bgm pos="132882328,926016,22226448">リバースイデオロギー</bgm>
 		<bgm pos="156034792,5390560,19984736">幻想浄瑠璃</bgm>
-		<bgm pos="181410088,2120352,13104000">妖怪の山～Mysterious Mountain</bgm>
+		<bgm pos="181410088,2120352,13104000">妖怪の山 ～ Mysterious Mountain</bgm>
 		<bgm pos="196634440,1879240,4861944">プレイヤーズスコア</bgm>
 	</bgmlist>
 </thxml>

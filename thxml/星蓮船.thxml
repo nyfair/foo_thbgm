@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
 
 <thxml>
-	<album>東方星蓮船～Undefined Fantastic Object</album>
+	<album>東方星蓮船 ～ Undefined Fantastic Object</album>
 	<albumartist>上海アリス幻樂団</albumartist>
 	<path>thbgm.dat</path>
 	<bgmlist>
@@ -17,11 +17,11 @@
 		<bgm pos="180225296,3262976,27894272">魔界地方都市エソテリア</bgm>
 		<bgm pos="211382544,5178112,31823488">虎柄の毘沙門天</bgm>
 		<bgm pos="248384144,577920,17417984">法界の火</bgm>
-		<bgm pos="266380048,2922228,37618948">感情の摩天楼～Cosmic Mind</bgm>
+		<bgm pos="266380048,2922228,37618948">感情の摩天楼 ～ Cosmic Mind</bgm>
 		<bgm pos="306921224,1290240,31361024">夜空のユーフォーロマンス</bgm>
 		<bgm pos="339572488,1102848,31689728">平安のエイリアン</bgm>
 		<bgm pos="372365064,1098800,8469328">妖怪寺</bgm>
-		<bgm pos="381933192,937664,19217504">空の帰り道～Sky Dream</bgm>
+		<bgm pos="381933192,937664,19217504">空の帰り道 ～ Sky Dream</bgm>
 		<bgm pos="402088360,1879240,4861944">プレイヤーズスコア</bgm>
 	</bgmlist>
 </thxml>

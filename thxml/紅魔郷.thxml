@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
 
 <thxml>
-	<album>東方紅魔郷～the Embodiment of Scarlet Devil</album>
+	<album>東方紅魔郷 ～ the Embodiment of Scarlet Devil</album>
 	<albumartist>上海アリス幻樂団</albumartist>
 	<path>BGM\</path>
 	<bgmlist>
@@ -10,17 +10,17 @@
 		<bgm file="th06_03.wav" pos="44,507044,9282520">妖魔夜行</bgm>
 		<bgm file="th06_04.wav" pos="44,1215644,14221268">ルーネイトエルフ</bgm>
 		<bgm file="th06_05.wav" pos="44,1021504,14774564">おてんば恋娘</bgm>
-		<bgm file="th06_06.wav" pos="44,7936456,16730644">上海紅茶館～Chinese Tea</bgm>
+		<bgm file="th06_06.wav" pos="44,7936456,16730644">上海紅茶館 ～ Chinese Tea</bgm>
 		<bgm file="th06_07.wav" pos="44,4152112,14410476">明治十七年の上海アリス</bgm>
 		<bgm file="th06_08.wav" pos="44,731160,18810388">ヴワル魔法図書館</bgm>
-		<bgm file="th06_09.wav" pos="44,5183996,15621500">ラクトガール～少女密室</bgm>
+		<bgm file="th06_09.wav" pos="44,5183996,15621500">ラクトガール ～ 少女密室</bgm>
 		<bgm file="th06_10.wav" pos="44,3620476,25117468">メイドと血の懐中時計</bgm>
-		<bgm file="th06_11.wav" pos="44,957720,13919348">月時計～ルナ・ダイアル</bgm>
+		<bgm file="th06_11.wav" pos="44,957720,13919348">月時計 ～ ルナ・ダイアル</bgm>
 		<bgm file="th06_12.wav" pos="44,663936,9770464">ツェペシュの幼き末裔</bgm>
 		<bgm file="th06_13.wav" pos="44,5856628,18984460">亡き王女の為のセプテット</bgm>
 		<bgm file="th06_14.wav" pos="44,6324824,20719308">魔法少女達の百年祭</bgm>
 		<bgm file="th06_15.wav" pos="44,788464,21516196">U.N.オーエンは彼女なのか？</bgm>
 		<bgm file="th06_16.wav" pos="44,1600832,8310056">紅より儚い永遠</bgm>
-		<bgm file="th06_17.wav" pos="44,957984,17720376">紅楼～Eastern Dream...</bgm>
+		<bgm file="th06_17.wav" pos="44,957984,17720376">紅楼 ～ Eastern Dream...</bgm>
 	</bgmlist>
 </thxml>

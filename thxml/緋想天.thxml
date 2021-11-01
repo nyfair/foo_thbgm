@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
 
 <thxml>
-	<album artist="U2" codec="vorbis" encoding="lossy" pack="tasfro">東方緋想天～Scarlet Weather Rhapsody</album>
-	<albumartist>黄昏フロンティア&上海アリス幻樂団</albumartist>
+	<album artist="U2" codec="vorbis" encoding="lossy" pack="tasfro">東方緋想天 ～ Scarlet Weather Rhapsody</album>
+	<albumartist>黄昏フロンティア & 上海アリス幻樂団</albumartist>
 	<path>th105b.dat|</path>
 	<bgmlist>
 		<bgm file="data/bgm/op.ogg" pos="0,1253274,4614814">緋想天</bgm>
@@ -17,24 +17,24 @@
 		<bgm file="data/bgm/st03.ogg" pos="0,455266,3968988">嘲りの遊戯</bgm>
 		<bgm file="data/bgm/ta04.ogg" pos="0,187631,2469605">冷吟閑酔</bgm>
 		<bgm file="data/bgm/ta02.ogg" pos="0,192787,2520253">雲外蒼天</bgm>
-		<bgm file="data/bgm/st04.ogg" pos="0,1282896,7184303" artist="ZUN">黒い海に紅く～Legendary Fish</bgm>
+		<bgm file="data/bgm/st04.ogg" pos="0,1282896,7184303" artist="ZUN">黒い海に紅く ～ Legendary Fish</bgm>
 		<bgm file="data/bgm/ta07.ogg" pos="0,455930,2822374">天衣無縫</bgm>
-		<bgm file="data/bgm/st05.ogg" pos="0,346222,5192818" artist="ZUN">有頂天変～Wonderful Heaven</bgm>
+		<bgm file="data/bgm/st05.ogg" pos="0,346222,5192818" artist="ZUN">有頂天変 ～ Wonderful Heaven</bgm>
 		<bgm file="data/bgm/st06.ogg" pos="0,3419075,1051903" artist="ZUN">幼心地の有頂天</bgm>
 		<bgm file="data/bgm/ta06.ogg" pos="0,431242,3175201">暮色蒼然</bgm>
 		<bgm file="data/bgm/sr.ogg" pos="0,0,3724704">東方緋想天</bgm>
 		<bgm file="data/bgm/st10.ogg" pos="0,584623,3445948">東方妖恋談</bgm>
-		<bgm file="data/bgm/st11.ogg" pos="0,440901,3568363">星の器～Casket of Star</bgm>
+		<bgm file="data/bgm/st11.ogg" pos="0,440901,3568363">星の器 ～ Casket of Star</bgm>
 		<bgm file="data/bgm/st12.ogg" pos="0,931349,3899362">フラワリングナイト</bgm>
 		<bgm file="data/bgm/st13.ogg" pos="0,634426,4130527">ブクレシュティの人形師</bgm>
-		<bgm file="data/bgm/st14.ogg" pos="0,583253,3620689">広有射怪鳥事～Till When？</bgm>
-		<bgm file="data/bgm/st15.ogg" pos="0,287071,4004754">ラクトガール～少女密室</bgm>
-		<bgm file="data/bgm/st16.ogg" pos="0,429052,3503687">幽雅に咲かせ、墨染の桜～Border of Life</bgm>
+		<bgm file="data/bgm/st14.ogg" pos="0,583253,3620689">広有射怪鳥事 ～ Till When？</bgm>
+		<bgm file="data/bgm/st15.ogg" pos="0,287071,4004754">ラクトガール ～ 少女密室</bgm>
+		<bgm file="data/bgm/st16.ogg" pos="0,429052,3503687">幽雅に咲かせ、墨染の桜 ～ Border of Life</bgm>
 		<bgm file="data/bgm/st17.ogg" pos="0,496981,3880757">亡き王女の為のセプテット</bgm>
-		<bgm file="data/bgm/st18.ogg" pos="0,338811,3780005">夜が降りてくる～Evening Star</bgm>
+		<bgm file="data/bgm/st18.ogg" pos="0,338811,3780005">夜が降りてくる ～ Evening Star</bgm>
 		<bgm file="data/bgm/st19.ogg" pos="0,401855,4299733">砕月</bgm>
-		<bgm file="data/bgm/st20.ogg" pos="0,272715,3871869">狂気の瞳～Invisible Full Moon</bgm>
+		<bgm file="data/bgm/st20.ogg" pos="0,272715,3871869">狂気の瞳 ～ Invisible Full Moon</bgm>
 		<bgm file="data/bgm/st21.ogg" pos="0,841335,4838402">風神少女</bgm>
-		<bgm file="data/bgm/st22.ogg" pos="0,477572,3492209">彼岸帰航～Riverside View</bgm>
+		<bgm file="data/bgm/st22.ogg" pos="0,477572,3492209">彼岸帰航 ～ Riverside View</bgm>
 	</bgmlist>
 </thxml>

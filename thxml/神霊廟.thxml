@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
 
 <thxml>
-	<album>東方神霊廟～Ten Desires</album>
+	<album>東方神霊廟 ～ Ten Desires</album>
 	<albumartist>上海アリス幻樂団</albumartist>
 	<path>thbgm.dat</path>
 	<bgmlist>
@@ -17,7 +17,7 @@
 		<bgm pos="235450808,275504,20341616">夢殿大祀廟</bgm>
 		<bgm pos="266376488,661504,26126336">大神神話伝</bgm>
 		<bgm pos="306558248,2833984,17010528">小さな欲望の星空</bgm>
-		<bgm pos="336325016,2602200,29961480">聖徳伝説～True Administrator</bgm>
+		<bgm pos="336325016,2602200,29961480">聖徳伝説 ～ True Administrator</bgm>
 		<bgm pos="410939768,1457280,22562464">妖怪裏参道</bgm>
 		<bgm pos="446969384,2398880,23140480">佐渡の二ッ岩</bgm>
 		<bgm pos="368888696,259584,15268864">神社の新しい風</bgm>

@@ -1,29 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
 
 <thxml>
-	<album artist="あきやまうに" codec="vorbis" encoding="lossy" pack="tfpk">東方憑依華～Antinomy of Common Flowers</album>
-	<albumartist>黄昏フロンティア&上海アリス幻樂団</albumartist>
+	<album artist="あきやまうに" codec="vorbis" encoding="lossy" pack="tfpk">東方憑依華 ～ Antinomy of Common Flowers</album>
+	<albumartist>黄昏フロンティア & 上海アリス幻樂団</albumartist>
 	<path>th155.pak|</path>
 	<bgmlist>
-		<bgm file="155reimu1.ogg" pos="0,235822,5880000" artist="コンプ(豚乙女)">二色蓮花蝶～Red and White</bgm>
+		<bgm file="155reimu1.ogg" pos="0,235822,5880000" artist="コンプ(豚乙女)">二色蓮花蝶 ～ Red and White</bgm>
 		<bgm file="155marisa1.ogg" pos="0,604378,6225883" artist="oiko(SOUNDOT)">恋色マスタースパーク</bgm>
 		<bgm file="155ichirin1.ogg" pos="0,158775,5318411" artist="しゃばだば(Sound CYCLONE)">時代親父とハイカラ少女</bgm>
-		<bgm file="155hijiri1.ogg" pos="0,823990,5762368" artist="NYO(Silver Forest)">感情の摩天楼～Cosmic Mind</bgm>
+		<bgm file="155hijiri1.ogg" pos="0,823990,5762368" artist="NYO(Silver Forest)">感情の摩天楼 ～ Cosmic Mind</bgm>
 		<bgm file="155futo1.ogg" pos="0,216837,6106122" artist="鯛の小骨(Azure&Sands)">大神神話伝</bgm>
-		<bgm file="155miko1.ogg" pos="0,1062240,6075999" artist="鷹(CROW'SCLAW)">聖徳伝説～True Administrator</bgm>
-		<bgm file="155nitori1.ogg" pos="0,80778,5809273" artist="ゆうゆ(ゆや｡)">芥川龍之介の河童～Candid Friend</bgm>
+		<bgm file="155miko1.ogg" pos="0,1062240,6075999" artist="鷹(CROW'SCLAW)">聖徳伝説 ～ True Administrator</bgm>
+		<bgm file="155nitori1.ogg" pos="0,80778,5809273" artist="ゆうゆ(ゆや｡)">芥川龍之介の河童 ～ Candid Friend</bgm>
 		<bgm file="155koishi1.ogg" pos="0,101331,5237999" artist="岸田(岸田教団)">ハルトマンの妖怪少女</bgm>
 		<bgm file="155mamizou1.ogg" pos="0,105758,4904780" artist="秀三(石鹸屋)">幻想郷の二ッ岩</bgm>
 		<bgm file="155kokoro1.ogg" pos="0,605447,9918652" artist="どぶウサギ(dBu music)">亡失のエモーション</bgm>
 		<bgm file="155mokou1.ogg" pos="0,463123,7257600" artist="ziki_7(SOUNDOT)">月まで届け、不死の煙</bgm>
-		<bgm file="155sinmyoumaru1.ogg" pos="0,238721,5968885" artist="ぴずや(ぴずやの独房/Pizuya's Cell)">輝く針の小人族～Little Princess</bgm>
+		<bgm file="155sinmyoumaru1.ogg" pos="0,238721,5968885" artist="ぴずや(ぴずやの独房/Pizuya's Cell)">輝く針の小人族 ～ Little Princess</bgm>
 		<bgm file="155kasen1.ogg" pos="0,580033,5660139" artist="Kou Ogata(k-waves LAB)">華狭間のバトルフィールド</bgm>
-		<bgm file="155usami1.ogg" pos="0,501412,5459117" artist="ARM(IOSYS)">ラストオカルティズム～現し世の秘術師</bgm>
-		<bgm file="155udonge1.ogg" pos="0,1530065,5292035" artist="ビートまりお(COOL&CREATE)">狂気の瞳～Invisible Full Moon</bgm>
+		<bgm file="155usami1.ogg" pos="0,501412,5459117" artist="ARM(IOSYS)">ラストオカルティズム ～ 現し世の秘術師</bgm>
+		<bgm file="155udonge1.ogg" pos="0,1530065,5292035" artist="ビートまりお(COOL&CREATE)">狂気の瞳 ～ Invisible Full Moon</bgm>
 		<bgm file="155doremy1.ogg" pos="0,882037,7191692" artist="狐夢想(狐夢想屋)">永遠の春夢</bgm>
-		<!-- <bgm file="155tenshi1.ogg" pos="0,165485,7144599" artist="紅い流星(東京アクティブNEETs)">有頂天変～Wonderful Heaven</bgm> -->
-		<!-- <bgm file="155yukari1.ogg" pos="0,240190,5582825" artist="ELEMENTAS(A-One)">夜が降りてくる～Evening Star</bgm> -->
-		<bgm file="bgst01.ogg" pos="0,371162,3822005">地の色は黄色～Primrose</bgm>
+		<!-- <bgm file="155tenshi1.ogg" pos="0,165485,7144599" artist="紅い流星(東京アクティブNEETs)">有頂天変 ～ Wonderful Heaven</bgm> -->
+		<!-- <bgm file="155yukari1.ogg" pos="0,240190,5582825" artist="ELEMENTAS(A-One)">夜が降りてくる ～ Evening Star</bgm> -->
+		<bgm file="bgst01.ogg" pos="0,371162,3822005">地の色は黄色 ～ Primrose</bgm>
 		<bgm file="bgst02.ogg" pos="0,434867,4268903">マッシュルーム・ワルツ</bgm>
 		<!-- <bgm file="bgst03.ogg" pos="0,396990,4338207">聖輦船空を往く</bgm> -->
 		<bgm file="bgst04.ogg" pos="0,282093,4089290">法力の下の平等</bgm>
@@ -40,12 +40,12 @@
 		<bgm file="bgst15.ogg" pos="0,772357,3969000">永遠に続く回廊</bgm>
 		<bgm file="bgst16.ogg" pos="0,77343,3911482">スリープシープ・パレード</bgm>
 		<bgm file="bgst17.ogg" pos="0,575189,3988177">至る有頂天</bgm>
-		<bgm file="midboss.ogg" pos="0,516150,6030189" artist="ZUN">憑坐は夢と現の間に～Necro-Fantasia</bgm>
-		<bgm file="lastboss.ogg" pos="0,752819,10295090" artist="ZUN">今宵は飄逸なエゴイスト(Live ver)～Egoistic Flowers.</bgm>
+		<bgm file="midboss.ogg" pos="0,516150,6030189" artist="ZUN">憑坐は夢と現の間に ～ Necro-Fantasia</bgm>
+		<bgm file="lastboss.ogg" pos="0,752819,10295090" artist="ZUN">今宵は飄逸なエゴイスト(Live ver) ～ Egoistic Flowers.</bgm>
 		<bgm file="145st01.ogg" pos="0,243791,4415054">オカルトアトラクト</bgm>
 		<bgm file="145st02.ogg" pos="0,116507,4051689">ネオ竹林インフレイム</bgm>
 		<bgm file="145st03.ogg" pos="0,242274,4409994">億万劫の鐘</bgm>
-		<bgm file="145st04.ogg" pos="0,1924501,6795416" artist="ZUN">アンノウンX～Occultly Madness</bgm>
+		<bgm file="145st04.ogg" pos="0,1924501,6795416" artist="ZUN">アンノウンX ～ Occultly Madness</bgm>
 		<bgm file="story01.ogg" pos="0,208022,2697881">憑依投合</bgm>
 		<bgm file="story02.ogg" pos="0,383395,2811375">連帯責人</bgm>
 		<bgm file="story03.ogg" pos="0,132485,2751840">合縁奇縁</bgm>
@@ -54,7 +54,7 @@
 		<bgm file="story06.ogg" pos="0,191909,2778298">知略縦横</bgm>
 		<bgm file="story07.ogg" pos="0,191537,2998797">意気揚々</bgm>
 		<bgm file="story08.ogg" pos="0,324796,2726178">開演間近</bgm>
-		<bgm file="story09.ogg" pos="0,464729,2822396">天衣無縫～Yellow Lily</bgm>
+		<bgm file="story09.ogg" pos="0,464729,2822396">天衣無縫 ～ Yellow Lily</bgm>
 		<bgm file="th155op1.ogg" pos="0,529564,3307500">異変の種子</bgm>
 		<bgm file="th155op2.ogg" pos="0,529614,3307501">疑惑の芽生え</bgm>
 		<bgm file="th155op3.ogg" pos="0,529607,3307500">真相へ繋がる枝葉</bgm>
@@ -63,25 +63,25 @@
 		<bgm file="staffroll0.ogg" pos="0,0,3813515">未だ蕾む憑依華</bgm>
 		<bgm file="staffroll1.ogg" pos="0,0,4475592">咲き誇る憑依華</bgm>
 		<bgm file="staffroll2.ogg" pos="0,0,4318853" artist="Kou Ogata(k-waves LAB)">悠久の蒸気機関</bgm>
-		<bgm file="155reimu1_20.ogg" pos="0,0,941724">二色蓮花蝶～Red and White【20秒版】</bgm>
+		<bgm file="155reimu1_20.ogg" pos="0,0,941724">二色蓮花蝶 ～ Red and White【20秒版】</bgm>
 		<bgm file="155marisa1_20.ogg" pos="0,0,961908">恋色マスタースパーク【20秒版】</bgm>
 		<bgm file="155ichirin1_20.ogg" pos="0,0,889498">時代親父とハイカラ少女【20秒版】</bgm>
-		<bgm file="155hijiri1_20.ogg" pos="0,0,896950">感情の摩天楼～Cosmic Mind【20秒版】</bgm>
+		<bgm file="155hijiri1_20.ogg" pos="0,0,896950">感情の摩天楼 ～ Cosmic Mind【20秒版】</bgm>
 		<bgm file="155futo1_20.ogg" pos="0,0,915792">大神神話伝【20秒版】</bgm>
-		<bgm file="155miko1_20.ogg" pos="0,0,1045237">聖徳伝説～True Administrator【20秒版】</bgm>
-		<bgm file="155nitori1_20.ogg" pos="0,0,962787">芥川龍之介の河童～Candid Friend【20秒版】</bgm>
+		<bgm file="155miko1_20.ogg" pos="0,0,1045237">聖徳伝説 ～ True Administrator【20秒版】</bgm>
+		<bgm file="155nitori1_20.ogg" pos="0,0,962787">芥川龍之介の河童 ～ Candid Friend【20秒版】</bgm>
 		<bgm file="155koishi1_20.ogg" pos="0,0,990235">ハルトマンの妖怪少女【20秒版】</bgm>
 		<bgm file="155mamizou1_20.ogg" pos="0,0,1033064">幻想郷の二ッ岩【20秒版】</bgm>
 		<bgm file="155kokoro1_20.ogg" pos="0,0,968143">亡失のエモーション【20秒版】</bgm>
 		<bgm file="155mokou1_20.ogg" pos="0,0,907408">月まで届け、不死の煙【20秒版】</bgm>
-		<bgm file="155sinmyoumaru1_20.ogg" pos="0,0,882000">輝く針の小人族～Little Princess【20秒版】</bgm>
+		<bgm file="155sinmyoumaru1_20.ogg" pos="0,0,882000">輝く針の小人族 ～ Little Princess【20秒版】</bgm>
 		<bgm file="155kasen1_20.ogg" pos="0,0,882001">華狭間のバトルフィールド【20秒版】</bgm>
-		<bgm file="155usami1_20.ogg" pos="0,0,882000">ラストオカルティズム～現し世の秘術師【20秒版】</bgm>
-		<bgm file="155udonge1_20.ogg" pos="0,0,872806">狂気の瞳～Invisible Full Moon【20秒版】</bgm>
+		<bgm file="155usami1_20.ogg" pos="0,0,882000">ラストオカルティズム ～ 現し世の秘術師【20秒版】</bgm>
+		<bgm file="155udonge1_20.ogg" pos="0,0,872806">狂気の瞳 ～ Invisible Full Moon【20秒版】</bgm>
 		<bgm file="155doremy1_20.ogg" pos="0,0,882000">永遠の春夢【20秒版】</bgm>
-		<!-- <bgm file="155tenshi1_20.ogg" pos="0,0,1014300">有頂天変～Wonderful Heaven【20秒版】</bgm> -->
-		<!-- <bgm file="155yukari1_20.ogg" pos="0,0,882000">夜が降りてくる～Evening Star【20秒版】</bgm> -->
-		<bgm file="bgst01_20.ogg" pos="0,0,882000">地の色は黄色～Primrose【20秒版】</bgm>
+		<!-- <bgm file="155tenshi1_20.ogg" pos="0,0,1014300">有頂天変 ～ Wonderful Heaven【20秒版】</bgm> -->
+		<!-- <bgm file="155yukari1_20.ogg" pos="0,0,882000">夜が降りてくる ～ Evening Star【20秒版】</bgm> -->
+		<bgm file="bgst01_20.ogg" pos="0,0,882000">地の色は黄色 ～ Primrose【20秒版】</bgm>
 		<bgm file="bgst02_20.ogg" pos="0,0,882000">マッシュルーム・ワルツ【20秒版】</bgm>
 		<!-- <bgm file="bgst03_20.ogg" pos="0,0,882000">聖輦船空を往く【20秒版】</bgm> -->
 		<bgm file="bgst04_20.ogg" pos="0,0,882000">法力の下の平等【20秒版】</bgm>
@@ -98,12 +98,12 @@
 		<bgm file="bgst15_20.ogg" pos="0,0,882000">永遠に続く回廊【20秒版】</bgm>
 		<bgm file="bgst16_20.ogg" pos="0,0,919737">スリープシープ・パレード【20秒版】</bgm>
 		<bgm file="bgst17_20.ogg" pos="0,0,882000">至る有頂天【20秒版】</bgm>
-		<bgm file="midboss_20.ogg" pos="0,0,970200">憑坐は夢と現の間に～Necro-Fantasia【20秒版】</bgm>
-		<bgm file="lastboss_20.ogg" pos="0,0,882000">今宵は飄逸なエゴイスト(Live ver)～Egoistic Flowers.【20秒版】</bgm>
+		<bgm file="midboss_20.ogg" pos="0,0,970200">憑坐は夢と現の間に ～ Necro-Fantasia【20秒版】</bgm>
+		<bgm file="lastboss_20.ogg" pos="0,0,882000">今宵は飄逸なエゴイスト(Live ver) ～ Egoistic Flowers.【20秒版】</bgm>
 		<bgm file="145st01_20.ogg" pos="0,0,972626">オカルトアトラクト【20秒版】</bgm>
 		<bgm file="145st02_20.ogg" pos="0,0,905602">ネオ竹林インフレイム【20秒版】</bgm>
 		<bgm file="145st03_20.ogg" pos="0,0,962056">億万劫の鐘【20秒版】</bgm>
-		<bgm file="145st04_20.ogg" pos="0,0,961770">アンノウンX～Occultly Madness【20秒版】</bgm>
+		<bgm file="145st04_20.ogg" pos="0,0,961770">アンノウンX ～ Occultly Madness【20秒版】</bgm>
 	</bgmlist>
 	<filelist>
 		<file pos="374557476" len="2800533" key="D0627FA7FE6A1566BBB2B396FB5BC252">145st01.ogg</file>

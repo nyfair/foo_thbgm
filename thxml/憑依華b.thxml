@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
 
 <thxml>
-	<album artist="あきやまうに" codec="vorbis" encoding="lossy" pack="tfpk">東方憑依華～Antinomy of Common Flowers</album>
-	<albumartist>黄昏フロンティア&上海アリス幻樂団</albumartist>
+	<album artist="あきやまうに" codec="vorbis" encoding="lossy" pack="tfpk">東方憑依華 ～ Antinomy of Common Flowers</album>
+	<albumartist>黄昏フロンティア & 上海アリス幻樂団</albumartist>
 	<path>th155b.pak|</path>
 	<bgmlist>
-		<bgm file="155tenshi1.ogg" pos="0,165489,7144597" artist="紅い流星(東京アクティブNEETs)">有頂天変～Wonderful Heaven</bgm>
-		<bgm file="155yukari1.ogg" pos="0,240191,5582824" artist="ELEMENTAS(A-One)">夜が降りてくる～Evening Star</bgm>
+		<bgm file="155tenshi1.ogg" pos="0,165489,7144597" artist="紅い流星(東京アクティブNEETs)">有頂天変 ～ Wonderful Heaven</bgm>
+		<bgm file="155yukari1.ogg" pos="0,240191,5582824" artist="ELEMENTAS(A-One)">夜が降りてくる ～ Evening Star</bgm>
 		<bgm file="bgst03.ogg" pos="0,397021,4338207">聖輦船空を往く</bgm>
 		<bgm file="bgst06.ogg" pos="0,506632,3690476">光輝く天球儀</bgm>
 		<bgm file="bgst11.ogg" pos="0,687050,4233595">不滅のレッドソウル</bgm>
-		<bgm file="155tenshi1_20.ogg" pos="0,0,1014300" artist="紅い流星(東京アクティブNEETs)">有頂天変～Wonderful Heaven【20秒版】</bgm>
-		<bgm file="155yukari1_20.ogg" pos="0,0,882000" artist="ELEMENTAS(A-One)">夜が降りてくる～Evening Star【20秒版】</bgm>
+		<bgm file="155tenshi1_20.ogg" pos="0,0,1014300" artist="紅い流星(東京アクティブNEETs)">有頂天変 ～ Wonderful Heaven【20秒版】</bgm>
+		<bgm file="155yukari1_20.ogg" pos="0,0,882000" artist="ELEMENTAS(A-One)">夜が降りてくる ～ Evening Star【20秒版】</bgm>
 		<bgm file="bgst03_20.ogg" pos="0,0,882000">聖輦船空を往【20秒版】く</bgm>
 		<bgm file="bgst06_20.ogg" pos="0,0,882000">光輝く天球儀【20秒版】</bgm>
 		<bgm file="bgst11_20.ogg" pos="0,0,914634">不滅のレッドソウル【20秒版】</bgm>
