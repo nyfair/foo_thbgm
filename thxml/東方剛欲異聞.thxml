@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
+
+<thxml>
+	<album artist="ziki_7" samplerate="44100" bits="16" channels="2" codec="Vorbis_ogg" encoding="lossy" pack="">東方剛欲異聞 ～ 水没した沈愁地獄</album>
+	<albumartist>黄昏フロンティア & 上海アリス幻樂団</albumartist>
+	<path></path>
+	<bgmlist>
+		<bgm file="op.ogg" artist="01" pos="0,423360,3175200">水没した沈愁地獄</bgm>
+		<bgm file="staff_roll.ogg" artist="02" pos="0,0,6197108">東方剛欲異聞</bgm>
+		<bgm file="talk_ed.ogg" artist="03" pos="0,155801,3361976">天理人欲</bgm>
+		<bgm file="talk_forest.ogg" artist="04" pos="0,720501,3078980">魔法使いの憂鬱</bgm>
+		<bgm file="talk_underground.ogg" artist="05" pos="0,389050,4980707">暗闇の風穴</bgm>
+		<bgm file="talk_town.ogg" artist="06" pos="0,154303,1984501">旧地獄街道を行く</bgm>
+		<bgm file="talk_Inferno.ogg" artist="07" pos="0,463006,4636030">業火マントル</bgm>
+		<bgm file="talk_reactor.ogg" artist="08" pos="0,580606,4402944">御柱の基場</bgm>
+		<bgm file="talk_oil.ogg" artist="09" pos="0,193813,4379622">大地の底, 剛欲の海</bgm>
+		<bgm file="talk_waterhell.ogg" artist="10" pos="0,911360,3527997">不朽の曼珠沙華</bgm>
+		<bgm file="talk_scarlet.ogg" artist="11" pos="0,420120,6817342">魔法少女達の百年祭</bgm>
+		<bgm file="reimu1.ogg" artist="12" pos="0,1433010,4105308">少女綺想曲</bgm>
+		<bgm file="marisa1.ogg" artist="13" pos="0,240405,4089275">恋色マスタースパーク</bgm>
+		<bgm file="yamame1.ogg" artist="14" pos="0,301276,4513765">封じられた妖怪</bgm>
+		<bgm file="kogasa1.ogg" artist="15" pos="0,4501254,4622897">万年置き傘にご注意を</bgm>
+		<bgm file="murasa1.ogg" artist="16" pos="0,396946,5727812">キャプテンムラサ</bgm>
+		<bgm file="kanako1.ogg" artist="17" pos="0,1018532,6318123">神さびた古戦場</bgm>
+		<bgm file="jyoon1.ogg" artist="18" pos="0,1136692,7035248">今宵は飄逸なエゴイスト ～ Egoistic Flowers</bgm>
+		<bgm file="yuugi1.ogg" artist="19" pos="0,423360,5856480">華のさかづき大江山</bgm>
+		<bgm file="utuho1.ogg" artist="20" pos="0,232332,4570366">霊知の太陽信仰</bgm>
+		<bgm file="niwatari1.ogg" artist="21" pos="0,492995,4387950">セラフィックチキン</bgm>
+		<bgm file="flandre1.ogg" artist="22" pos="0,652037,5499581">U.N.オーエンは彼女なのか？</bgm>
+		<bgm file="toutetu1.ogg" artist="23" pos="0,94537,11151085">強欲な獣のメメント</bgm>
+		<bgm file="toutetu2.ogg" artist="24" pos="0,1322775,10269000">有機体全てのメメント ～ Memory of Fossil Energy.</bgm>
+	</bgmlist>
+</thxml>
