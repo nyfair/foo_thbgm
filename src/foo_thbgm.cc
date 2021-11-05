@@ -39,7 +39,7 @@ inline t_uint32 swap_endian(const t_uint32 &x) {
 			((x & 0xff000000) >> 24);
 }
 
-inline int char2int(const char input) {
+inline t_uint8 char2int(const char input) {
 	if (input >= '0' && input <= '9')
 		return input - '0';
 	if (input >= 'A' && input <= 'F')
@@ -647,8 +647,7 @@ private:
 		buffer.set_size(size << 2);
 		m_file->seek(f.pos, p_abort);
 		m_file->read(buffer.get_ptr(), f.size, p_abort);
-		t_uint32 *buf = (t_uint32*) (buffer.get_ptr());
-		t_uint32 *key = (t_uint32*) f.key;
+		t_uint32 *buf = (t_uint32*) (buffer.get_ptr()), *key, c, k;
 		t_uint8 j = 0;
 		switch (tfpk_ver) {
 			case 0:		// th135
@@ -657,14 +656,38 @@ private:
 					j = (j + 1) & 3;
 				}
 				break;
-			default:	// th145(1)
-				t_uint32 c = key[0], k;
+			case 1:	// th145 & th155
+				key = (t_uint32*)f.key;
+				c = key[0];
 				for (t_uint32 i = 0; i < size; ++i) {
 					k = key[j] ^ buf[i];
 					k ^= c;
 					c = buf[i];
 					buf[i] = k;
 					j = (j + 1) & 3;
+				}
+				break;
+			default: // th175
+				c = f.size ^ f.pos;
+				for (t_uint32 i = 0; i < f.size; i += 4) {
+					t_uint32 x = 0;
+					t_uint32 y = c + i/4;
+					for (j = 0; j < 4; j++) {
+						int64_t a = y * 0x5E4789C9ll;
+						t_uint32 b = (a >> 0x2E) + (a >> 0x3F);
+						t_uint32 t = (y - b * 0xADC8) * 0xBC8F + b * 0xFFFFF2B9;
+						if ((int32_t)t <= 0) {
+							t += 0x7FFFFFFF;
+						}
+						y = t;
+						x = (x << 8) | (y & 0xFF);
+					}
+					if (i + 4 < f.size) {
+						buf[i/4] ^= x;
+					} else {
+						for (j = 0; j < f.size-i; j++)
+							buffer.get_ptr()[i + j] ^= x >> (8 * j);
+					}
 				}
 		}
 	}
@@ -675,16 +698,20 @@ private:
 		if (stricmp_utf8(tfpkarchive, p_archive)) {
 			tfpkfiles.clear();
 			tfpkarchive = p_archive;
-			char sig[4];
-			m_file->read_object_t(sig, p_abort);
-			m_file->read_object_t(tfpk_ver, p_abort);
-			if (memcmp(sig, "TFPK", 4)) throw exception_io_data();
+			if (tfpk_ver == NULL) {
+				char sig[4];
+				m_file->read_object_t(sig, p_abort);
+				m_file->read_object_t(tfpk_ver, p_abort);
+				if (memcmp(sig, "TFPK", 4)) throw exception_io_data();
+			}
 			for (size_t i = 0; i < filelist.size(); i++) {
 				map<string, string> f = filelist[i];
-				const char* keyhex = f["key"].c_str();
 				TFPKFile file = { _atoi64(f["pos"].c_str()), _atoi64(f["len"].c_str()) };
-				for (int i = 0; i < 16; i++)
-					file.key[i] = (char2int(*(keyhex+(i<<1)))<<4) + char2int(*(keyhex+(i<<1)+1));
+				if (tfpk_ver != 175) {
+					const char* keyhex = f["key"].c_str();
+					for (int i = 0; i < 16; i++)
+						file.key[i] = (char2int(*(keyhex + (i << 1))) << 4) + char2int(*(keyhex + (i << 1) + 1));
+				}
 				tfpkfiles[f["name"].c_str()] = file;
 			}
 		}
@@ -741,7 +768,10 @@ public:
 
 	virtual void open_archive(service_ptr_t<file> &p_out, const char *p_archive,
 		const char *p_file, abort_callback &p_abort) {
-		if (stricmp_utf8(pfc::string_extension(p_archive), "pak")) {
+		const char* ext = pfc::string_extension(p_archive);
+		if (ext[0] == 'c' && ext[1] == 'g') {
+			tfpk_ver = 175;
+		} else if (stricmp_utf8(ext, "pak")) {
 			throw exception_io_data();
 		}
 		service_ptr_t<file> m_file;
@@ -1040,9 +1070,9 @@ public:
 static input_factory_t<input_thxml> g_input_thbgm_factory;
 
 DECLARE_FILE_TYPE("Touhou-like BGM XML-Tag File", "*.thxml");
-DECLARE_COMPONENT_VERSION("ThBGM Player", "2.0", 
+DECLARE_COMPONENT_VERSION("ThBGM Player", "3.0", 
 "Play BGM files of Touhou and some related doujin games.\n\n"
 "If you have any feature request and bug report,\n"
 "feel free to post an issue in the Github project.\n\n"
 "https://github.com/nyfair/foo_thbgm/issues\n"
-"(C) nyfair <nyfair2012@gmail.com>\n\xE6\xB1\x82\xE6\x90\x9E\xE5\xA7\xAC\xE6\xB1\x82\xE7\x99\xBE\xE5\x90\x88");
+"(C) nyfair <nyfair2012@gmail.com>");

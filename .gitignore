@@ -4,6 +4,4 @@ Debug/
 src/Release/
 src/Debug/
 ipch/
-*.opensdf
-*.suo
-*.sdf
+.vs/

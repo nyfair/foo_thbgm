@@ -4,7 +4,7 @@ step2: Move thxml file to your game's installation directory.
 step3: Open the thxml file by fb2k, then enjoy your life!
 
 Something you should know:
-Foobar2000 v1.1 or newer required to run this plugin.
+Foobar2000 v1.3(SDK 2015-08-03) or newer required to run this plugin.
 Four new thbgm entries are added into fb2k's playback menu.
 
 Loop forever means BGM will always loop. Don't forget to disable this mode when converting BGM files.
@@ -42,6 +42,7 @@ TH155: Antinomy of Common Flowers (東方憑依華)
 TH16 : Hidden Star in Four Seasons (東方天空璋)
 TH165: Violet Detector (秘封ナイトメアダイアリー)
 TH17 : Wily Beast and Weakest Creature (東方鬼形獣)
+TH175: Touhou Gouyoku Ibun (東方剛欲異聞)
 TH18 : Unconnected Marketeers (東方虹龍洞)
 Uwabami Breakers (黄昏酒場)
 Kioh Gyoku (稀翁玉)
@@ -49,6 +50,8 @@ Banshiryuu (幡紫竜) both c67 and later version
 Samidare (五月雨)
 
 ChangeLog:
+3.0
+add th175 support
 2.0
 update tfpk unpacker
 1.2

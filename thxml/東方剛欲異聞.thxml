@@ -1,33 +1,82 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
 
 <thxml>
-	<album artist="ziki_7" samplerate="44100" bits="16" channels="2" codec="Vorbis_ogg" encoding="lossy" pack="">東方剛欲異聞 ～ 水没した沈愁地獄</album>
+	<album artist="ziki_7" codec="vorbis" encoding="lossy" pack="tfpk">東方剛欲異聞 ～ 水没した沈愁地獄</album>
 	<albumartist>黄昏フロンティア & 上海アリス幻樂団</albumartist>
-	<path></path>
+	<path>data.cga|</path>
 	<bgmlist>
-		<bgm file="op.ogg" artist="01" pos="0,423360,3175200">水没した沈愁地獄</bgm>
-		<bgm file="staff_roll.ogg" artist="02" pos="0,0,6197108">東方剛欲異聞</bgm>
-		<bgm file="talk_ed.ogg" artist="03" pos="0,155801,3361976">天理人欲</bgm>
-		<bgm file="talk_forest.ogg" artist="04" pos="0,720501,3078980">魔法使いの憂鬱</bgm>
-		<bgm file="talk_underground.ogg" artist="05" pos="0,389050,4980707">暗闇の風穴</bgm>
-		<bgm file="talk_town.ogg" artist="06" pos="0,154303,1984501">旧地獄街道を行く</bgm>
-		<bgm file="talk_Inferno.ogg" artist="07" pos="0,463006,4636030">業火マントル</bgm>
-		<bgm file="talk_reactor.ogg" artist="08" pos="0,580606,4402944">御柱の基場</bgm>
-		<bgm file="talk_oil.ogg" artist="09" pos="0,193813,4379622">大地の底, 剛欲の海</bgm>
-		<bgm file="talk_waterhell.ogg" artist="10" pos="0,911360,3527997">不朽の曼珠沙華</bgm>
-		<bgm file="talk_scarlet.ogg" artist="11" pos="0,420120,6817342">魔法少女達の百年祭</bgm>
-		<bgm file="reimu1.ogg" artist="12" pos="0,1433010,4105308">少女綺想曲</bgm>
-		<bgm file="marisa1.ogg" artist="13" pos="0,240405,4089275">恋色マスタースパーク</bgm>
-		<bgm file="yamame1.ogg" artist="14" pos="0,301276,4513765">封じられた妖怪</bgm>
-		<bgm file="kogasa1.ogg" artist="15" pos="0,4501254,4622897">万年置き傘にご注意を</bgm>
-		<bgm file="murasa1.ogg" artist="16" pos="0,396946,5727812">キャプテンムラサ</bgm>
-		<bgm file="kanako1.ogg" artist="17" pos="0,1018532,6318123">神さびた古戦場</bgm>
-		<bgm file="jyoon1.ogg" artist="18" pos="0,1136692,7035248">今宵は飄逸なエゴイスト ～ Egoistic Flowers</bgm>
-		<bgm file="yuugi1.ogg" artist="19" pos="0,423360,5856480">華のさかづき大江山</bgm>
-		<bgm file="utuho1.ogg" artist="20" pos="0,232332,4570366">霊知の太陽信仰</bgm>
-		<bgm file="niwatari1.ogg" artist="21" pos="0,492995,4387950">セラフィックチキン</bgm>
-		<bgm file="flandre1.ogg" artist="22" pos="0,652037,5499581">U.N.オーエンは彼女なのか？</bgm>
-		<bgm file="toutetu1.ogg" artist="23" pos="0,94537,11151085">強欲な獣のメメント</bgm>
-		<bgm file="toutetu2.ogg" artist="24" pos="0,1322775,10269000">有機体全てのメメント ～ Memory of Fossil Energy.</bgm>
+		<bgm file="op.ogg" pos="0,423360,3175200">水没した沈愁地獄</bgm>
+		<bgm file="staff_roll.ogg" pos="0,0,6200294">東方剛欲異聞</bgm>
+		<bgm file="talk_ed.ogg" pos="0,155801,3361976">天理人欲</bgm>
+		<bgm file="talk_forest.ogg" pos="0,720501,3078980">魔法使いの憂鬱</bgm>
+		<bgm file="talk_underground.ogg" pos="0,389050,4980707">暗闇の風穴</bgm>
+		<bgm file="talk_town.ogg" pos="0,154303,1984501">旧地獄街道を行く</bgm>
+		<bgm file="talk_Inferno.ogg" pos="0,463006,4636030">業火マントル</bgm>
+		<bgm file="talk_reactor.ogg" pos="0,580606,4402944">御柱の基場</bgm>
+		<bgm file="talk_oil.ogg" pos="0,193813,4379622">大地の底, 剛欲の海</bgm>
+		<bgm file="talk_waterhell.ogg" pos="0,911360,3527997">不朽の曼珠沙華</bgm>
+		<bgm file="talk_scarlet.ogg" pos="0,420120,6817342">魔法少女達の百年祭</bgm>
+		<bgm file="reimu1.ogg" pos="0,1433010,4105308">少女綺想曲</bgm>
+		<bgm file="marisa1.ogg" pos="0,240405,4089275">恋色マスタースパーク</bgm>
+		<bgm file="yamame1.ogg" pos="0,301276,4513765">封じられた妖怪</bgm>
+		<bgm file="kogasa1.ogg" pos="0,4501254,4622897">万年置き傘にご注意を</bgm>
+		<bgm file="murasa1.ogg" pos="0,396946,5727812">キャプテンムラサ</bgm>
+		<bgm file="kanako1.ogg" pos="0,1018532,6318123">神さびた古戦場</bgm>
+		<bgm file="jyoon1.ogg" pos="0,1136692,7035248">今宵は飄逸なエゴイスト ～ Egoistic Flowers</bgm>
+		<bgm file="yuugi1.ogg" pos="0,423360,5856480">華のさかづき大江山</bgm>
+		<bgm file="utuho1.ogg" pos="0,232332,4570366">霊知の太陽信仰</bgm>
+		<bgm file="niwatari1.ogg" pos="0,492995,4387950">セラフィックチキン</bgm>
+		<bgm file="flandre1.ogg" pos="0,652037,5499581">U.N.オーエンは彼女なのか？</bgm>
+		<bgm file="toutetu1.ogg" pos="0,94537,11151085" artist="ZUN">強欲な獣のメメント</bgm>
+		<bgm file="toutetu2.ogg" pos="0,1322775,10269000" artist="ZUN">有機体全てのメメント ～ Memory of Fossil Energy.</bgm>
 	</bgmlist>
+	<filelist>
+		<file pos="35454815" len="1990410">talk_ed.ogg</file>
+		<file pos="915" len="3676082">flandre1.ogg</file>
+		<file pos="42550695" len="117">talk_Inferno.ogg.ini</file>
+		<file pos="12337196" len="5494702">kogasa1.ogg</file>
+		<file pos="23917275" len="2844424">niwatari1.ogg</file>
+		<file pos="17832018" len="2572265">marisa1.ogg</file>
+		<file pos="77718720" len="117">yamame1.ogg.ini</file>
+		<file pos="39564739" len="2985956">talk_Inferno.ogg</file>
+		<file pos="59316237" len="117">talk_waterhell.ogg.ini</file>
+		<file pos="72227602" len="119">toutetu2.ogg.ini</file>
+		<file pos="45210265" len="117">talk_oil.ogg.ini</file>
+		<file pos="28899159" len="3175322">reimu1.ogg</file>
+		<file pos="26761699" len="117">niwatari1.ogg.ini</file>
+		<file pos="48118301" len="4088785">talk_scarlet.ogg</file>
+		<file pos="56767112" len="2549125">talk_waterhell.ogg</file>
+		<file pos="81319706" len="119">yuugi1.ogg.ini</file>
+		<file pos="74940713" len="2778007">yamame1.ogg</file>
+		<file pos="42550812" len="2659453">talk_oil.ogg</file>
+		<file pos="20404283" len="119">marisa1.ogg.ini</file>
+		<file pos="32074599" len="3380216">staff_roll.ogg</file>
+		<file pos="52207086" len="117">talk_scarlet.ogg.ini</file>
+		<file pos="52207203" len="1321804">talk_town.ogg</file>
+		<file pos="53529126" len="3237867">talk_underground.ogg</file>
+		<file pos="37445225" len="119">talk_ed.ogg.ini</file>
+		<file pos="37445344" len="2119276">talk_forest.ogg</file>
+		<file pos="12337078" len="118">kanako1.ogg.ini</file>
+		<file pos="74940596" len="117">utuho1.ogg.ini</file>
+		<file pos="65722643" len="119">toutetu1.ogg.ini</file>
+		<file pos="77718837" len="3600869">yuugi1.ogg</file>
+		<file pos="28899040" len="119">op.ogg.ini</file>
+		<file pos="26761816" len="2137224">op.ogg</file>
+		<file pos="8337826" len="3999252">kanako1.ogg</file>
+		<file pos="53529007" len="119">talk_town.ogg.ini</file>
+		<file pos="56766993" len="119">talk_underground.ogg.ini</file>
+		<file pos="59316354" len="6406289">toutetu1.ogg</file>
+		<file pos="65722762" len="6504840">toutetu2.ogg</file>
+		<file pos="48118184" len="117">talk_reactor.ogg.ini</file>
+		<file pos="3676997" len="117">flandre1.ogg.ini</file>
+		<file pos="3677114" len="4660594">jyoon1.ogg</file>
+		<file pos="20404402" len="3512756">murasa1.ogg</file>
+		<file pos="45210382" len="2907802">talk_reactor.ogg</file>
+		<file pos="39564620" len="119">talk_forest.ogg.ini</file>
+		<file pos="72227721" len="2712875">utuho1.ogg</file>
+		<file pos="8337708" len="118">jyoon1.ogg.ini</file>
+		<file pos="17831898" len="120">kogasa1.ogg.ini</file>
+		<file pos="23917158" len="117">murasa1.ogg.ini</file>
+		<file pos="32074481" len="118">reimu1.ogg.ini</file>
+	</filelist>
 </thxml>
