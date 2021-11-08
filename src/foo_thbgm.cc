@@ -984,7 +984,7 @@ public:
 		} else {
 			p_info.set_length(audio_math::samples_to_time(
 				m_headlen + m_looplen, samplerate));
-			if (read_thbgm_info) {
+			if (read_thbgm_info && current_loop == NULL) {
 				open_raw(p_subsong, p_abort);
 				raw.get_info(p_info, p_abort);
 			}
