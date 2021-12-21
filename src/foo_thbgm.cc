@@ -650,7 +650,8 @@ private:
 		t_uint32 *buf = (t_uint32*) (buffer.get_ptr()), *key, c, k;
 		t_uint8 j = 0;
 		switch (tfpk_ver) {
-			case 0:		// th135
+			case 0: // th135
+				key = (t_uint32*)f.key;
 				for (t_uint32 i = 0; i < size; ++i) {
 					buf[i] ^= key[j];
 					j = (j + 1) & 3;
@@ -698,7 +699,10 @@ private:
 		if (stricmp_utf8(tfpkarchive, p_archive)) {
 			tfpkfiles.clear();
 			tfpkarchive = p_archive;
-			if (tfpk_ver == NULL) {
+			const char* ext = pfc::string_extension(p_archive);
+			if (ext[0] == 'c' && ext[1] == 'g') {
+				tfpk_ver = 175;
+			} else {
 				char sig[4];
 				m_file->read_object_t(sig, p_abort);
 				m_file->read_object_t(tfpk_ver, p_abort);
@@ -770,7 +774,7 @@ public:
 		const char *p_file, abort_callback &p_abort) {
 		const char* ext = pfc::string_extension(p_archive);
 		if (ext[0] == 'c' && ext[1] == 'g') {
-			tfpk_ver = 175;
+			// th175
 		} else if (stricmp_utf8(ext, "pak")) {
 			throw exception_io_data();
 		}
