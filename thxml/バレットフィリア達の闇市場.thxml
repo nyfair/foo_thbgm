@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
+
+<thxml>
+	<album>バレットフィリア達の闇市場　～ 100th Black Market</album>
+	<albumartist>上海アリス幻樂団</albumartist>
+	<path>thbgm.dat</path>
+	<bgmlist>
+		<bgm pos="16,658176,21021952">コレクターの憂鬱な午後</bgm>
+		<bgm pos="21680144,324864,13283968">妖怪フックオン</bgm>
+		<bgm pos="35288976,287744,32768928">ワクワクする見慣れた幻想郷</bgm>
+		<bgm pos="68345648,4409856,27561600">闇市場は場所を選ばない</bgm>
+		<bgm pos="100317104,635392,19466240">弾幕を持て、バレットフィリア達よ</bgm>
+		<bgm pos="120418736,544960,27336864">１００回目のブラックマーケット</bgm>
+		<bgm pos="148300560,725056,28348928">ルナレインボー</bgm>
+		<bgm pos="177374544,4557728,39398784">あの賑やかな市場は今どこに　～ Immemorial Marketeers</bgm>
+		<bgm pos="221331056,8984064,4179584">虹色の世界</bgm>
+		<bgm pos="234494704,2011840,18815360">ルナティックドリーマー</bgm>
+	</bgmlist>
+</thxml>

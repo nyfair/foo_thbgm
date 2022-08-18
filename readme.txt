@@ -44,6 +44,7 @@ TH165: Violet Detector (秘封ナイトメアダイアリー)
 TH17 : Wily Beast and Weakest Creature (東方鬼形獣)
 TH175: Touhou Gouyoku Ibun (東方剛欲異聞)
 TH18 : Unconnected Marketeers (東方虹龍洞)
+TH185: 100th Black Market (バレットフィリア達の闇市場)
 Uwabami Breakers (黄昏酒場)
 Kioh Gyoku (稀翁玉)
 Banshiryuu (幡紫竜) both c67 and later version
