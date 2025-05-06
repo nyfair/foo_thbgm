@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
+
+<thxml>
+	<album>東方錦上京 ～ Fossilized Wonders</album>
+	<albumartist>上海アリス幻樂団</albumartist>
+	<path>thbgm_tr.dat</path>
+	<bgmlist>
+		<bgm pos="16,358112,16934368">錦の上の巫女</bgm>
+		<bgm pos="17292496,2471040,20530432">愛おしき塵の住処</bgm>
+		<bgm pos="40293968,498432,16933696">例え世界から忘れられても</bgm>
+		<bgm pos="57726096,874016,23905184">セイクリッドフォレスト</bgm>
+		<bgm pos="82505296,2365856,21915040">森にはお化けがいるよ</bgm>
+		<bgm pos="106786192,1154704,24631888">プレステ・ジョアンの黄金境</bgm>
+		<bgm pos="132572784,453440,23224512">どうせなら命を賭けて謎を解け</bgm>
+		<bgm pos="156250736,1879240,4861944">プレイヤーズスコア</bgm>
+	</bgmlist>
+</thxml>

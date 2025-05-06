@@ -46,6 +46,7 @@ TH175: Touhou Gouyoku Ibun (東方剛欲異聞)
 TH18 : Unconnected Marketeers (東方虹龍洞)
 TH185: 100th Black Market (バレットフィリア達の闇市場)
 TH19 : Unfinished Dream of All Living Ghost (東方獣王園)
+TH20 : Fossilized Wonders (東方錦上京)
 Uwabami Breakers (黄昏酒場)
 Kioh Gyoku (稀翁玉)
 Banshiryuu (幡紫竜) both c67 and later version
