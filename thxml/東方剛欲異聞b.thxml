@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE thxml "nyfair_thxml.dtd">
+
+<thxml>
+	<album artist="ziki_7" codec="vorbis" encoding="lossy" pack="tfpk">東方剛欲異聞 ～ 水没した沈愁地獄</album>
+	<albumartist>黄昏フロンティア & 上海アリス幻樂団</albumartist>
+	<path>data.cgb|</path>
+	<bgmlist>
+		<bgm file="okina1.ogg" pos="0,694596,8286528">秘神マターラ</bgm>
+		<bgm file="talk_door.ogg" pos="0,264479,5688779">もうドアには入れない</bgm>
+	</bgmlist>
+	<filelist>
+		<file pos="4868674" len="117">okina1.ogg.ini</file>
+		<file pos="989" len="4867685">okina1.ogg</file>
+		<file pos="4868791" len="3197929">talk_door.ogg</file>
+		<file pos="8066720" len="117">talk_door.ogg.ini</file>
+	</filelist>
+</thxml>

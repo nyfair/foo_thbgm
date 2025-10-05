@@ -17,21 +17,21 @@
 		<bgm file="bgst11_20.ogg" pos="0,0,914634">不滅のレッドソウル【20秒版】</bgm>
 	</bgmlist>
 	<filelist>
-		<file pos="46187867" len="4056847" key="73059AAB948B318BB4D8E6BA7A08931A">155tenshi1.ogg</file>
-		<file pos="50244714" len="108" key="515245EFFA6D1B6B323A92D5DA77F2FC">155tenshi1.sfl</file>
-		<file pos="50244822" len="550525" key="198BC99A75DFF913260BAE6AF51E544F">155tenshi1_20.ogg</file>
-		<file pos="50795347" len="3354962" key="1418A1B808950AC2D94424F6734369A4">155yukari1.ogg</file>
-		<file pos="54150309" len="108" key="43F30840DD87D273FA1D3B1FA169B383">155yukari1.sfl</file>
-		<file pos="54150417" len="487149" key="9FE03BBD0E488991F67A71BA1B98A640">155yukari1_20.ogg</file>
-		<file pos="54637566" len="3185" key="7EBF0F6FD6184E6DA016545876C602EA">bgm.csv</file>
-		<file pos="54640751" len="2861005" key="9AEC7528B56AE09115ABE744D6499F51">bgst03.ogg</file>
-		<file pos="57501756" len="104" key="5E2B6DFD10DD2857D64C2799F05A1F28">bgst03.sfl</file>
-		<file pos="57501860" len="478674" key="9E5E02E827D65E2C0C0C4D7550D8A454">bgst03_20.ogg</file>
-		<file pos="57980534" len="2485791" key="1A13BD6B106D31280706FAECF867F26A">bgst06.ogg</file>
-		<file pos="60466325" len="104" key="430D381F30AD02CCA3866A65C0DF8D26">bgst06.sfl</file>
-		<file pos="60466429" len="485185" key="69C1C80E8D4FA55AC115AEACA0AD2FAF">bgst06_20.ogg</file>
-		<file pos="60951614" len="2833363" key="2A5C7E0D93A70CB7467D3D36EA22D68F">bgst11.ogg</file>
-		<file pos="63784977" len="104" key="75E10742A22E9165AADFDE584885F7B5">bgst11.sfl</file>
-		<file pos="63785081" len="502124" key="AFB22D454F74BD98B191A3A234F2D3FC">bgst11_20.ogg</file>
+		<file pos="48057806" len="4056847" key="1857F9F9624A93F91F76E78AB9508111">155tenshi1.ogg</file>
+		<file pos="52114653" len="108" key="EBDDF29AF895D257656D67F8BE637BBF">155tenshi1.sfl</file>
+		<file pos="52114761" len="550525" key="CB8F74158EC5FC2F8B3BE89C700A94DA">155tenshi1_20.ogg</file>
+		<file pos="52665286" len="3354962" key="3C89301291B598FB1F33DBC9061733D4">155yukari1.ogg</file>
+		<file pos="56020248" len="108" key="956DDBF351A5C8F4858FDA4DB359AB89">155yukari1.sfl</file>
+		<file pos="56020356" len="487149" key="C378A6307B2B9CC804E2A5E22C6C26A3">155yukari1_20.ogg</file>
+		<file pos="56507505" len="3185" key="5E2C9709C00C3332307C765B2400A54A">bgm.csv</file>
+		<file pos="56510690" len="2861005" key="BD0F6990DA8325D76522A64885F4DC05">bgst03.ogg</file>
+		<file pos="59371695" len="104" key="36005CAFE8732F2A571F3708A341C530">bgst03.sfl</file>
+		<file pos="59371799" len="478674" key="A7F8BDDEFC4DBFE8489441ECEB778507">bgst03_20.ogg</file>
+		<file pos="59850473" len="2485791" key="89E910A23A1D718CD77E417CC4908201">bgst06.ogg</file>
+		<file pos="62336264" len="104" key="06586D6909867F79D6A26D2A9FE5F967">bgst06.sfl</file>
+		<file pos="62336368" len="485185" key="EDCA8215CA6A0F412071F47BBB402CEE">bgst06_20.ogg</file>
+		<file pos="62821553" len="2833363" key="8FA2EDD38D1E3E498E0BD1ADA7BF5D03">bgst11.ogg</file>
+		<file pos="65654916" len="104" key="3950A01EF08C90CC4B186AAAB7C5541C">bgst11.sfl</file>
+		<file pos="65655020" len="502124" key="40B533FD68BF8D7E4254174A30B3A915">bgst11_20.ogg</file>
 	</filelist>
 </thxml>
